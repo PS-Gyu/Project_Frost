@@ -1278,7 +1278,7 @@ MonoBehaviour:
   m_PointlightHDType: 0
   m_SpotLightShape: 0
   m_AreaLightShape: 0
-  m_Intensity: 3.1415927
+  m_Intensity: 10000
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
@@ -32703,7 +32703,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 10882822, guid: 068cba0c26a86e34b9fe9765eb53ae5e, type: 3}
       propertyPath: m_Intensity
-      value: 3.1415927
+      value: 10000
       objectReference: {fileID: 0}
     - target: {fileID: 10882822, guid: 068cba0c26a86e34b9fe9765eb53ae5e, type: 3}
       propertyPath: m_Shadows.m_Strength
