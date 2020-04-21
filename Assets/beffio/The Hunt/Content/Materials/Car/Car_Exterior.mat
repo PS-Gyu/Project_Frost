@@ -8,14 +8,16 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Car_Exterior
-  m_Shader: {fileID: 4800000, guid: 871a5340ead1c0a40a59c59272ac70f4, type: 3}
+  m_Shader: {fileID: 4800000, guid: 29c4adff654862b40a2e9fb2015a42c3, type: 3}
   m_ShaderKeywords: _EMISSION _METALLICGLOSSMAP _NORMALMAP
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
+  stringTagMap:
+    MotionVector: User
+  disabledShaderPasses:
+  - MOTIONVECTORS
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -83,6 +85,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 194d22aa25743524cb4291bbd3b29f78, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _raindrops_vert:
         m_Texture: {fileID: 2800000, guid: a1fd508d3845659408804008917da3c7, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -104,11 +110,12 @@ Material:
     - _Featuresemissionintensity: 17
     - _Frontlightsemissionintensity: 258
     - _GlossMapScale: 0.749
-    - _Glossiness: 0.5
+    - _Glossiness: 0.02
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
+    - _OpacityThreshold: 0
     - _Parallax: 0.02
     - _Rainintensity: 3.03
     - _Rainspeed: 36.4
@@ -121,12 +128,18 @@ Material:
     - _Tiresmoothness: 0.76
     - _Turnlightsemissionintensity: 115
     - _UVSec: 0
+    - _UseAoMap: 0
+    - _UseColorMap: 1
+    - _UseEmissiveMap: 0
+    - _UseMetallicMap: 0
+    - _UseNormalMap: 1
+    - _UseRoughnessMap: 0
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:
     - _Carpaintcolor: {r: 0.734, g: 0.6691789, b: 0.61215603, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 5.6470003, g: 0, b: 0, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Emissioncolor1: {r: 0, g: 0.71323526, b: 0.03443211, a: 0}
     - _Emissioncolor2: {r: 0, g: 0.04827571, b: 1, a: 0}
     - _Emissioncolor3: {r: 0, g: 0.2658723, b: 0.7867647, a: 0}
@@ -139,4 +152,6 @@ Material:
     - _Tirecolor: {r: 0.742, g: 0.742, b: 0.742, a: 0}
     - _Turnlightsemission: {r: 0.040269658, g: 0.4411764, b: 0.02595158, a: 0}
     - _Typocolor: {r: 0.953, g: 0.81767404, b: 0, a: 0}
+    - _UvOffset: {r: 0, g: 0, b: 0, a: 0}
+    - _UvTiling: {r: 1, g: 1, b: 0, a: 0}
     - _Wheelscolor: {r: 0.7794118, g: 0.7794118, b: 0.7794118, a: 0}

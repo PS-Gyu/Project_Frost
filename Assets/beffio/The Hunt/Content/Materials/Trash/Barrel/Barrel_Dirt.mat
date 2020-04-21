@@ -8,14 +8,16 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Barrel_Dirt
-  m_Shader: {fileID: 4800000, guid: fb60dfa89ab8e0e4cb24d0c0d13bec18, type: 3}
+  m_Shader: {fileID: 4800000, guid: 29c4adff654862b40a2e9fb2015a42c3, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
+  stringTagMap:
+    MotionVector: User
+  disabledShaderPasses:
+  - MOTIONVECTORS
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -28,7 +30,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: dc19cc3eea82df542ac9460bdd045cdb, type: 3}
+        m_Texture: {fileID: 2800000, guid: e8bd9a8503e9afc44956bec61f0fad7b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -52,7 +54,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: dea3f784b68c7254e9397413fafda944, type: 3}
+        m_Texture: {fileID: 2800000, guid: 0613db4c15943ea4f950b8acefa0a41a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Mask:
@@ -64,7 +66,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: 0fe97df44cc0519409c8b8c909efe0d1, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3b9d8c7a7ead9214facd349418f7dfa1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normal:
@@ -72,10 +74,14 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 6750399c94fb009458196d208c13d7d4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -92,7 +98,7 @@ Material:
     - _DstBlend: 0
     - _Emissionintensity: 0
     - _GlossMapScale: 0.779
-    - _Glossiness: 0.5
+    - _Glossiness: 0.35
     - _GlossyReflections: 1
     - _GreenChannelMultiplyBlend: 0
     - _Metallic: 0
@@ -100,6 +106,7 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Occlusionshift: 1
+    - _OpacityThreshold: 0
     - _Parallax: 0.02
     - _RedBlending: 1
     - _RedChannelMultiplyBlend: 0
@@ -108,6 +115,12 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
+    - _UseAoMap: 0
+    - _UseColorMap: 1
+    - _UseEmissiveMap: 0
+    - _UseMetallicMap: 1
+    - _UseNormalMap: 1
+    - _UseRoughnessMap: 0
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:
@@ -117,3 +130,5 @@ Material:
     - _ColorRedchannel: {r: 1, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Global_Multiply: {r: 1, g: 1, b: 1, a: 0}
+    - _UvOffset: {r: 0, g: 0, b: 0, a: 0}
+    - _UvTiling: {r: 1, g: 1, b: 0, a: 0}

@@ -8,14 +8,16 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Orb_Drone
-  m_Shader: {fileID: 4800000, guid: 811f150792709e343b0d0a7bf418603a, type: 3}
+  m_Shader: {fileID: 4800000, guid: 7252379db4c18b641b517f2c91bb57e1, type: 3}
   m_ShaderKeywords: _EMISSION _METALLICGLOSSMAP _NORMALMAP
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
+  stringTagMap:
+    MotionVector: User
+  disabledShaderPasses:
+  - MOTIONVECTORS
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -48,7 +50,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 2800000, guid: adcf22bae980c79428146ef1248c02a2, type: 3}
+        m_Texture: {fileID: 2800000, guid: 81b8867c47f32bb41bde1359e81ee7e9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMask:
@@ -56,7 +58,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 922e68b053f3e664abdc5c8518e3bcdf, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9c7200948500cba4b876eff32f2ae535, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Mask:
@@ -83,6 +85,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _texcoord:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -96,7 +102,7 @@ Material:
     - _EyeEmissionintensity: 12
     - _FlaslightEmissionIntensity: 8
     - _GlossMapScale: 1
-    - _Glossiness: 0.5
+    - _Glossiness: 0.08
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Metallicshift: 1
@@ -109,6 +115,12 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
+    - _UseAoMap: 0
+    - _UseColorMap: 1
+    - _UseEmissiveMap: 1
+    - _UseMetallicMap: 1
+    - _UseNormalMap: 1
+    - _UseRoughnessMap: 0
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:
@@ -124,3 +136,5 @@ Material:
     - _EyeEmissionColor: {r: 1, g: 0.64929, b: 0.3308823, a: 0}
     - _FlashlightEmissionColor: {r: 1, g: 0.7389452, b: 0.27205884, a: 0}
     - _TextColor: {r: 1, g: 0.8507099, b: 0.66176474, a: 0}
+    - _UvOffset: {r: 0, g: 0, b: 0, a: 0}
+    - _UvTiling: {r: 1, g: 1, b: 0, a: 0}
