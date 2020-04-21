@@ -1,0 +1,142 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Car_Exterior
+  m_Shader: {fileID: 4800000, guid: 871a5340ead1c0a40a59c59272ac70f4, type: 3}
+  m_ShaderKeywords: _EMISSION _METALLICGLOSSMAP _NORMALMAP
+  m_LightmapFlags: 1
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Albedo:
+        m_Texture: {fileID: 2800000, guid: bb155f7f360a1b249a477b45cd1db183, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Albedomask:
+        m_Texture: {fileID: 2800000, guid: c1530ce8dd3078849ae154e6c455cc10, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: d53ec204fb59f954e94c195db176b182, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Emission:
+        m_Texture: {fileID: 2800000, guid: 554fd782bf7414a428b61ea33d86a8c5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 2800000, guid: 554fd782bf7414a428b61ea33d86a8c5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMask:
+        m_Texture: {fileID: 2800000, guid: 9e9bed8df169a8647aacc842d66903d4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: bb155f7f360a1b249a477b45cd1db183, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Metallic:
+        m_Texture: {fileID: 2800000, guid: 3645c586ff8ff144bbe47378fe834bed, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 2800000, guid: 3645c586ff8ff144bbe47378fe834bed, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal:
+        m_Texture: {fileID: 2800000, guid: d53ec204fb59f954e94c195db176b182, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Raindrops_normals:
+        m_Texture: {fileID: 2800000, guid: 194d22aa25743524cb4291bbd3b29f78, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _raindrops_vert:
+        m_Texture: {fileID: 2800000, guid: a1fd508d3845659408804008917da3c7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _BumpScale: 1
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _Emissionintensity: 100
+    - _Featuresemissionintensity: 17
+    - _Frontlightsemissionintensity: 258
+    - _GlossMapScale: 0.749
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _Rainintensity: 3.03
+    - _Rainspeed: 36.4
+    - _Raintiling: 50
+    - _Rearlightsemissionintensity: 106
+    - _SmoothnessTextureChannel: 0
+    - _Smoothnessshift: 0.774
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _Tiresmoothness: 0.76
+    - _Turnlightsemissionintensity: 115
+    - _UVSec: 0
+    - _ZWrite: 1
+    - __dirty: 0
+    m_Colors:
+    - _Carpaintcolor: {r: 0.734, g: 0.6691789, b: 0.61215603, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 5.6470003, g: 0, b: 0, a: 1}
+    - _Emissioncolor1: {r: 0, g: 0.71323526, b: 0.03443211, a: 0}
+    - _Emissioncolor2: {r: 0, g: 0.04827571, b: 1, a: 0}
+    - _Emissioncolor3: {r: 0, g: 0.2658723, b: 0.7867647, a: 0}
+    - _Emissioncolor4: {r: 0.86764705, g: 0.86764705, b: 0.86764705, a: 0}
+    - _Featuresemission: {r: 0.148086, g: 0.6102941, b: 0.38078386, a: 0}
+    - _Frontlightsemission: {r: 0, g: 0.30045643, b: 0.5514706, a: 0}
+    - _Overlaycolor: {r: 0.55709344, g: 0.5924949, b: 0.6764706, a: 0}
+    - _Raintiling: {r: 80, g: 26.6, b: 0, a: 0}
+    - _Rearlightsemission: {r: 0.7205882, g: 0, b: 0, a: 0}
+    - _Tirecolor: {r: 0.742, g: 0.742, b: 0.742, a: 0}
+    - _Turnlightsemission: {r: 0.040269658, g: 0.4411764, b: 0.02595158, a: 0}
+    - _Typocolor: {r: 0.953, g: 0.81767404, b: 0, a: 0}
+    - _Wheelscolor: {r: 0.7794118, g: 0.7794118, b: 0.7794118, a: 0}

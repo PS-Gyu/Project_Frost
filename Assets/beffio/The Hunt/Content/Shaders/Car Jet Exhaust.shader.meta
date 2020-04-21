@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 35a4238a0980e7046956a0bf09e33134
+timeCreated: 1522401034
+licenseType: Store
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _bars1: {fileID: 2800000, guid: e7bae02c569040a4fbf67b8d98cf7828, type: 3}
+  - _TextureSample1: {fileID: 2800000, guid: e7bae02c569040a4fbf67b8d98cf7828, type: 3}
+  - _swirl: {fileID: 2800000, guid: fa7b6704e3f282f4594e3e58fb3be164, type: 3}
+  - _TextureSample2: {fileID: 2800000, guid: fa7b6704e3f282f4594e3e58fb3be164, type: 3}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
