@@ -8,16 +8,14 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Wire_Module 2
-  m_Shader: {fileID: 4800000, guid: 29c4adff654862b40a2e9fb2015a42c3, type: 3}
+  m_Shader: {fileID: 4800000, guid: fb60dfa89ab8e0e4cb24d0c0d13bec18, type: 3}
   m_ShaderKeywords: _METALLICGLOSSMAP _NORMALMAP
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap:
-    MotionVector: User
-  disabledShaderPasses:
-  - MOTIONVECTORS
+  stringTagMap: {}
+  disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -81,10 +79,6 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _SpecGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _texcoord:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -106,7 +100,6 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Occlusionshift: 1
-    - _OpacityThreshold: 0
     - _Parallax: 0.02
     - _RedBlending: 1
     - _RedChannelMultiplyBlend: 0
@@ -115,12 +108,6 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _UseAoMap: 0
-    - _UseColorMap: 1
-    - _UseEmissiveMap: 0
-    - _UseMetallicMap: 1
-    - _UseNormalMap: 1
-    - _UseRoughnessMap: 0
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:
@@ -130,5 +117,3 @@ Material:
     - _ColorRedchannel: {r: 1, g: 1, b: 1, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Global_Multiply: {r: 1, g: 1, b: 1, a: 0}
-    - _UvOffset: {r: 0, g: 0, b: 0, a: 0}
-    - _UvTiling: {r: 1, g: 1, b: 0, a: 0}
