@@ -22,7 +22,7 @@ MonoBehaviour:
     minDistance: 0.6
     height: 1.5
     smooth: 10
-    smoothDamp: 4
+    smoothDamp: 0
     xMouseSensitivity: 3
     yMouseSensitivity: 3
     yMinLimit: -75
@@ -67,12 +67,12 @@ MonoBehaviour:
   - Name: Strafing
     forward: -1
     right: 0
-    defaultDistance: 2.5
+    defaultDistance: -0.6
     maxDistance: 1.5
     minDistance: 0.25
     height: 1.6
     smooth: 10
-    smoothDamp: 4
+    smoothDamp: 0
     xMouseSensitivity: 1
     yMouseSensitivity: 1
     yMinLimit: -40
@@ -137,8 +137,8 @@ MonoBehaviour:
     fixedAngle: {x: 0, y: 0}
     lookPoints:
     - pointName: point_01
-      positionPoint: {x: 36.9, y: 0.64, z: 2.323}
-      eulerAngle: {x: -0, y: 270, z: 0}
+      positionPoint: {x: -0.5, y: 1.73, z: -15.02}
+      eulerAngle: {x: -0, y: 90, z: 0}
       freeRotation: 0
     - pointName: point_02
       positionPoint: {x: 29.395, y: 0.709, z: 2.241}
