@@ -30,6 +30,8 @@ TagManager:
   - CoverPoint
   - Interactable
   - AIAction
+  - Interaction
+  - SearchingObj
   layers:
   - Default
   - TransparentFX
