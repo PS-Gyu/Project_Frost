@@ -5,8 +5,11 @@ using UnityEngine;
 [System.Serializable]
 public class Dialogue
 {
-    public string name;
+    public Transform tf_Target; //카메라가 타겟팅할 대상
 
+    [HideInInspector]
+    public string name;
+    [HideInInspector]
     public string[] contexts;
 }
 

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Invector.vCharacterController;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,7 +11,6 @@ public class InteractionController : MonoBehaviour
     RaycastHit hitInfo;
 
     bool isContact = false;
-    bool isPlaying = false;
     bool isInteract = false;
 
     DialogueManager theDM;
@@ -60,22 +60,8 @@ public class InteractionController : MonoBehaviour
             isContact = false;
         }
     }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        
-        if (collision.transform.tag == "Interaction")
-        {
-            ///'프레스 에프 투 대화' 대화창  .SetActive(true);
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                if (!isPlaying)
-                {
-                    Interact();
-                }
-            }
-        }
-    }
+    
+    
 
     void ClickLeftBtn()
     {
@@ -83,10 +69,7 @@ public class InteractionController : MonoBehaviour
         {
             if (isContact)
             {
-                if (!isPlaying)
-                {
-                    Interact();
-                }
+                Interact();
             }
         }
     }
@@ -95,11 +78,7 @@ public class InteractionController : MonoBehaviour
     {
         isInteract = true;
         
-        //인터렉트 후 나올 대화창.SetActive(true);
         theDM.ShowDialogue(hitInfo.transform.GetComponent<InteractionEvent>().GetDialogue());
-
-        //대화창 다 끝나고 isPlaying = false;
-
         
     }
 

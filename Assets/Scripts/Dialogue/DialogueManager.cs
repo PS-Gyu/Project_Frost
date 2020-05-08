@@ -60,12 +60,14 @@ public class DialogueManager : MonoBehaviour
         isDialogue = true;
         txt_Dialogue.text = "";
         dialogues = p_dialogues;
-
+        GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().enabled = false;
+        
         StartCoroutine(TypeWriter());
     }
 
     void EndDialogue()
     {
+        GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().enabled = true;
         isDialogue = false;
         contextCount = 0;
         lineCount = 0;
@@ -94,6 +96,7 @@ public class DialogueManager : MonoBehaviour
 
     void SettingUI(bool p_flag)
     {
+        
         go_DialogueBar.SetActive(p_flag);
     }
 }
