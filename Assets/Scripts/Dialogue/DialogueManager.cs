@@ -30,7 +30,7 @@ public class DialogueManager : MonoBehaviour
         {
             if (isNext)
             {
-                if (Input.GetKeyDown(KeyCode.Space))
+                if (Input.GetKeyDown(KeyCode.E))
                 {
                     isNext = false;
                     txt_Dialogue.text = "";
