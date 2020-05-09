@@ -73,8 +73,8 @@ MonoBehaviour:
     height: 1.9
     smooth: 25
     smoothDamp: 0
-    xMouseSensitivity: 1
-    yMouseSensitivity: 1
+    xMouseSensitivity: 2
+    yMouseSensitivity: 2
     yMinLimit: -40
     yMaxLimit: 80
     xMinLimit: -360
