@@ -70,6 +70,7 @@ public class InteractionController : MonoBehaviour
             {
                 Interact();
             }
+            
         }
     }
 
@@ -79,8 +80,8 @@ public class InteractionController : MonoBehaviour
         {
             isInteract = true;
             theDM.ShowDialogue(hitInfo.transform.GetComponent<InteractionEvent>().GetDialogue());
+            hitInfo.transform.GetComponent<InteractionEvent>().isFirst = false;
         }
-        hitInfo.transform.GetComponent<InteractionEvent>().isFirst = false;
     }
 
 

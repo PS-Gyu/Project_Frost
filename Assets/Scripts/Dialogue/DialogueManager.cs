@@ -99,7 +99,6 @@ public class DialogueManager : MonoBehaviour
 
     void SettingUI(bool p_flag)
     {
-        
         go_DialogueBar.SetActive(p_flag);
     }
 }
