@@ -24,6 +24,9 @@ public class DialogueManager : MonoBehaviour
     int lineCount = 0; //대화 카운트
     int contextCount = 0; //대사 카운트
 
+
+
+
     void Update()
     {
         if (isDialogue)

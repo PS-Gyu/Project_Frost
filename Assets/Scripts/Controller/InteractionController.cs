@@ -75,10 +75,12 @@ public class InteractionController : MonoBehaviour
 
     void Interact()
     {
-        isInteract = true;
-        
-        theDM.ShowDialogue(hitInfo.transform.GetComponent<InteractionEvent>().GetDialogue());
-        
+        if (hitInfo.transform.GetComponent<InteractionEvent>().isFirst)
+        {
+            isInteract = true;
+            theDM.ShowDialogue(hitInfo.transform.GetComponent<InteractionEvent>().GetDialogue());
+        }
+        hitInfo.transform.GetComponent<InteractionEvent>().isFirst = false;
     }
 
 
