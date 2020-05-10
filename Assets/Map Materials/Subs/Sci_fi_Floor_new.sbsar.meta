@@ -17,8 +17,9 @@ ScriptedImporter:
     generateAllOutputs: 0
     generateMipMaps: 1
     preset: " <sbspreset pkgurl=\"pkg://Sci_fi_Floor_new\" label=\"\" >\n  <presetinput
-      identifier=\"$outputsize\" uid=\"2979139340\" type=\"8\" value=\"9,9\" />\n
-      </sbspreset>\n"
+      identifier=\"$outputsize\" uid=\"2979139340\" type=\"8\" value=\"9,9\" />\n 
+      <presetinput identifier=\"Light_color\" uid=\"3687462397\" type=\"0\" value=\"0.054\"
+      />\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}

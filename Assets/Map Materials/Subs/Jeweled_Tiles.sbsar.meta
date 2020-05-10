@@ -18,11 +18,12 @@ ScriptedImporter:
     generateMipMaps: 1
     preset: " <sbspreset pkgurl=\"pkg://Jeweled_Tiles\" label=\"\" >\n  <presetinput
       identifier=\"$outputsize\" uid=\"4279482825\" type=\"8\" value=\"9,9\" />\n 
-      <presetinput identifier=\"Jewels_Size\" uid=\"2331587230\" type=\"0\" value=\"0.204\"
-      />\n  <presetinput identifier=\"Marble_Size\" uid=\"2331748735\" type=\"0\"
-      value=\"0.651\" />\n  <presetinput identifier=\"Number_of_Tiles_X\" uid=\"2331766201\"
-      type=\"4\" value=\"6\" />\n  <presetinput identifier=\"Normal_Intensity\" uid=\"2323949270\"
-      type=\"0\" value=\"0.58\" />\n </sbspreset>\n"
+      <presetinput identifier=\"Jewels_Size\" uid=\"2331587230\" type=\"0\" value=\"0\"
+      />\n  <presetinput identifier=\"Jewels_Color\" uid=\"2323908362\" type=\"3\"
+      value=\"0.490566,0.398571,0.0578498,1\" />\n  <presetinput identifier=\"Marble_Size\"
+      uid=\"2331748735\" type=\"0\" value=\"0.768\" />\n  <presetinput identifier=\"Number_of_Tiles_X\"
+      uid=\"2331766201\" type=\"4\" value=\"4\" />\n  <presetinput identifier=\"Normal_Intensity\"
+      uid=\"2323949270\" type=\"0\" value=\"0.13\" />\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
