@@ -137,8 +137,8 @@ MonoBehaviour:
     fixedAngle: {x: 0, y: 0}
     lookPoints:
     - pointName: point_01
-      positionPoint: {x: -0.5, y: 1.73, z: -15.02}
-      eulerAngle: {x: -0, y: 90, z: 0}
+      positionPoint: {x: 0, y: 1, z: -10}
+      eulerAngle: {x: -0, y: 0, z: 0}
       freeRotation: 0
     - pointName: point_02
       positionPoint: {x: 29.395, y: 0.709, z: 2.241}
