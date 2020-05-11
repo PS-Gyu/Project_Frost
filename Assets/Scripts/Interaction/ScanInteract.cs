@@ -5,24 +5,20 @@ using UnityEngine;
 
 public class ScanInteract : MonoBehaviour
 {
-    void OntriggerEnter(Collider col)
-    {
-        Debug.Log("Highlighted");
-        if (col.gameObject.tag =="SearchingObj")
-        {
-            col.gameObject.GetComponent<Renderer>().material = col.gameObject.GetComponent<SearchingObj>().highlightMat;
-            
-        }
 
-    }
-
-    void OntriggerExit(Collider col)
+    private void OnTriggerEnter(Collider col)
     {
         if (col.tag == "SearchingObj")
         {
-            col.gameObject.GetComponent<Renderer>().sharedMaterial = col.gameObject.GetComponent<SearchingObj>().originalMat;
-            Debug.Log("Originated");
+            col.GetComponent<Renderer>().material = col.GetComponent<SearchingObj>().highlightMat;
+        }
+    }
 
+    private void OnTriggerExit(Collider col)
+    {
+        if(col.tag == "SearchingObj")
+        {
+            col.GetComponent<Renderer>().material = col.GetComponent<SearchingObj>().originalMat;
         }
     }
 

@@ -32,6 +32,7 @@ TagManager:
   - AIAction
   - Interaction
   - SearchingObj
+  - Area
   layers:
   - Default
   - TransparentFX
@@ -50,8 +51,8 @@ TagManager:
   - HeadTrack
   - BodyPart
   - BlockAIRayCast
-  - 
-  - 
+  - Doom
+  - SearchingObj
   - 
   - 
   - 
