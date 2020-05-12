@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 421434}
   - component: {fileID: 3695705225665252398}
   m_Layer: 11
-  m_Name: LadderPrefab
+  m_Name: Ladder_prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49,7 +49,8 @@ MonoBehaviour:
   header: COMMENT
   comment: '- You can duplicate the steps to how height you want your ladder to be.
 
-    - Don''t forget to Move the ''LadderTop'' with the ''Trigger_LadderTop" as well.'
+    -
+    Don''t forget to Move the ''LadderTop'' with the ''Trigger_LadderTop" as well.'
   inEdit: 0
 --- !u!1 &136958
 GameObject:
@@ -494,7 +495,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 183494}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -512,6 +513,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &188250
 GameObject:
   m_ObjectHideFlags: 0
@@ -581,7 +583,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 188250}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1980459831, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_UiScaleMode: 0
@@ -603,7 +605,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 188250}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreReversedGraphics: 1
@@ -665,7 +667,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 192174}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -683,6 +685,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &97579117
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,9 +697,11 @@ GameObject:
   - component: {fileID: 97579118}
   - component: {fileID: 97579120}
   - component: {fileID: 97579119}
+  - component: {fileID: 4869524109768696245}
+  - component: {fileID: 6541168250007217977}
   m_Layer: 11
   m_Name: LadderTop
-  m_TagString: Untagged
+  m_TagString: SearchingObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -737,6 +742,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -749,6 +755,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -761,6 +768,34 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &4869524109768696245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97579117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b58298ef83e694a4e8c1bbf8eb9965ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalMat1: {fileID: 2100000, guid: 3dfffd5a5d9d6c747ba693ecf451d511, type: 2}
+  originalMat2: {fileID: 2100000, guid: 9a47f97112907c14c922c5f56fc6f87a, type: 2}
+  highlightMat: {fileID: 2100000, guid: 1c5b6bbd158f6154bb5239aaba3273a9, type: 2}
+--- !u!65 &6541168250007217977
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97579117}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.299999, z: 0.29000014}
+  m_Center: {x: -0.000000044703484, y: 0.1499995, z: 0.12499985}
 --- !u!1 &268556547
 GameObject:
   m_ObjectHideFlags: 0
@@ -776,9 +811,10 @@ GameObject:
   - component: {fileID: 268556550}
   - component: {fileID: 268556549}
   - component: {fileID: 6209817846191155621}
+  - component: {fileID: 1932298166242030253}
   m_Layer: 11
   m_Name: LadderStep (3)
-  m_TagString: Untagged
+  m_TagString: SearchingObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -819,6 +855,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -831,6 +868,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -896,6 +934,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   materialIndex: 1
   stepHandleType: 1
+--- !u!114 &1932298166242030253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268556547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b58298ef83e694a4e8c1bbf8eb9965ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalMat1: {fileID: 2100000, guid: 3dfffd5a5d9d6c747ba693ecf451d511, type: 2}
+  originalMat2: {fileID: 2100000, guid: 9a47f97112907c14c922c5f56fc6f87a, type: 2}
+  highlightMat: {fileID: 2100000, guid: 1c5b6bbd158f6154bb5239aaba3273a9, type: 2}
 --- !u!1 &307237052
 GameObject:
   m_ObjectHideFlags: 0
@@ -911,9 +964,10 @@ GameObject:
   - component: {fileID: 307237055}
   - component: {fileID: 307237054}
   - component: {fileID: 3190538449841048270}
+  - component: {fileID: 2693140977070162696}
   m_Layer: 11
   m_Name: LadderStep (4)
-  m_TagString: Untagged
+  m_TagString: SearchingObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -954,6 +1008,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -966,6 +1021,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1031,6 +1087,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   materialIndex: 1
   stepHandleType: 1
+--- !u!114 &2693140977070162696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307237052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b58298ef83e694a4e8c1bbf8eb9965ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalMat1: {fileID: 2100000, guid: 3dfffd5a5d9d6c747ba693ecf451d511, type: 2}
+  originalMat2: {fileID: 2100000, guid: 9a47f97112907c14c922c5f56fc6f87a, type: 2}
+  highlightMat: {fileID: 2100000, guid: 1c5b6bbd158f6154bb5239aaba3273a9, type: 2}
 --- !u!1 &595406811
 GameObject:
   m_ObjectHideFlags: 0
@@ -1088,6 +1159,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1100,6 +1172,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1166,9 +1239,10 @@ GameObject:
   - component: {fileID: 598443432}
   - component: {fileID: 598443431}
   - component: {fileID: 4858997685147452482}
+  - component: {fileID: 487098485991064139}
   m_Layer: 11
   m_Name: LadderStep (2)
-  m_TagString: Untagged
+  m_TagString: SearchingObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1209,6 +1283,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1221,6 +1296,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1286,6 +1362,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   materialIndex: 1
   stepHandleType: 1
+--- !u!114 &487098485991064139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598443429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b58298ef83e694a4e8c1bbf8eb9965ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalMat1: {fileID: 2100000, guid: 3dfffd5a5d9d6c747ba693ecf451d511, type: 2}
+  originalMat2: {fileID: 2100000, guid: 9a47f97112907c14c922c5f56fc6f87a, type: 2}
+  highlightMat: {fileID: 2100000, guid: 1c5b6bbd158f6154bb5239aaba3273a9, type: 2}
 --- !u!1 &635621217
 GameObject:
   m_ObjectHideFlags: 0
@@ -1328,9 +1419,11 @@ GameObject:
   - component: {fileID: 908698304}
   - component: {fileID: 908698306}
   - component: {fileID: 908698305}
+  - component: {fileID: 1230153516906497236}
+  - component: {fileID: 7841377260721481444}
   m_Layer: 11
   m_Name: LadderSupport
-  m_TagString: Untagged
+  m_TagString: SearchingObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1371,6 +1464,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1382,6 +1476,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1394,6 +1489,34 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &1230153516906497236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 908698303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b58298ef83e694a4e8c1bbf8eb9965ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalMat1: {fileID: 2100000, guid: 3dfffd5a5d9d6c747ba693ecf451d511, type: 2}
+  originalMat2: {fileID: 0}
+  highlightMat: {fileID: 2100000, guid: 1c5b6bbd158f6154bb5239aaba3273a9, type: 2}
+--- !u!65 &7841377260721481444
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 908698303}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.50642246, y: 0.040000018, z: 0.19699223}
+  m_Center: {x: 0, y: 0.020000009, z: 0.08150395}
 --- !u!1 &1112739787
 GameObject:
   m_ObjectHideFlags: 0
@@ -1444,9 +1567,10 @@ GameObject:
   - component: {fileID: 1343496328}
   - component: {fileID: 1343496327}
   - component: {fileID: 6924207324863016114}
+  - component: {fileID: 2804153085750665202}
   m_Layer: 11
   m_Name: LadderStep (1)
-  m_TagString: Untagged
+  m_TagString: SearchingObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1487,6 +1611,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1499,6 +1624,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1564,6 +1690,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   materialIndex: 1
   stepHandleType: 1
+--- !u!114 &2804153085750665202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1343496325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b58298ef83e694a4e8c1bbf8eb9965ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalMat1: {fileID: 2100000, guid: 3dfffd5a5d9d6c747ba693ecf451d511, type: 2}
+  originalMat2: {fileID: 2100000, guid: 9a47f97112907c14c922c5f56fc6f87a, type: 2}
+  highlightMat: {fileID: 2100000, guid: 1c5b6bbd158f6154bb5239aaba3273a9, type: 2}
 --- !u!1 &1385964345
 GameObject:
   m_ObjectHideFlags: 0
@@ -1692,9 +1833,11 @@ GameObject:
   - component: {fileID: 1552162628}
   - component: {fileID: 1552162630}
   - component: {fileID: 1552162629}
+  - component: {fileID: 2192544250423724069}
+  - component: {fileID: 9036885685433911035}
   m_Layer: 11
   m_Name: LadderBottom
-  m_TagString: Untagged
+  m_TagString: SearchingObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1735,6 +1878,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1747,6 +1891,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1759,6 +1904,34 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &2192544250423724069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552162627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b58298ef83e694a4e8c1bbf8eb9965ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalMat1: {fileID: 2100000, guid: 3dfffd5a5d9d6c747ba693ecf451d511, type: 2}
+  originalMat2: {fileID: 2100000, guid: 9a47f97112907c14c922c5f56fc6f87a, type: 2}
+  highlightMat: {fileID: 2100000, guid: 1c5b6bbd158f6154bb5239aaba3273a9, type: 2}
+--- !u!65 &9036885685433911035
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552162627}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.50000006, y: 0.32000014, z: 0.2000001}
+  m_Center: {x: -0.000000029802322, y: -0.16000004, z: 0.07999997}
 --- !u!1 &1587916088
 GameObject:
   m_ObjectHideFlags: 0
@@ -1774,9 +1947,10 @@ GameObject:
   - component: {fileID: 1587916091}
   - component: {fileID: 1587916090}
   - component: {fileID: 6500132718107394406}
+  - component: {fileID: 4254559454229272483}
   m_Layer: 11
   m_Name: LadderStep (5)
-  m_TagString: Untagged
+  m_TagString: SearchingObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1817,6 +1991,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1829,6 +2004,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1894,6 +2070,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   materialIndex: 1
   stepHandleType: 1
+--- !u!114 &4254559454229272483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587916088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b58298ef83e694a4e8c1bbf8eb9965ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalMat1: {fileID: 2100000, guid: 3dfffd5a5d9d6c747ba693ecf451d511, type: 2}
+  originalMat2: {fileID: 2100000, guid: 9a47f97112907c14c922c5f56fc6f87a, type: 2}
+  highlightMat: {fileID: 2100000, guid: 1c5b6bbd158f6154bb5239aaba3273a9, type: 2}
 --- !u!1 &1757927514
 GameObject:
   m_ObjectHideFlags: 0
@@ -1939,9 +2130,11 @@ GameObject:
   - component: {fileID: 2008737036}
   - component: {fileID: 2008737038}
   - component: {fileID: 2008737037}
+  - component: {fileID: 3706911274861933556}
+  - component: {fileID: 2040643499552674597}
   m_Layer: 11
   m_Name: LadderSupport (1)
-  m_TagString: Untagged
+  m_TagString: SearchingObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1982,6 +2175,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1993,6 +2187,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -2005,6 +2200,34 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &3706911274861933556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008737035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b58298ef83e694a4e8c1bbf8eb9965ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalMat1: {fileID: 2100000, guid: 3dfffd5a5d9d6c747ba693ecf451d511, type: 2}
+  originalMat2: {fileID: 0}
+  highlightMat: {fileID: 2100000, guid: 1c5b6bbd158f6154bb5239aaba3273a9, type: 2}
+--- !u!65 &2040643499552674597
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008737035}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.50642246, y: 0.040000018, z: 0.19699223}
+  m_Center: {x: 0, y: 0.020000009, z: 0.08150395}
 --- !u!1 &1201822044245124
 GameObject:
   m_ObjectHideFlags: 0
@@ -2216,7 +2439,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1271466561111848}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1980459831, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_UiScaleMode: 0
@@ -2238,7 +2461,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1271466561111848}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreReversedGraphics: 1
@@ -2330,7 +2553,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1786005108638014}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -2348,6 +2571,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &1973926359408200
 GameObject:
   m_ObjectHideFlags: 0
@@ -2402,7 +2626,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1973926359408200}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -2420,3 +2644,4 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
