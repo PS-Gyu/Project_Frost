@@ -1,11 +1,6 @@
-﻿using Invector.vCamera;
-using Invector.vCharacterController;
+﻿using Invector.vCharacterController;
 using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.Remoting.Contexts;
 using UnityEngine;
-using UnityEngine.Rendering.LookDev;
-using UnityEngine.SocialPlatforms.GameCenter;
 using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
