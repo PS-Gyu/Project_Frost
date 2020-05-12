@@ -31,6 +31,7 @@ TagManager:
   - Interactable
   - AIAction
   - SearchingObj
+  - Interaction
   layers:
   - Default
   - TransparentFX
