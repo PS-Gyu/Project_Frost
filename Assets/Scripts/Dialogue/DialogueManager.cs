@@ -20,8 +20,6 @@ public class DialogueManager : MonoBehaviour
     int contextCount = 0; //대사 카운트
 
 
-
-
     void Update()
     {
         if (isDialogue)
@@ -42,9 +40,11 @@ public class DialogueManager : MonoBehaviour
                         if(++lineCount < dialogues.Length)
                         {
                             StartCoroutine(TypeWriter());
+                            
                         }
                         else
                         {
+                            GameObject.FindWithTag("Player").SetActive(true);
                             EndDialogue();
                         }
                     }
@@ -55,17 +55,21 @@ public class DialogueManager : MonoBehaviour
     }
     public void ShowDialogue(Dialogue[] p_dialogues)
     {
-        isDialogue = true;
+        GameObject.FindWithTag("Player").GetComponent<vThirdPersonController>().enabled = false;
+        GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().horizontalInput = new GenericInput("", "LeftAnalogHorizontal", "Horizontal");
+        GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().verticallInput = new GenericInput("", "LeftAnalogVertical", "Vertical");
+    isDialogue = true;
         txt_Dialogue.text = "";
         dialogues = p_dialogues;
-        GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().enabled = false;
         
         StartCoroutine(TypeWriter());
     }
 
     void EndDialogue()
     {
-        GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().enabled = true;
+        GameObject.FindWithTag("Player").GetComponent<vThirdPersonController>().enabled = true;
+        GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().horizontalInput = new GenericInput("Horizontal", "LeftAnalogHorizontal", "Horizontal");
+        GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().verticallInput = new GenericInput("Vertical", "LeftAnalogVertical", "Vertical");
         isDialogue = false;
         contextCount = 0;
         lineCount = 0;
@@ -77,7 +81,7 @@ public class DialogueManager : MonoBehaviour
     IEnumerator TypeWriter()
     {
         SettingUI(true);
-
+        
         string t_ReplaceText = dialogues[lineCount].contexts[contextCount];
         t_ReplaceText = t_ReplaceText.Replace("'", ",");
         //txt_Name.text = dialogues[lineCount].name;

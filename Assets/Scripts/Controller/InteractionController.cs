@@ -6,7 +6,7 @@ using UnityEngine;
 public class InteractionController : MonoBehaviour
 {
 
-    [SerializeField] Camera cam;
+    [SerializeField] Camera mainCam;
     RaycastHit hitInfo;
 
     bool isContact = false;
@@ -32,7 +32,7 @@ public class InteractionController : MonoBehaviour
         layerMask = ~layerMask;
         Vector3 t_MousePos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
 
-        if (Physics.Raycast(cam.ScreenPointToRay(t_MousePos), out hitInfo, 5, layerMask))
+        if (Physics.Raycast(mainCam.ScreenPointToRay(t_MousePos), out hitInfo, 5, layerMask))
         {
             Contact();
         }
@@ -81,6 +81,7 @@ public class InteractionController : MonoBehaviour
             isInteract = true;
             theDM.ShowDialogue(hitInfo.transform.GetComponent<InteractionEvent>().GetDialogue());
             hitInfo.transform.GetComponent<InteractionEvent>().isFirst = false;
+
         }
     }
 
