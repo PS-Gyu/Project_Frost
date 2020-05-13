@@ -18,8 +18,16 @@ ScriptedImporter:
     generateMipMaps: 1
     preset: " <sbspreset pkgurl=\"pkg://AFFbejeweled\" label=\"\" >\n  <presetinput
       identifier=\"$outputsize\" uid=\"4249468009\" type=\"8\" value=\"9,9\" />\n 
-      <presetinput identifier=\"material_2_diffuse_diffuse_Output_Color\" uid=\"2377491640\"
-      type=\"3\" value=\"1,1,1,1\" />\n  <presetinput identifier=\"material_2_base_color_base_color_Output_Color\"
+      <presetinput identifier=\"base_pattern_Input_Selection\" uid=\"2377267316\"
+      type=\"4\" value=\"4\" />\n  <presetinput identifier=\"base_pattern_Size\"
+      uid=\"2377469147\" type=\"0\" value=\"0.373\" />\n  <presetinput identifier=\"replication1_Number\"
+      uid=\"2377482149\" type=\"4\" value=\"9\" />\n  <presetinput identifier=\"replication1_Radius\"
+      uid=\"2377482168\" type=\"0\" value=\"0.151\" />\n  <presetinput identifier=\"replication2_Number\"
+      uid=\"2377481835\" type=\"4\" value=\"8\" />\n  <presetinput identifier=\"replication2_Radius\"
+      uid=\"2377481837\" type=\"0\" value=\"0.153\" />\n  <presetinput identifier=\"replication2_Pattern_Size\"
+      uid=\"2377481825\" type=\"1\" value=\"0.99,1\" />\n  <presetinput identifier=\"replication2_Pattern_Scale\"
+      uid=\"2377481827\" type=\"0\" value=\"0.62\" />\n  <presetinput identifier=\"material_2_diffuse_diffuse_Output_Color\"
+      uid=\"2377491640\" type=\"3\" value=\"1,1,1,1\" />\n  <presetinput identifier=\"material_2_base_color_base_color_Output_Color\"
       uid=\"2377491642\" type=\"3\" value=\"0,0,0,1\" />\n  <presetinput identifier=\"material_2_roughness_roughness_Output_Color\"
       uid=\"2377491646\" type=\"0\" value=\"0.234\" />\n  <presetinput identifier=\"material_2_specular_specular_Output_Color\"
       uid=\"2377491632\" type=\"3\" value=\"0.40566,0.40566,0.40566,1\" />\n  <presetinput
@@ -44,7 +52,7 @@ ScriptedImporter:
         texture: {fileID: -7454409331290091626, guid: 7ad8b6915c6c83b44b8f4d7c01baaf25,
           type: 3}
         scale: {x: 0.4, y: 0.4}
-        offset: {x: 0, y: 0}
+        offset: {x: 1.03, y: 0.57}
       - name: _BentNormalMap
         texture: {instanceID: 0}
         scale: {x: 1, y: 1}
@@ -383,11 +391,11 @@ ScriptedImporter:
         float: 1
       colors:
       - name: _BaseColor
-        color: {r: 1, g: 1, b: 1, a: 1}
+        color: {r: 0.4716981, g: 0.4716981, b: 0.4716981, a: 1}
       - name: _BaseColorMap_MipInfo
         color: {r: 0, g: 0, b: 0, a: 0}
       - name: _Color
-        color: {r: 1, g: 1, b: 1, a: 1}
+        color: {r: 0.4716981, g: 0.4716981, b: 0.4716981, a: 1}
       - name: _DiffusionProfileAsset
         color: {r: 0, g: 0, b: 0, a: 0}
       - name: _DoubleSidedConstants

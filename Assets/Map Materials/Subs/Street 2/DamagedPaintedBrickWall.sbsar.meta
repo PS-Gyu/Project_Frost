@@ -18,12 +18,18 @@ ScriptedImporter:
     generateMipMaps: 1
     preset: " <sbspreset pkgurl=\"pkg:///DamagedPaintedBrickWall\" label=\"\" >\n 
       <presetinput identifier=\"$outputsize\" uid=\"3447835908\" type=\"8\" value=\"9,9\"
-      />\n </sbspreset>\n"
+      />\n  <presetinput identifier=\"Paint_Color\" uid=\"3164830939\" type=\"3\"
+      value=\"0.160377,0.122142,0.0991011,1\" />\n  <presetinput identifier=\"Paint_Roughness\"
+      uid=\"3164829872\" type=\"0\" value=\"0.343\" />\n  <presetinput identifier=\"PaintIntegrity\"
+      uid=\"3164846680\" type=\"0\" value=\"0.506\" />\n  <presetinput identifier=\"CracksMaskIntensity\"
+      uid=\"3164798768\" type=\"0\" value=\"0.176\" />\n  <presetinput identifier=\"CracksNumber\"
+      uid=\"3164828058\" type=\"4\" value=\"41\" />\n  <presetinput identifier=\"Dirt_Color\"
+      uid=\"3164822519\" type=\"2\" value=\"0.141509,0.111941,0.0246974\" />\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
-      shaderKeywords: _BASECOLORMAP _DISPLACEMENT_LOCK_TILING_SCALE _HEIGHTMAP _MASKMAP
-        _NORMALMAP _NORMALMAP_TANGENT_SPACE _TESSELLATION_DISPLACEMENT _VERTEX_DISPLACEMENT_LOCK_OBJECT_SCALE
+      shaderKeywords: _BASECOLORMAP _DISPLACEMENT_LOCK_TILING_SCALE _HEIGHTMAP _MAPPING_TRIPLANAR
+        _MASKMAP _NORMALMAP _NORMALMAP_TANGENT_SPACE _TESSELLATION_DISPLACEMENT _VERTEX_DISPLACEMENT_LOCK_OBJECT_SCALE
       lightmapFlags: 4
       texEnvs:
       - name: _AnisotropyMap
@@ -33,7 +39,7 @@ ScriptedImporter:
       - name: _BaseColorMap
         texture: {fileID: -8371856922106705872, guid: 1f9ad11ac859b0e40ae907d63d49e04e,
           type: 3}
-        scale: {x: 1, y: 1}
+        scale: {x: 0.3, y: 0.3}
         offset: {x: 0, y: 0}
       - name: _BentNormalMap
         texture: {instanceID: 0}
@@ -175,7 +181,7 @@ ScriptedImporter:
       - name: _DistortionBlurBlendMode
         float: 0
       - name: _DistortionBlurDstBlend
-        float: 0
+        float: 1
       - name: _DistortionBlurRemapMax
         float: 1
       - name: _DistortionBlurRemapMin
@@ -183,17 +189,17 @@ ScriptedImporter:
       - name: _DistortionBlurScale
         float: 1
       - name: _DistortionBlurSrcBlend
-        float: 0
+        float: 1
       - name: _DistortionDepthTest
         float: 1
       - name: _DistortionDstBlend
-        float: 0
+        float: 1
       - name: _DistortionEnable
         float: 0
       - name: _DistortionScale
         float: 1
       - name: _DistortionSrcBlend
-        float: 0
+        float: 1
       - name: _DistortionVectorBias
         float: -1
       - name: _DistortionVectorScale
@@ -241,7 +247,7 @@ ScriptedImporter:
       - name: _HeightTessCenter
         float: 0.5
       - name: _InvTilingScale
-        float: 1
+        float: 3.3333333
       - name: _Ior
         float: 1
       - name: _IridescenceMask
@@ -301,13 +307,13 @@ ScriptedImporter:
       - name: _StencilWriteMask
         float: 3
       - name: _StencilWriteMaskDepth
-        float: 32
+        float: 48
       - name: _StencilWriteMaskDistortionVec
         float: 64
       - name: _StencilWriteMaskGBuffer
-        float: 3
+        float: 51
       - name: _StencilWriteMaskMV
-        float: 128
+        float: 176
       - name: _SubsurfaceMask
         float: 1
       - name: _SupportDecals
@@ -351,7 +357,7 @@ ScriptedImporter:
       - name: _TransparentWritingMotionVec
         float: 0
       - name: _UVBase
-        float: 0
+        float: 5
       - name: _UVDetail
         float: 0
       - name: _UVEmissive
@@ -361,22 +367,22 @@ ScriptedImporter:
       - name: _UseShadowThreshold
         float: 0
       - name: _ZTestDepthEqualForOpaque
-        float: 4
+        float: 3
       - name: _ZTestGBuffer
         float: 4
       - name: _ZTestModeDistortion
-        float: 8
+        float: 4
       - name: _ZTestTransparent
         float: 4
       - name: _ZWrite
         float: 1
       colors:
       - name: _BaseColor
-        color: {r: 1, g: 1, b: 1, a: 1}
+        color: {r: 0.5566038, g: 0.5566038, b: 0.5566038, a: 1}
       - name: _BaseColorMap_MipInfo
         color: {r: 0, g: 0, b: 0, a: 0}
       - name: _Color
-        color: {r: 1, g: 1, b: 1, a: 1}
+        color: {r: 0.5566038, g: 0.5566038, b: 0.5566038, a: 1}
       - name: _DiffusionProfileAsset
         color: {r: 0, g: 0, b: 0, a: 0}
       - name: _DoubleSidedConstants
@@ -400,7 +406,7 @@ ScriptedImporter:
       - name: _UVDetailsMappingMask
         color: {r: 1, g: 0, b: 0, a: 0}
       - name: _UVMappingMask
-        color: {r: 1, g: 0, b: 0, a: 0}
+        color: {r: 0, g: 0, b: 0, a: 0}
       - name: _UVMappingMaskEmissive
         color: {r: 1, g: 0, b: 0, a: 0}
     outputDescList:

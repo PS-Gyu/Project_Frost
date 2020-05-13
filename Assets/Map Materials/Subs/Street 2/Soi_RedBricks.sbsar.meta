@@ -17,13 +17,28 @@ ScriptedImporter:
     generateAllOutputs: 0
     generateMipMaps: 1
     preset: " <sbspreset pkgurl=\"pkg://Soi_RedBricks\" label=\"\" >\n  <presetinput
-      identifier=\"$outputsize\" uid=\"654490292\" type=\"8\" value=\"9,9\" />\n
-      </sbspreset>\n"
+      identifier=\"$outputsize\" uid=\"654490292\" type=\"8\" value=\"9,9\" />\n 
+      <presetinput identifier=\"Brick_Waviness\" uid=\"1356257985\" type=\"0\" value=\"0.589\"
+      />\n  <presetinput identifier=\"Damage_BigDamage\" uid=\"1355900505\" type=\"0\"
+      value=\"10.3\" />\n  <presetinput identifier=\"Damage_SmallDamage\" uid=\"1355903202\"
+      type=\"0\" value=\"3.8\" />\n  <presetinput identifier=\"Damage_Dimples\" uid=\"1355925840\"
+      type=\"0\" value=\"0.591\" />\n  <presetinput identifier=\"Damage_Dimples_Inset\"
+      uid=\"1355812937\" type=\"0\" value=\"0\" />\n  <presetinput identifier=\"Damage_Depth\"
+      uid=\"1355839051\" type=\"0\" value=\"0.384\" />\n  <presetinput identifier=\"Damage_Power\"
+      uid=\"1356015460\" type=\"0\" value=\"0.206\" />\n  <presetinput identifier=\"Pits_Amount\"
+      uid=\"1356026861\" type=\"0\" value=\"0.822\" />\n  <presetinput identifier=\"Brick_Color\"
+      uid=\"1356641075\" type=\"3\" value=\"0.273585,0.120511,0.0580723,1\" />\n 
+      <presetinput identifier=\"Bricik_Color_Variation\" uid=\"1356643663\" type=\"0\"
+      value=\"0.541\" />\n  <presetinput identifier=\"Paint_Color\" uid=\"1356648418\"
+      type=\"3\" value=\"0.481132,0.481132,0.481132,1\" />\n  <presetinput identifier=\"WaterDamage_Variation\"
+      uid=\"1356660125\" type=\"0\" value=\"0.589\" />\n  <presetinput identifier=\"Brick_Roughness_Variation\"
+      uid=\"1356830871\" type=\"0\" value=\"1\" />\n  <presetinput identifier=\"Brick_Roughness\"
+      uid=\"1356835795\" type=\"0\" value=\"0.85\" />\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
-      shaderKeywords: _BASECOLORMAP _DISPLACEMENT_LOCK_TILING_SCALE _HEIGHTMAP _MASKMAP
-        _NORMALMAP _NORMALMAP_TANGENT_SPACE _TESSELLATION_DISPLACEMENT _VERTEX_DISPLACEMENT_LOCK_OBJECT_SCALE
+      shaderKeywords: _BASECOLORMAP _DISPLACEMENT_LOCK_TILING_SCALE _HEIGHTMAP _MAPPING_TRIPLANAR
+        _MASKMAP _NORMALMAP _NORMALMAP_TANGENT_SPACE _TESSELLATION_DISPLACEMENT _VERTEX_DISPLACEMENT_LOCK_OBJECT_SCALE
       lightmapFlags: 4
       texEnvs:
       - name: _AnisotropyMap
@@ -33,7 +48,7 @@ ScriptedImporter:
       - name: _BaseColorMap
         texture: {fileID: -8707581243987610920, guid: 1108c5d1615fe3646a3a20c56c178cd2,
           type: 3}
-        scale: {x: 1, y: 1}
+        scale: {x: 0.3, y: 0.3}
         offset: {x: 0, y: 0}
       - name: _BentNormalMap
         texture: {instanceID: 0}
@@ -175,7 +190,7 @@ ScriptedImporter:
       - name: _DistortionBlurBlendMode
         float: 0
       - name: _DistortionBlurDstBlend
-        float: 0
+        float: 1
       - name: _DistortionBlurRemapMax
         float: 1
       - name: _DistortionBlurRemapMin
@@ -183,17 +198,17 @@ ScriptedImporter:
       - name: _DistortionBlurScale
         float: 1
       - name: _DistortionBlurSrcBlend
-        float: 0
+        float: 1
       - name: _DistortionDepthTest
         float: 1
       - name: _DistortionDstBlend
-        float: 0
+        float: 1
       - name: _DistortionEnable
         float: 0
       - name: _DistortionScale
         float: 1
       - name: _DistortionSrcBlend
-        float: 0
+        float: 1
       - name: _DistortionVectorBias
         float: -1
       - name: _DistortionVectorScale
@@ -241,7 +256,7 @@ ScriptedImporter:
       - name: _HeightTessCenter
         float: 0.5
       - name: _InvTilingScale
-        float: 1
+        float: 3.3333333
       - name: _Ior
         float: 1
       - name: _IridescenceMask
@@ -301,13 +316,13 @@ ScriptedImporter:
       - name: _StencilWriteMask
         float: 3
       - name: _StencilWriteMaskDepth
-        float: 32
+        float: 48
       - name: _StencilWriteMaskDistortionVec
         float: 64
       - name: _StencilWriteMaskGBuffer
-        float: 3
+        float: 51
       - name: _StencilWriteMaskMV
-        float: 128
+        float: 176
       - name: _SubsurfaceMask
         float: 1
       - name: _SupportDecals
@@ -351,7 +366,7 @@ ScriptedImporter:
       - name: _TransparentWritingMotionVec
         float: 0
       - name: _UVBase
-        float: 0
+        float: 5
       - name: _UVDetail
         float: 0
       - name: _UVEmissive
@@ -361,11 +376,11 @@ ScriptedImporter:
       - name: _UseShadowThreshold
         float: 0
       - name: _ZTestDepthEqualForOpaque
-        float: 4
+        float: 3
       - name: _ZTestGBuffer
         float: 4
       - name: _ZTestModeDistortion
-        float: 8
+        float: 4
       - name: _ZTestTransparent
         float: 4
       - name: _ZWrite
@@ -400,7 +415,7 @@ ScriptedImporter:
       - name: _UVDetailsMappingMask
         color: {r: 1, g: 0, b: 0, a: 0}
       - name: _UVMappingMask
-        color: {r: 1, g: 0, b: 0, a: 0}
+        color: {r: 0, g: 0, b: 0, a: 0}
       - name: _UVMappingMaskEmissive
         color: {r: 1, g: 0, b: 0, a: 0}
     outputDescList:
