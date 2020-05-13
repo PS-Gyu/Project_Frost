@@ -17,7 +17,8 @@ ScriptedImporter:
     generateAllOutputs: 0
     generateMipMaps: 1
     preset: " <sbspreset pkgurl=\"pkg://WallTech\" label=\"\" >\n  <presetinput identifier=\"$outputsize\"
-      uid=\"3409198429\" type=\"8\" value=\"9,9\" />\n </sbspreset>\n"
+      uid=\"3409198429\" type=\"8\" value=\"9,9\" />\n  <presetinput identifier=\"RandomMaskPanel\"
+      uid=\"3156571785\" type=\"0\" value=\"0.464\" />\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}

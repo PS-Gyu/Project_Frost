@@ -19,8 +19,8 @@ ScriptedImporter:
     preset: " <sbspreset pkgurl=\"pkg://metal_iron_plates\" label=\"\" >\n  <presetinput
       identifier=\"$outputsize\" uid=\"2618511034\" type=\"8\" value=\"9,9\" />\n 
       <presetinput identifier=\"normal_intensity\" uid=\"3784445060\" type=\"0\"
-      value=\"0.593\" />\n  <presetinput identifier=\"metal_roughness\" uid=\"3784444252\"
-      type=\"0\" value=\"0.171\" />\n </sbspreset>\n"
+      value=\"0.601\" />\n  <presetinput identifier=\"metal_roughness\" uid=\"3784444252\"
+      type=\"0\" value=\"0.185\" />\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}

@@ -22,7 +22,8 @@ ScriptedImporter:
       value=\"14\" />\n  <presetinput identifier=\"outer_radius\" uid=\"4225778900\"
       type=\"0\" value=\"0.64\" />\n  <presetinput identifier=\"color_1\" uid=\"4225893903\"
       type=\"3\" value=\"0.915094,0.915094,0.915094,1\" />\n  <presetinput identifier=\"mortar_roughness\"
-      uid=\"4225920261\" type=\"0\" value=\"0.711\" />\n </sbspreset>\n"
+      uid=\"4225920261\" type=\"0\" value=\"0.711\" />\n  <presetinput identifier=\"mortar_color\"
+      uid=\"4226141801\" type=\"3\" value=\"0.707547,0.707547,0.707547,1\" />\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
