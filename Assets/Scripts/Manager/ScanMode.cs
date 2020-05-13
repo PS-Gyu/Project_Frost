@@ -2,6 +2,7 @@
 using Cinemachine.PostFX;
 using Invector.vCamera;
 using Invector.vCharacterController;
+using Invector.vCharacterController.vActions;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -21,6 +22,9 @@ public class ScanMode : MonoBehaviour
     [SerializeField] bool isScan = false;
     [SerializeField] bool isEnd = false;
 
+    bool isUsingLad = false;
+    bool isStrafe = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,24 +34,31 @@ public class ScanMode : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        isUsingLad = GameObject.FindWithTag("Player").GetComponent<vLadderAction>().isUsingLadder;
         
         if (!isScan)
         {
             if (!isEnd)
             {
-                
                 if (Input.GetKeyDown(KeyCode.Tab))
                 {
                     isScan = true;
                     StartCoroutine(ScanStart());
                 }
             }
+        }else if(isUsingLad && isStrafe)
+        {
+            GameObject.FindWithTag("Player").GetComponent<vThirdPersonController>().Strafe();
+            isStrafe = !isStrafe;
+        }else if(!isUsingLad && isScan && !isStrafe)
+        {
+            GameObject.FindWithTag("Player").GetComponent<vThirdPersonController>().Strafe();
+            isStrafe = !isStrafe;
         }
         else
         {
             if (isEnd)
             {
-                
                 if (Input.GetKeyDown(KeyCode.Tab))
                 {
                     isScan = false;
@@ -59,7 +70,11 @@ public class ScanMode : MonoBehaviour
 
     IEnumerator ScanStart()
     {
-        GameObject.FindWithTag("Player").GetComponent<vThirdPersonController>().Strafe();
+        if (isStrafe == false)
+        {
+            GameObject.FindWithTag("Player").GetComponent<vThirdPersonController>().Strafe();
+            isStrafe = !isStrafe;
+        }
         doom.GetComponent<Animation>().clip = start;
         pp.GetComponent<Volume>().profile = p1;
         doom.GetComponent<Animation>().Play();
@@ -68,7 +83,11 @@ public class ScanMode : MonoBehaviour
     }
     IEnumerator ScanEnd()
     {
-        GameObject.FindWithTag("Player").GetComponent<vThirdPersonController>().Strafe();
+        if (isStrafe == true)
+        {
+            GameObject.FindWithTag("Player").GetComponent<vThirdPersonController>().Strafe();
+            isStrafe = !isStrafe;
+        }
         doom.GetComponent<Animation>().clip = end;
         doom.GetComponent<Animation>().Play();
         yield return new WaitForSeconds(1.0f);
@@ -76,5 +95,4 @@ public class ScanMode : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         isEnd = false;
     }
-
 }

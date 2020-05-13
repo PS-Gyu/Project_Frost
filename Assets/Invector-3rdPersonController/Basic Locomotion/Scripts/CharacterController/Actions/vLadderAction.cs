@@ -51,13 +51,13 @@ namespace Invector.vCharacterController.vActions
         protected float currentClimbSpeed;
         [vReadOnly(false)]
         [SerializeField]
-        protected bool isUsingLadder;
+        public bool isUsingLadder;
         [vReadOnly(false)]
         [SerializeField]
-        protected bool isEnterLadder;
+        public bool isEnterLadder;
         [vReadOnly(false)]
         [SerializeField]
-        protected bool isExitingLadder;
+        public bool isExitingLadder;
         [vReadOnly(false)]
         [SerializeField]
         protected bool triggerEnterOnce;
@@ -136,6 +136,7 @@ namespace Invector.vCharacterController.vActions
         void UseLadder()
         {
             if (!isUsingLadder) return;
+            
 
             // update the base layer to know what animations are being played
             tpInput.cc.AnimatorLayerControl();
