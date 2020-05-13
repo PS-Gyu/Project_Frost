@@ -20,7 +20,13 @@ ScriptedImporter:
       identifier=\"$outputsize\" uid=\"4257634963\" type=\"8\" value=\"9,9\" />\n 
       <presetinput identifier=\"color_selection\" uid=\"2391199343\" type=\"4\" value=\"4\"
       />\n  <presetinput identifier=\"custom_color\" uid=\"2391198189\" type=\"2\"
-      value=\"0.849057,0.849057,0.849057\" />\n </sbspreset>\n"
+      value=\"1,1,1\" />\n  <presetinput identifier=\"mask_selection\" uid=\"2391661220\"
+      type=\"4\" value=\"3\" />\n  <presetinput identifier=\"dots_number_x\" uid=\"2391423045\"
+      type=\"4\" value=\"124\" />\n  <presetinput identifier=\"dots_number_y\" uid=\"2391423089\"
+      type=\"4\" value=\"127\" />\n  <presetinput identifier=\"dots_scale\" uid=\"2391414435\"
+      type=\"0\" value=\"0.134\" />\n  <presetinput identifier=\"global_dirt\" uid=\"2391608795\"
+      type=\"0\" value=\"0.266\" />\n  <presetinput identifier=\"roughness_value\"
+      uid=\"2391642707\" type=\"0\" value=\"0.109\" />\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}

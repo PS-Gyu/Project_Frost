@@ -1,0 +1,2257 @@
+fileFormatVersion: 2
+guid: 67753f54d3d3e0a4592051cd924b0d73
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 232528478, guid: 43a8bbf65be290d44ba52b94476242b9, type: 3}
+  version: 24
+  projectContext: 1
+  mGraphInstanceData:
+  - graphLabel: Tech_Floor
+    prototypeName: Tech_Floor
+    graphDescIndex: 0
+    generateAllOutputs: 0
+    generateMipMaps: 1
+    preset: " <sbspreset pkgurl=\"pkg://Tech_Floor\" label=\"\" >\n  <presetinput
+      identifier=\"$outputsize\" uid=\"981451006\" type=\"8\" value=\"9,9\" />\n 
+      <presetinput identifier=\"paintColor\" uid=\"1266993416\" type=\"3\" value=\"1,1,1,1\"
+      />\n  <presetinput identifier=\"meshColor\" uid=\"1266993573\" type=\"3\" value=\"0.377358,0.374307,0.372019,1\"
+      />\n  <presetinput identifier=\"metalColor\" uid=\"1266993187\" type=\"3\"
+      value=\"0.764151,0.764151,0.764151,1\" />\n  <presetinput identifier=\"plateRough\"
+      uid=\"1266995121\" type=\"0\" value=\"0.574\" />\n  <presetinput identifier=\"plasticRough\"
+      uid=\"1266994735\" type=\"0\" value=\"0.56\" />\n  <presetinput identifier=\"wear_level\"
+      uid=\"1266993928\" type=\"0\" value=\"0.931\" />\n  <presetinput identifier=\"wear_contrast\"
+      uid=\"1266993835\" type=\"0\" value=\"0.404\" />\n  <presetinput identifier=\"grunge_amount\"
+      uid=\"1266994511\" type=\"0\" value=\"0.386\" />\n  <presetinput identifier=\"intersticeWidth\"
+      uid=\"1266978792\" type=\"0\" value=\"3.4\" />\n  <presetinput identifier=\"bevelDistance\"
+      uid=\"1266976250\" type=\"0\" value=\"0.098\" />\n </sbspreset>\n"
+    shaderName: HDRP/LitTessellation
+    materialProperties:
+      shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
+      shaderKeywords: _BASECOLORMAP _DISPLACEMENT_LOCK_TILING_SCALE _HEIGHTMAP _MAPPING_TRIPLANAR
+        _MASKMAP _NORMALMAP _NORMALMAP_TANGENT_SPACE _TESSELLATION_DISPLACEMENT _VERTEX_DISPLACEMENT_LOCK_OBJECT_SCALE
+      lightmapFlags: 4
+      texEnvs:
+      - name: _AnisotropyMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _BaseColorMap
+        texture: {fileID: 7643175260664100030, guid: 67753f54d3d3e0a4592051cd924b0d73,
+          type: 3}
+        scale: {x: 0.3, y: 0.3}
+        offset: {x: 0, y: 0}
+      - name: _BentNormalMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _BentNormalMapOS
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _CoatMaskMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _DetailMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _DistortionVectorMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _EmissiveColorMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _HeightMap
+        texture: {fileID: 7719125319316526195, guid: 67753f54d3d3e0a4592051cd924b0d73,
+          type: 3}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _IridescenceMaskMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _IridescenceThicknessMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _MainTex
+        texture: {fileID: 7643175260664100030, guid: 67753f54d3d3e0a4592051cd924b0d73,
+          type: 3}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _MaskMap
+        texture: {fileID: -3405664905850250886, guid: 67753f54d3d3e0a4592051cd924b0d73,
+          type: 3}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _NormalMap
+        texture: {fileID: -2478206605850142155, guid: 67753f54d3d3e0a4592051cd924b0d73,
+          type: 3}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _NormalMapOS
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _SpecularColorMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _SubsurfaceMaskMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _TangentMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _TangentMapOS
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _ThicknessMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _TransmittanceColorMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      floats:
+      - name: _AORemapMax
+        float: 1
+      - name: _AORemapMin
+        float: 0
+      - name: _ATDistance
+        float: 1
+      - name: _AddPrecomputedVelocity
+        float: 0
+      - name: _AlbedoAffectEmissive
+        float: 0
+      - name: _AlphaCutoff
+        float: 0.5
+      - name: _AlphaCutoffEnable
+        float: 0
+      - name: _AlphaCutoffPostpass
+        float: 0.5
+      - name: _AlphaCutoffPrepass
+        float: 0.5
+      - name: _AlphaCutoffShadow
+        float: 0.5
+      - name: _AlphaDstBlend
+        float: 0
+      - name: _AlphaSrcBlend
+        float: 1
+      - name: _Anisotropy
+        float: 0
+      - name: _BlendMode
+        float: 0
+      - name: _CoatMask
+        float: 0
+      - name: _CullMode
+        float: 2
+      - name: _CullModeForward
+        float: 2
+      - name: _Cutoff
+        float: 0.5
+      - name: _DepthOffsetEnable
+        float: 0
+      - name: _DetailAlbedoScale
+        float: 1
+      - name: _DetailNormalScale
+        float: 1
+      - name: _DetailSmoothnessScale
+        float: 1
+      - name: _DiffusionProfile
+        float: 0
+      - name: _DiffusionProfileHash
+        float: 0
+      - name: _DisplacementLockObjectScale
+        float: 1
+      - name: _DisplacementLockTilingScale
+        float: 1
+      - name: _DisplacementMode
+        float: 3
+      - name: _DistortionBlendMode
+        float: 0
+      - name: _DistortionBlurBlendMode
+        float: 0
+      - name: _DistortionBlurDstBlend
+        float: 1
+      - name: _DistortionBlurRemapMax
+        float: 1
+      - name: _DistortionBlurRemapMin
+        float: 0
+      - name: _DistortionBlurScale
+        float: 1
+      - name: _DistortionBlurSrcBlend
+        float: 1
+      - name: _DistortionDepthTest
+        float: 1
+      - name: _DistortionDstBlend
+        float: 1
+      - name: _DistortionEnable
+        float: 0
+      - name: _DistortionScale
+        float: 1
+      - name: _DistortionSrcBlend
+        float: 1
+      - name: _DistortionVectorBias
+        float: -1
+      - name: _DistortionVectorScale
+        float: 2
+      - name: _DoubleSidedEnable
+        float: 0
+      - name: _DoubleSidedNormalMode
+        float: 1
+      - name: _DstBlend
+        float: 0
+      - name: _EmissiveColorMode
+        float: 1
+      - name: _EmissiveExposureWeight
+        float: 1
+      - name: _EmissiveIntensity
+        float: 1
+      - name: _EmissiveIntensityUnit
+        float: 0
+      - name: _EnableBlendModePreserveSpecularLighting
+        float: 1
+      - name: _EnableFogOnTransparent
+        float: 1
+      - name: _EnableGeometricSpecularAA
+        float: 0
+      - name: _EnergyConservingSpecularColor
+        float: 1
+      - name: _HdrpVersion
+        float: 2
+      - name: _HeightAmplitude
+        float: 0.02
+      - name: _HeightCenter
+        float: 0.5
+      - name: _HeightMapParametrization
+        float: 0
+      - name: _HeightMax
+        float: 1
+      - name: _HeightMin
+        float: -1
+      - name: _HeightOffset
+        float: 0
+      - name: _HeightPoMAmplitude
+        float: 2
+      - name: _HeightTessAmplitude
+        float: 2
+      - name: _HeightTessCenter
+        float: 0.5
+      - name: _InvTilingScale
+        float: 3.3333333
+      - name: _Ior
+        float: 1
+      - name: _IridescenceMask
+        float: 1
+      - name: _IridescenceThickness
+        float: 1
+      - name: _LinkDetailsWithBase
+        float: 1
+      - name: _MaterialID
+        float: 1
+      - name: _Metallic
+        float: 1
+      - name: _NormalMapSpace
+        float: 0
+      - name: _NormalScale
+        float: 1
+      - name: _PPDLodThreshold
+        float: 5
+      - name: _PPDMaxSamples
+        float: 15
+      - name: _PPDMinSamples
+        float: 5
+      - name: _PPDPrimitiveLength
+        float: 1
+      - name: _PPDPrimitiveWidth
+        float: 1
+      - name: _ReceivesSSR
+        float: 1
+      - name: _RefractionModel
+        float: 0
+      - name: _SSRefractionProjectionModel
+        float: 0
+      - name: _Smoothness
+        float: 0.5
+      - name: _SmoothnessRemapMax
+        float: 1
+      - name: _SmoothnessRemapMin
+        float: 0
+      - name: _SpecularAAScreenSpaceVariance
+        float: 0.1
+      - name: _SpecularAAThreshold
+        float: 0.2
+      - name: _SpecularOcclusionMode
+        float: 1
+      - name: _SrcBlend
+        float: 1
+      - name: _StencilRef
+        float: 2
+      - name: _StencilRefDepth
+        float: 0
+      - name: _StencilRefDistortionVec
+        float: 64
+      - name: _StencilRefGBuffer
+        float: 2
+      - name: _StencilRefMV
+        float: 128
+      - name: _StencilWriteMask
+        float: 3
+      - name: _StencilWriteMaskDepth
+        float: 48
+      - name: _StencilWriteMaskDistortionVec
+        float: 64
+      - name: _StencilWriteMaskGBuffer
+        float: 51
+      - name: _StencilWriteMaskMV
+        float: 176
+      - name: _SubsurfaceMask
+        float: 1
+      - name: _SupportDecals
+        float: 1
+      - name: _SurfaceType
+        float: 0
+      - name: _TessellationBackFaceCullEpsilon
+        float: -0.25
+      - name: _TessellationFactor
+        float: 4
+      - name: _TessellationFactorMaxDistance
+        float: 50
+      - name: _TessellationFactorMinDistance
+        float: 20
+      - name: _TessellationFactorTriangleSize
+        float: 100
+      - name: _TessellationMode
+        float: 0
+      - name: _TessellationShapeFactor
+        float: 0.75
+      - name: _TexWorldScale
+        float: 1
+      - name: _TexWorldScaleEmissive
+        float: 1
+      - name: _Thickness
+        float: 1
+      - name: _ThicknessMultiplier
+        float: 1
+      - name: _TransmissionEnable
+        float: 1
+      - name: _TransparentBackfaceEnable
+        float: 0
+      - name: _TransparentCullMode
+        float: 2
+      - name: _TransparentDepthPostpassEnable
+        float: 0
+      - name: _TransparentDepthPrepassEnable
+        float: 0
+      - name: _TransparentSortPriority
+        float: 0
+      - name: _TransparentWritingMotionVec
+        float: 0
+      - name: _UVBase
+        float: 5
+      - name: _UVDetail
+        float: 0
+      - name: _UVEmissive
+        float: 0
+      - name: _UseEmissiveIntensity
+        float: 0
+      - name: _UseShadowThreshold
+        float: 0
+      - name: _ZTestDepthEqualForOpaque
+        float: 3
+      - name: _ZTestGBuffer
+        float: 4
+      - name: _ZTestModeDistortion
+        float: 4
+      - name: _ZTestTransparent
+        float: 4
+      - name: _ZWrite
+        float: 1
+      colors:
+      - name: _BaseColor
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - name: _BaseColorMap_MipInfo
+        color: {r: 0, g: 0, b: 0, a: 0}
+      - name: _Color
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - name: _DiffusionProfileAsset
+        color: {r: 0, g: 0, b: 0, a: 0}
+      - name: _DoubleSidedConstants
+        color: {r: 1, g: 1, b: -1, a: 0}
+      - name: _EmissionColor
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - name: _EmissiveColor
+        color: {r: 0, g: 0, b: 0, a: 1}
+      - name: _EmissiveColorLDR
+        color: {r: 0, g: 0, b: 0, a: 1}
+      - name: _InvPrimScale
+        color: {r: 1, g: 1, b: 0, a: 0}
+      - name: _IridescenceThicknessRemap
+        color: {r: 0, g: 1, b: 0, a: 0}
+      - name: _SpecularColor
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - name: _ThicknessRemap
+        color: {r: 0, g: 1, b: 0, a: 0}
+      - name: _TransmittanceColor
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - name: _UVDetailsMappingMask
+        color: {r: 1, g: 0, b: 0, a: 0}
+      - name: _UVMappingMask
+        color: {r: 0, g: 0, b: 0, a: 0}
+      - name: _UVMappingMaskEmissive
+        color: {r: 1, g: 0, b: 0, a: 0}
+    outputDescList:
+    - outputName: baseColor
+      identifier: basecolor
+      usageName: baseColor
+      channelStr: baseColor
+      label: Base Color
+      usage: 1
+      bImage: 1
+      bNumerical: 0
+      bLinear: 0
+    - outputName: normal
+      identifier: normal
+      usageName: normal
+      channelStr: normal
+      label: Normal
+      usage: 7
+      bImage: 1
+      bNumerical: 0
+      bLinear: 1
+    - outputName: roughness
+      identifier: roughness
+      usageName: roughness
+      channelStr: roughness
+      label: Roughness
+      usage: 15
+      bImage: 1
+      bNumerical: 0
+      bLinear: 1
+    - outputName: metallic
+      identifier: metallic
+      usageName: metallic
+      channelStr: metallic
+      label: Metallic
+      usage: 34
+      bImage: 1
+      bNumerical: 0
+      bLinear: 1
+    - outputName: height
+      identifier: height
+      usageName: height
+      channelStr: height
+      label: height
+      usage: 9
+      bImage: 1
+      bNumerical: 0
+      bLinear: 1
+    - outputName: ambientOcclusion
+      identifier: ambientOcclusion
+      usageName: ambientOcclusion
+      channelStr: ambientOcclusion
+      label: ambientOcclusion
+      usage: 5
+      bImage: 1
+      bNumerical: 0
+      bLinear: 1
+    - outputName: mask
+      identifier: mask
+      usageName: mask
+      channelStr: mask
+      label: Mask
+      usage: 6
+      bImage: 1
+      bNumerical: 0
+      bLinear: 1
+    texturePackingList:
+    - targetName: baseColor
+      components:
+      - sourceName: baseColor
+        from: 0
+        to: 3
+    - targetName: normal
+      components:
+      - sourceName: normal
+        from: 0
+        to: 3
+    - targetName: roughness
+      components:
+      - sourceName: roughness
+        from: 0
+        to: 3
+    - targetName: metallic
+      components:
+      - sourceName: smoothness
+        from: 0
+        to: 3
+    - targetName: height
+      components:
+      - sourceName: height
+        from: 0
+        to: 3
+    - targetName: ambientOcclusion
+      components:
+      - sourceName: ambientOcclusion
+        from: 0
+        to: 3
+    - targetName: mask
+      components:
+      - sourceName: metallic
+        from: 0
+        to: 0
+      - sourceName: ambientOcclusion
+        from: 0
+        to: 1
+      - sourceName: mask
+        from: 0
+        to: 2
+      - sourceName: smoothness
+        from: 0
+        to: 3
+    textureParameters:
+    - textureName: Tech_Floor - baseColor
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Tech_Floor - normal
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Tech_Floor - roughness
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Tech_Floor - metallic
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Tech_Floor - height
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Tech_Floor - ambientOcclusion
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Tech_Floor - mask
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    colorSpaceList: []
+    inputTextureMap: []
+    targetSettingList:
+    - label: Default
+      bOverride: 0
+      bLockRatio: 1
+      textureWidth: 512
+      textureHeight: 512
+      textureFormatMode: 0
+      normalCompressed: 0
+      bGenerateOnLoad: 1
+    material: {fileID: 7916765153335693230, guid: 67753f54d3d3e0a4592051cd924b0d73,
+      type: 3}
+    generatedTextures:
+    - {fileID: 7643175260664100030, guid: 67753f54d3d3e0a4592051cd924b0d73, type: 3}
+    - {fileID: -2478206605850142155, guid: 67753f54d3d3e0a4592051cd924b0d73, type: 3}
+    - {fileID: 7719125319316526195, guid: 67753f54d3d3e0a4592051cd924b0d73, type: 3}
+    - {fileID: -3405664905850250886, guid: 67753f54d3d3e0a4592051cd924b0d73, type: 3}
+  - graphLabel: Tech_Floor_1
+    prototypeName: Tech_Floor
+    graphDescIndex: 0
+    generateAllOutputs: 0
+    generateMipMaps: 1
+    preset: " <sbspreset pkgurl=\"pkg://Tech_Floor\" label=\"\" >\n  <presetinput
+      identifier=\"$outputsize\" uid=\"981451006\" type=\"8\" value=\"9,9\" />\n 
+      <presetinput identifier=\"paintColor\" uid=\"1266993416\" type=\"3\" value=\"1,1,1,1\"
+      />\n  <presetinput identifier=\"meshColor\" uid=\"1266993573\" type=\"3\" value=\"1,1,1,1\"
+      />\n  <presetinput identifier=\"metalColor\" uid=\"1266993187\" type=\"3\"
+      value=\"1,1,1,1\" />\n  <presetinput identifier=\"plateRough\" uid=\"1266995121\"
+      type=\"0\" value=\"0.739\" />\n  <presetinput identifier=\"plasticRough\" uid=\"1266994735\"
+      type=\"0\" value=\"0.629\" />\n  <presetinput identifier=\"wear_level\" uid=\"1266993928\"
+      type=\"0\" value=\"0.739\" />\n  <presetinput identifier=\"wear_contrast\"
+      uid=\"1266993835\" type=\"0\" value=\"0.528\" />\n  <presetinput identifier=\"grunge_amount\"
+      uid=\"1266994511\" type=\"0\" value=\"0.478\" />\n  <presetinput identifier=\"grunge_scale\"
+      uid=\"1266994611\" type=\"4\" value=\"4\" />\n  <presetinput identifier=\"intersticeWidth\"
+      uid=\"1266978792\" type=\"0\" value=\"1\" />\n  <presetinput identifier=\"Nb_X\"
+      uid=\"1266975213\" type=\"4\" value=\"0\" />\n  <presetinput identifier=\"Nb_Y\"
+      uid=\"1266975732\" type=\"4\" value=\"0\" />\n  <presetinput identifier=\"bevelDistance\"
+      uid=\"1266976250\" type=\"0\" value=\"-0.006\" />\n  <presetinput identifier=\"insertBool\"
+      uid=\"1267023638\" type=\"4\" value=\"0\" />\n  <presetinput identifier=\"grooveBool\"
+      uid=\"1267020059\" type=\"4\" value=\"0\" />\n  <presetinput identifier=\"pinBool\"
+      uid=\"1267020576\" type=\"4\" value=\"0\" />\n </sbspreset>\n"
+    shaderName: HDRP/LitTessellation
+    materialProperties:
+      shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
+      shaderKeywords: _BASECOLORMAP _DISPLACEMENT_LOCK_TILING_SCALE _HEIGHTMAP _MAPPING_TRIPLANAR
+        _MASKMAP _NORMALMAP _NORMALMAP_TANGENT_SPACE _TESSELLATION_DISPLACEMENT _VERTEX_DISPLACEMENT_LOCK_OBJECT_SCALE
+      lightmapFlags: 4
+      texEnvs:
+      - name: _AnisotropyMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _BaseColorMap
+        texture: {fileID: 3011112185316710604, guid: 67753f54d3d3e0a4592051cd924b0d73,
+          type: 3}
+        scale: {x: 0.1, y: 0.1}
+        offset: {x: 0, y: 0}
+      - name: _BentNormalMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _BentNormalMapOS
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _CoatMaskMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _DetailMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _DistortionVectorMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _EmissiveColorMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _HeightMap
+        texture: {fileID: -6585949431021948169, guid: 67753f54d3d3e0a4592051cd924b0d73,
+          type: 3}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _IridescenceMaskMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _IridescenceThicknessMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _MainTex
+        texture: {fileID: 3011112185316710604, guid: 67753f54d3d3e0a4592051cd924b0d73,
+          type: 3}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _MaskMap
+        texture: {fileID: 1239130274146867207, guid: 67753f54d3d3e0a4592051cd924b0d73,
+          type: 3}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _NormalMap
+        texture: {fileID: -7130056990640502872, guid: 67753f54d3d3e0a4592051cd924b0d73,
+          type: 3}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _NormalMapOS
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _SpecularColorMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _SubsurfaceMaskMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _TangentMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _TangentMapOS
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _ThicknessMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _TransmittanceColorMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      floats:
+      - name: _AORemapMax
+        float: 1
+      - name: _AORemapMin
+        float: 0.46851385
+      - name: _ATDistance
+        float: 1
+      - name: _AddPrecomputedVelocity
+        float: 0
+      - name: _AlbedoAffectEmissive
+        float: 0
+      - name: _AlphaCutoff
+        float: 0.5
+      - name: _AlphaCutoffEnable
+        float: 0
+      - name: _AlphaCutoffPostpass
+        float: 0.5
+      - name: _AlphaCutoffPrepass
+        float: 0.5
+      - name: _AlphaCutoffShadow
+        float: 0.5
+      - name: _AlphaDstBlend
+        float: 0
+      - name: _AlphaSrcBlend
+        float: 1
+      - name: _Anisotropy
+        float: 0
+      - name: _BlendMode
+        float: 0
+      - name: _CoatMask
+        float: 0
+      - name: _CullMode
+        float: 2
+      - name: _CullModeForward
+        float: 2
+      - name: _Cutoff
+        float: 0.5
+      - name: _DepthOffsetEnable
+        float: 0
+      - name: _DetailAlbedoScale
+        float: 1
+      - name: _DetailNormalScale
+        float: 1
+      - name: _DetailSmoothnessScale
+        float: 1
+      - name: _DiffusionProfile
+        float: 0
+      - name: _DiffusionProfileHash
+        float: 0
+      - name: _DisplacementLockObjectScale
+        float: 1
+      - name: _DisplacementLockTilingScale
+        float: 1
+      - name: _DisplacementMode
+        float: 3
+      - name: _DistortionBlendMode
+        float: 0
+      - name: _DistortionBlurBlendMode
+        float: 0
+      - name: _DistortionBlurDstBlend
+        float: 1
+      - name: _DistortionBlurRemapMax
+        float: 1
+      - name: _DistortionBlurRemapMin
+        float: 0
+      - name: _DistortionBlurScale
+        float: 1
+      - name: _DistortionBlurSrcBlend
+        float: 1
+      - name: _DistortionDepthTest
+        float: 1
+      - name: _DistortionDstBlend
+        float: 1
+      - name: _DistortionEnable
+        float: 0
+      - name: _DistortionScale
+        float: 1
+      - name: _DistortionSrcBlend
+        float: 1
+      - name: _DistortionVectorBias
+        float: -1
+      - name: _DistortionVectorScale
+        float: 2
+      - name: _DoubleSidedEnable
+        float: 0
+      - name: _DoubleSidedNormalMode
+        float: 1
+      - name: _DstBlend
+        float: 0
+      - name: _EmissiveColorMode
+        float: 1
+      - name: _EmissiveExposureWeight
+        float: 1
+      - name: _EmissiveIntensity
+        float: 1
+      - name: _EmissiveIntensityUnit
+        float: 0
+      - name: _EnableBlendModePreserveSpecularLighting
+        float: 1
+      - name: _EnableFogOnTransparent
+        float: 1
+      - name: _EnableGeometricSpecularAA
+        float: 0
+      - name: _EnergyConservingSpecularColor
+        float: 1
+      - name: _HdrpVersion
+        float: 2
+      - name: _HeightAmplitude
+        float: 0.02
+      - name: _HeightCenter
+        float: 0.5
+      - name: _HeightMapParametrization
+        float: 0
+      - name: _HeightMax
+        float: 1
+      - name: _HeightMin
+        float: -1
+      - name: _HeightOffset
+        float: 0
+      - name: _HeightPoMAmplitude
+        float: 2
+      - name: _HeightTessAmplitude
+        float: 2
+      - name: _HeightTessCenter
+        float: 0.5
+      - name: _InvTilingScale
+        float: 10
+      - name: _Ior
+        float: 1
+      - name: _IridescenceMask
+        float: 1
+      - name: _IridescenceThickness
+        float: 1
+      - name: _LinkDetailsWithBase
+        float: 1
+      - name: _MaterialID
+        float: 1
+      - name: _Metallic
+        float: 1
+      - name: _NormalMapSpace
+        float: 0
+      - name: _NormalScale
+        float: 1
+      - name: _PPDLodThreshold
+        float: 5
+      - name: _PPDMaxSamples
+        float: 15
+      - name: _PPDMinSamples
+        float: 5
+      - name: _PPDPrimitiveLength
+        float: 1
+      - name: _PPDPrimitiveWidth
+        float: 1
+      - name: _ReceivesSSR
+        float: 1
+      - name: _RefractionModel
+        float: 0
+      - name: _SSRefractionProjectionModel
+        float: 0
+      - name: _Smoothness
+        float: 0.5
+      - name: _SmoothnessRemapMax
+        float: 1
+      - name: _SmoothnessRemapMin
+        float: 0
+      - name: _SpecularAAScreenSpaceVariance
+        float: 0.1
+      - name: _SpecularAAThreshold
+        float: 0.2
+      - name: _SpecularOcclusionMode
+        float: 1
+      - name: _SrcBlend
+        float: 1
+      - name: _StencilRef
+        float: 2
+      - name: _StencilRefDepth
+        float: 0
+      - name: _StencilRefDistortionVec
+        float: 64
+      - name: _StencilRefGBuffer
+        float: 2
+      - name: _StencilRefMV
+        float: 128
+      - name: _StencilWriteMask
+        float: 3
+      - name: _StencilWriteMaskDepth
+        float: 48
+      - name: _StencilWriteMaskDistortionVec
+        float: 64
+      - name: _StencilWriteMaskGBuffer
+        float: 51
+      - name: _StencilWriteMaskMV
+        float: 176
+      - name: _SubsurfaceMask
+        float: 1
+      - name: _SupportDecals
+        float: 1
+      - name: _SurfaceType
+        float: 0
+      - name: _TessellationBackFaceCullEpsilon
+        float: -0.25
+      - name: _TessellationFactor
+        float: 4
+      - name: _TessellationFactorMaxDistance
+        float: 50
+      - name: _TessellationFactorMinDistance
+        float: 20
+      - name: _TessellationFactorTriangleSize
+        float: 100
+      - name: _TessellationMode
+        float: 0
+      - name: _TessellationShapeFactor
+        float: 0.75
+      - name: _TexWorldScale
+        float: 1
+      - name: _TexWorldScaleEmissive
+        float: 1
+      - name: _Thickness
+        float: 1
+      - name: _ThicknessMultiplier
+        float: 1
+      - name: _TransmissionEnable
+        float: 1
+      - name: _TransparentBackfaceEnable
+        float: 0
+      - name: _TransparentCullMode
+        float: 2
+      - name: _TransparentDepthPostpassEnable
+        float: 0
+      - name: _TransparentDepthPrepassEnable
+        float: 0
+      - name: _TransparentSortPriority
+        float: 0
+      - name: _TransparentWritingMotionVec
+        float: 0
+      - name: _UVBase
+        float: 5
+      - name: _UVDetail
+        float: 0
+      - name: _UVEmissive
+        float: 0
+      - name: _UseEmissiveIntensity
+        float: 0
+      - name: _UseShadowThreshold
+        float: 0
+      - name: _ZTestDepthEqualForOpaque
+        float: 3
+      - name: _ZTestGBuffer
+        float: 4
+      - name: _ZTestModeDistortion
+        float: 4
+      - name: _ZTestTransparent
+        float: 4
+      - name: _ZWrite
+        float: 1
+      colors:
+      - name: _BaseColor
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - name: _BaseColorMap_MipInfo
+        color: {r: 0, g: 0, b: 0, a: 0}
+      - name: _Color
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - name: _DiffusionProfileAsset
+        color: {r: 0, g: 0, b: 0, a: 0}
+      - name: _DoubleSidedConstants
+        color: {r: 1, g: 1, b: -1, a: 0}
+      - name: _EmissionColor
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - name: _EmissiveColor
+        color: {r: 0, g: 0, b: 0, a: 1}
+      - name: _EmissiveColorLDR
+        color: {r: 0, g: 0, b: 0, a: 1}
+      - name: _InvPrimScale
+        color: {r: 1, g: 1, b: 0, a: 0}
+      - name: _IridescenceThicknessRemap
+        color: {r: 0, g: 1, b: 0, a: 0}
+      - name: _SpecularColor
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - name: _ThicknessRemap
+        color: {r: 0, g: 1, b: 0, a: 0}
+      - name: _TransmittanceColor
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - name: _UVDetailsMappingMask
+        color: {r: 1, g: 0, b: 0, a: 0}
+      - name: _UVMappingMask
+        color: {r: 0, g: 0, b: 0, a: 0}
+      - name: _UVMappingMaskEmissive
+        color: {r: 1, g: 0, b: 0, a: 0}
+    outputDescList:
+    - outputName: baseColor
+      identifier: basecolor
+      usageName: baseColor
+      channelStr: baseColor
+      label: Base Color
+      usage: 1
+      bImage: 1
+      bNumerical: 0
+      bLinear: 0
+    - outputName: normal
+      identifier: normal
+      usageName: normal
+      channelStr: normal
+      label: Normal
+      usage: 7
+      bImage: 1
+      bNumerical: 0
+      bLinear: 1
+    - outputName: roughness
+      identifier: roughness
+      usageName: roughness
+      channelStr: roughness
+      label: Roughness
+      usage: 15
+      bImage: 1
+      bNumerical: 0
+      bLinear: 1
+    - outputName: metallic
+      identifier: metallic
+      usageName: metallic
+      channelStr: metallic
+      label: Metallic
+      usage: 34
+      bImage: 1
+      bNumerical: 0
+      bLinear: 1
+    - outputName: height
+      identifier: height
+      usageName: height
+      channelStr: height
+      label: height
+      usage: 9
+      bImage: 1
+      bNumerical: 0
+      bLinear: 1
+    - outputName: ambientOcclusion
+      identifier: ambientOcclusion
+      usageName: ambientOcclusion
+      channelStr: ambientOcclusion
+      label: ambientOcclusion
+      usage: 5
+      bImage: 1
+      bNumerical: 0
+      bLinear: 1
+    - outputName: mask
+      identifier: mask
+      usageName: mask
+      channelStr: mask
+      label: Mask
+      usage: 6
+      bImage: 1
+      bNumerical: 0
+      bLinear: 1
+    texturePackingList:
+    - targetName: baseColor
+      components:
+      - sourceName: baseColor
+        from: 0
+        to: 3
+    - targetName: normal
+      components:
+      - sourceName: normal
+        from: 0
+        to: 3
+    - targetName: roughness
+      components:
+      - sourceName: roughness
+        from: 0
+        to: 3
+    - targetName: metallic
+      components:
+      - sourceName: smoothness
+        from: 0
+        to: 3
+    - targetName: height
+      components:
+      - sourceName: height
+        from: 0
+        to: 3
+    - targetName: ambientOcclusion
+      components:
+      - sourceName: ambientOcclusion
+        from: 0
+        to: 3
+    - targetName: mask
+      components:
+      - sourceName: metallic
+        from: 0
+        to: 0
+      - sourceName: ambientOcclusion
+        from: 0
+        to: 1
+      - sourceName: mask
+        from: 0
+        to: 2
+      - sourceName: smoothness
+        from: 0
+        to: 3
+    textureParameters:
+    - textureName: Tech_Floor_1 - baseColor
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Tech_Floor_1 - normal
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Tech_Floor_1 - roughness
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Tech_Floor_1 - metallic
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Tech_Floor_1 - height
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Tech_Floor_1 - ambientOcclusion
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Tech_Floor_1 - mask
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    colorSpaceList: []
+    inputTextureMap: []
+    targetSettingList:
+    - label: Default
+      bOverride: 0
+      bLockRatio: 1
+      textureWidth: 512
+      textureHeight: 512
+      textureFormatMode: 0
+      normalCompressed: 0
+      bGenerateOnLoad: 1
+    material: {fileID: -7868615446277228721, guid: 67753f54d3d3e0a4592051cd924b0d73,
+      type: 3}
+    generatedTextures:
+    - {fileID: 3011112185316710604, guid: 67753f54d3d3e0a4592051cd924b0d73, type: 3}
+    - {fileID: -7130056990640502872, guid: 67753f54d3d3e0a4592051cd924b0d73, type: 3}
+    - {fileID: -6585949431021948169, guid: 67753f54d3d3e0a4592051cd924b0d73, type: 3}
+    - {fileID: 1239130274146867207, guid: 67753f54d3d3e0a4592051cd924b0d73, type: 3}
+  - graphLabel: Tech_Floor_2
+    prototypeName: Tech_Floor
+    graphDescIndex: 0
+    generateAllOutputs: 0
+    generateMipMaps: 1
+    preset: " <sbspreset pkgurl=\"pkg://Tech_Floor\" label=\"\" >\n  <presetinput
+      identifier=\"$outputsize\" uid=\"981451006\" type=\"8\" value=\"9,9\" />\n 
+      <presetinput identifier=\"paintColor\" uid=\"1266993416\" type=\"3\" value=\"1,1,1,1\"
+      />\n  <presetinput identifier=\"meshColor\" uid=\"1266993573\" type=\"3\" value=\"0.377358,0.374307,0.372019,1\"
+      />\n  <presetinput identifier=\"metalColor\" uid=\"1266993187\" type=\"3\"
+      value=\"0.764151,0.764151,0.764151,1\" />\n  <presetinput identifier=\"plateRough\"
+      uid=\"1266995121\" type=\"0\" value=\"0.574\" />\n  <presetinput identifier=\"plasticRough\"
+      uid=\"1266994735\" type=\"0\" value=\"0.56\" />\n  <presetinput identifier=\"wear_level\"
+      uid=\"1266993928\" type=\"0\" value=\"0.931\" />\n  <presetinput identifier=\"wear_contrast\"
+      uid=\"1266993835\" type=\"0\" value=\"0.404\" />\n  <presetinput identifier=\"grunge_amount\"
+      uid=\"1266994511\" type=\"0\" value=\"0.386\" />\n  <presetinput identifier=\"intersticeWidth\"
+      uid=\"1266978792\" type=\"0\" value=\"3.4\" />\n  <presetinput identifier=\"bevelDistance\"
+      uid=\"1266976250\" type=\"0\" value=\"0.098\" />\n </sbspreset>\n"
+    shaderName: HDRP/LitTessellation
+    materialProperties:
+      shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
+      shaderKeywords: _BASECOLORMAP _DISPLACEMENT_LOCK_TILING_SCALE _HEIGHTMAP _MAPPING_TRIPLANAR
+        _MASKMAP _NORMALMAP _NORMALMAP_TANGENT_SPACE _TESSELLATION_DISPLACEMENT _VERTEX_DISPLACEMENT_LOCK_OBJECT_SCALE
+      lightmapFlags: 4
+      texEnvs:
+      - name: _AnisotropyMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _BaseColorMap
+        texture: {fileID: -2386799619417976792, guid: 67753f54d3d3e0a4592051cd924b0d73,
+          type: 3}
+        scale: {x: 0.3, y: 0.3}
+        offset: {x: 0, y: 0}
+      - name: _BentNormalMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _BentNormalMapOS
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _CoatMaskMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _DetailMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _DistortionVectorMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _EmissiveColorMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _HeightMap
+        texture: {fileID: -1579991703155639348, guid: 67753f54d3d3e0a4592051cd924b0d73,
+          type: 3}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _IridescenceMaskMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _IridescenceThicknessMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _MainTex
+        texture: {fileID: -2386799619417976792, guid: 67753f54d3d3e0a4592051cd924b0d73,
+          type: 3}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _MaskMap
+        texture: {fileID: -6275475696774650816, guid: 67753f54d3d3e0a4592051cd924b0d73,
+          type: 3}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _NormalMap
+        texture: {fileID: 5611629895330407814, guid: 67753f54d3d3e0a4592051cd924b0d73,
+          type: 3}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _NormalMapOS
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _SpecularColorMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _SubsurfaceMaskMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _TangentMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _TangentMapOS
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _ThicknessMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _TransmittanceColorMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      floats:
+      - name: _AORemapMax
+        float: 1
+      - name: _AORemapMin
+        float: 0
+      - name: _ATDistance
+        float: 1
+      - name: _AddPrecomputedVelocity
+        float: 0
+      - name: _AlbedoAffectEmissive
+        float: 0
+      - name: _AlphaCutoff
+        float: 0.5
+      - name: _AlphaCutoffEnable
+        float: 0
+      - name: _AlphaCutoffPostpass
+        float: 0.5
+      - name: _AlphaCutoffPrepass
+        float: 0.5
+      - name: _AlphaCutoffShadow
+        float: 0.5
+      - name: _AlphaDstBlend
+        float: 0
+      - name: _AlphaSrcBlend
+        float: 1
+      - name: _Anisotropy
+        float: 0
+      - name: _BlendMode
+        float: 0
+      - name: _CoatMask
+        float: 0
+      - name: _CullMode
+        float: 2
+      - name: _CullModeForward
+        float: 2
+      - name: _Cutoff
+        float: 0.5
+      - name: _DepthOffsetEnable
+        float: 0
+      - name: _DetailAlbedoScale
+        float: 1
+      - name: _DetailNormalScale
+        float: 1
+      - name: _DetailSmoothnessScale
+        float: 1
+      - name: _DiffusionProfile
+        float: 0
+      - name: _DiffusionProfileHash
+        float: 0
+      - name: _DisplacementLockObjectScale
+        float: 1
+      - name: _DisplacementLockTilingScale
+        float: 1
+      - name: _DisplacementMode
+        float: 3
+      - name: _DistortionBlendMode
+        float: 0
+      - name: _DistortionBlurBlendMode
+        float: 0
+      - name: _DistortionBlurDstBlend
+        float: 1
+      - name: _DistortionBlurRemapMax
+        float: 1
+      - name: _DistortionBlurRemapMin
+        float: 0
+      - name: _DistortionBlurScale
+        float: 1
+      - name: _DistortionBlurSrcBlend
+        float: 1
+      - name: _DistortionDepthTest
+        float: 1
+      - name: _DistortionDstBlend
+        float: 1
+      - name: _DistortionEnable
+        float: 0
+      - name: _DistortionScale
+        float: 1
+      - name: _DistortionSrcBlend
+        float: 1
+      - name: _DistortionVectorBias
+        float: -1
+      - name: _DistortionVectorScale
+        float: 2
+      - name: _DoubleSidedEnable
+        float: 0
+      - name: _DoubleSidedNormalMode
+        float: 1
+      - name: _DstBlend
+        float: 0
+      - name: _EmissiveColorMode
+        float: 1
+      - name: _EmissiveExposureWeight
+        float: 1
+      - name: _EmissiveIntensity
+        float: 1
+      - name: _EmissiveIntensityUnit
+        float: 0
+      - name: _EnableBlendModePreserveSpecularLighting
+        float: 1
+      - name: _EnableFogOnTransparent
+        float: 1
+      - name: _EnableGeometricSpecularAA
+        float: 0
+      - name: _EnergyConservingSpecularColor
+        float: 1
+      - name: _HdrpVersion
+        float: 2
+      - name: _HeightAmplitude
+        float: 0.02
+      - name: _HeightCenter
+        float: 0.5
+      - name: _HeightMapParametrization
+        float: 0
+      - name: _HeightMax
+        float: 1
+      - name: _HeightMin
+        float: -1
+      - name: _HeightOffset
+        float: 0
+      - name: _HeightPoMAmplitude
+        float: 2
+      - name: _HeightTessAmplitude
+        float: 2
+      - name: _HeightTessCenter
+        float: 0.5
+      - name: _InvTilingScale
+        float: 3.3333333
+      - name: _Ior
+        float: 1
+      - name: _IridescenceMask
+        float: 1
+      - name: _IridescenceThickness
+        float: 1
+      - name: _LinkDetailsWithBase
+        float: 1
+      - name: _MaterialID
+        float: 1
+      - name: _Metallic
+        float: 1
+      - name: _NormalMapSpace
+        float: 0
+      - name: _NormalScale
+        float: 1
+      - name: _PPDLodThreshold
+        float: 5
+      - name: _PPDMaxSamples
+        float: 15
+      - name: _PPDMinSamples
+        float: 5
+      - name: _PPDPrimitiveLength
+        float: 1
+      - name: _PPDPrimitiveWidth
+        float: 1
+      - name: _ReceivesSSR
+        float: 1
+      - name: _RefractionModel
+        float: 0
+      - name: _SSRefractionProjectionModel
+        float: 0
+      - name: _Smoothness
+        float: 0.5
+      - name: _SmoothnessRemapMax
+        float: 1
+      - name: _SmoothnessRemapMin
+        float: 0.28211588
+      - name: _SpecularAAScreenSpaceVariance
+        float: 0.1
+      - name: _SpecularAAThreshold
+        float: 0.2
+      - name: _SpecularOcclusionMode
+        float: 1
+      - name: _SrcBlend
+        float: 1
+      - name: _StencilRef
+        float: 2
+      - name: _StencilRefDepth
+        float: 0
+      - name: _StencilRefDistortionVec
+        float: 64
+      - name: _StencilRefGBuffer
+        float: 2
+      - name: _StencilRefMV
+        float: 128
+      - name: _StencilWriteMask
+        float: 3
+      - name: _StencilWriteMaskDepth
+        float: 48
+      - name: _StencilWriteMaskDistortionVec
+        float: 64
+      - name: _StencilWriteMaskGBuffer
+        float: 51
+      - name: _StencilWriteMaskMV
+        float: 176
+      - name: _SubsurfaceMask
+        float: 1
+      - name: _SupportDecals
+        float: 1
+      - name: _SurfaceType
+        float: 0
+      - name: _TessellationBackFaceCullEpsilon
+        float: -0.25
+      - name: _TessellationFactor
+        float: 4
+      - name: _TessellationFactorMaxDistance
+        float: 50
+      - name: _TessellationFactorMinDistance
+        float: 20
+      - name: _TessellationFactorTriangleSize
+        float: 100
+      - name: _TessellationMode
+        float: 0
+      - name: _TessellationShapeFactor
+        float: 0.75
+      - name: _TexWorldScale
+        float: 1
+      - name: _TexWorldScaleEmissive
+        float: 1
+      - name: _Thickness
+        float: 1
+      - name: _ThicknessMultiplier
+        float: 1
+      - name: _TransmissionEnable
+        float: 1
+      - name: _TransparentBackfaceEnable
+        float: 0
+      - name: _TransparentCullMode
+        float: 2
+      - name: _TransparentDepthPostpassEnable
+        float: 0
+      - name: _TransparentDepthPrepassEnable
+        float: 0
+      - name: _TransparentSortPriority
+        float: 0
+      - name: _TransparentWritingMotionVec
+        float: 0
+      - name: _UVBase
+        float: 5
+      - name: _UVDetail
+        float: 0
+      - name: _UVEmissive
+        float: 0
+      - name: _UseEmissiveIntensity
+        float: 0
+      - name: _UseShadowThreshold
+        float: 0
+      - name: _ZTestDepthEqualForOpaque
+        float: 3
+      - name: _ZTestGBuffer
+        float: 4
+      - name: _ZTestModeDistortion
+        float: 4
+      - name: _ZTestTransparent
+        float: 4
+      - name: _ZWrite
+        float: 1
+      colors:
+      - name: _BaseColor
+        color: {r: 0.2735849, g: 0.2735849, b: 0.2735849, a: 1}
+      - name: _BaseColorMap_MipInfo
+        color: {r: 0, g: 0, b: 0, a: 0}
+      - name: _Color
+        color: {r: 0.2735849, g: 0.2735849, b: 0.2735849, a: 1}
+      - name: _DiffusionProfileAsset
+        color: {r: 0, g: 0, b: 0, a: 0}
+      - name: _DoubleSidedConstants
+        color: {r: 1, g: 1, b: -1, a: 0}
+      - name: _EmissionColor
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - name: _EmissiveColor
+        color: {r: 0, g: 0, b: 0, a: 1}
+      - name: _EmissiveColorLDR
+        color: {r: 0, g: 0, b: 0, a: 1}
+      - name: _InvPrimScale
+        color: {r: 1, g: 1, b: 0, a: 0}
+      - name: _IridescenceThicknessRemap
+        color: {r: 0, g: 1, b: 0, a: 0}
+      - name: _SpecularColor
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - name: _ThicknessRemap
+        color: {r: 0, g: 1, b: 0, a: 0}
+      - name: _TransmittanceColor
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - name: _UVDetailsMappingMask
+        color: {r: 1, g: 0, b: 0, a: 0}
+      - name: _UVMappingMask
+        color: {r: 0, g: 0, b: 0, a: 0}
+      - name: _UVMappingMaskEmissive
+        color: {r: 1, g: 0, b: 0, a: 0}
+    outputDescList:
+    - outputName: baseColor
+      identifier: basecolor
+      usageName: baseColor
+      channelStr: baseColor
+      label: Base Color
+      usage: 1
+      bImage: 1
+      bNumerical: 0
+      bLinear: 0
+    - outputName: normal
+      identifier: normal
+      usageName: normal
+      channelStr: normal
+      label: Normal
+      usage: 7
+      bImage: 1
+      bNumerical: 0
+      bLinear: 1
+    - outputName: roughness
+      identifier: roughness
+      usageName: roughness
+      channelStr: roughness
+      label: Roughness
+      usage: 15
+      bImage: 1
+      bNumerical: 0
+      bLinear: 1
+    - outputName: metallic
+      identifier: metallic
+      usageName: metallic
+      channelStr: metallic
+      label: Metallic
+      usage: 34
+      bImage: 1
+      bNumerical: 0
+      bLinear: 1
+    - outputName: height
+      identifier: height
+      usageName: height
+      channelStr: height
+      label: height
+      usage: 9
+      bImage: 1
+      bNumerical: 0
+      bLinear: 1
+    - outputName: ambientOcclusion
+      identifier: ambientOcclusion
+      usageName: ambientOcclusion
+      channelStr: ambientOcclusion
+      label: ambientOcclusion
+      usage: 5
+      bImage: 1
+      bNumerical: 0
+      bLinear: 1
+    - outputName: mask
+      identifier: mask
+      usageName: mask
+      channelStr: mask
+      label: Mask
+      usage: 6
+      bImage: 1
+      bNumerical: 0
+      bLinear: 1
+    texturePackingList:
+    - targetName: baseColor
+      components:
+      - sourceName: baseColor
+        from: 0
+        to: 3
+    - targetName: normal
+      components:
+      - sourceName: normal
+        from: 0
+        to: 3
+    - targetName: roughness
+      components:
+      - sourceName: roughness
+        from: 0
+        to: 3
+    - targetName: metallic
+      components:
+      - sourceName: smoothness
+        from: 0
+        to: 3
+    - targetName: height
+      components:
+      - sourceName: height
+        from: 0
+        to: 3
+    - targetName: ambientOcclusion
+      components:
+      - sourceName: ambientOcclusion
+        from: 0
+        to: 3
+    - targetName: mask
+      components:
+      - sourceName: metallic
+        from: 0
+        to: 0
+      - sourceName: ambientOcclusion
+        from: 0
+        to: 1
+      - sourceName: mask
+        from: 0
+        to: 2
+      - sourceName: smoothness
+        from: 0
+        to: 3
+    textureParameters:
+    - textureName: Tech_Floor_2 - baseColor
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Tech_Floor_2 - normal
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Tech_Floor_2 - roughness
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Tech_Floor_2 - metallic
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Tech_Floor_2 - height
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Tech_Floor_2 - ambientOcclusion
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Tech_Floor_2 - mask
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    colorSpaceList: []
+    inputTextureMap: []
+    targetSettingList:
+    - label: Default
+      bOverride: 0
+      bLockRatio: 1
+      textureWidth: 512
+      textureHeight: 512
+      textureFormatMode: 0
+      normalCompressed: 0
+      bGenerateOnLoad: 1
+    material: {fileID: 958526917906822374, guid: 67753f54d3d3e0a4592051cd924b0d73,
+      type: 3}
+    generatedTextures:
+    - {fileID: -2386799619417976792, guid: 67753f54d3d3e0a4592051cd924b0d73, type: 3}
+    - {fileID: 5611629895330407814, guid: 67753f54d3d3e0a4592051cd924b0d73, type: 3}
+    - {fileID: -1579991703155639348, guid: 67753f54d3d3e0a4592051cd924b0d73, type: 3}
+    - {fileID: -6275475696774650816, guid: 67753f54d3d3e0a4592051cd924b0d73, type: 3}
+  - graphLabel: Tech_Floor_3
+    prototypeName: Tech_Floor
+    graphDescIndex: 0
+    generateAllOutputs: 0
+    generateMipMaps: 1
+    preset: " <sbspreset pkgurl=\"pkg://Tech_Floor\" label=\"\" >\n  <presetinput
+      identifier=\"$outputsize\" uid=\"981451006\" type=\"8\" value=\"9,9\" />\n 
+      <presetinput identifier=\"paintColor\" uid=\"1266993416\" type=\"3\" value=\"1,1,1,1\"
+      />\n  <presetinput identifier=\"meshColor\" uid=\"1266993573\" type=\"3\" value=\"1,1,1,1\"
+      />\n  <presetinput identifier=\"metalColor\" uid=\"1266993187\" type=\"3\"
+      value=\"1,1,1,1\" />\n  <presetinput identifier=\"plateRough\" uid=\"1266995121\"
+      type=\"0\" value=\"0.739\" />\n  <presetinput identifier=\"plasticRough\" uid=\"1266994735\"
+      type=\"0\" value=\"0.629\" />\n  <presetinput identifier=\"wear_level\" uid=\"1266993928\"
+      type=\"0\" value=\"0.739\" />\n  <presetinput identifier=\"wear_contrast\"
+      uid=\"1266993835\" type=\"0\" value=\"0.528\" />\n  <presetinput identifier=\"grunge_amount\"
+      uid=\"1266994511\" type=\"0\" value=\"0.478\" />\n  <presetinput identifier=\"grunge_scale\"
+      uid=\"1266994611\" type=\"4\" value=\"4\" />\n  <presetinput identifier=\"intersticeWidth\"
+      uid=\"1266978792\" type=\"0\" value=\"1\" />\n  <presetinput identifier=\"Nb_X\"
+      uid=\"1266975213\" type=\"4\" value=\"0\" />\n  <presetinput identifier=\"Nb_Y\"
+      uid=\"1266975732\" type=\"4\" value=\"0\" />\n  <presetinput identifier=\"bevelDistance\"
+      uid=\"1266976250\" type=\"0\" value=\"-0.006\" />\n  <presetinput identifier=\"insertBool\"
+      uid=\"1267023638\" type=\"4\" value=\"0\" />\n  <presetinput identifier=\"grooveBool\"
+      uid=\"1267020059\" type=\"4\" value=\"0\" />\n  <presetinput identifier=\"pinBool\"
+      uid=\"1267020576\" type=\"4\" value=\"0\" />\n </sbspreset>\n"
+    shaderName: HDRP/LitTessellation
+    materialProperties:
+      shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
+      shaderKeywords: _BASECOLORMAP _DISPLACEMENT_LOCK_TILING_SCALE _HEIGHTMAP _MAPPING_TRIPLANAR
+        _MASKMAP _NORMALMAP _NORMALMAP_TANGENT_SPACE _TESSELLATION_DISPLACEMENT _VERTEX_DISPLACEMENT_LOCK_OBJECT_SCALE
+      lightmapFlags: 4
+      texEnvs:
+      - name: _AnisotropyMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _BaseColorMap
+        texture: {fileID: -3517584412498094239, guid: 67753f54d3d3e0a4592051cd924b0d73,
+          type: 3}
+        scale: {x: 0.1, y: 0.1}
+        offset: {x: 0, y: 0}
+      - name: _BentNormalMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _BentNormalMapOS
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _CoatMaskMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _DetailMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _DistortionVectorMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _EmissiveColorMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _HeightMap
+        texture: {fileID: -861102234930227162, guid: 67753f54d3d3e0a4592051cd924b0d73,
+          type: 3}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _IridescenceMaskMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _IridescenceThicknessMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _MainTex
+        texture: {fileID: -3517584412498094239, guid: 67753f54d3d3e0a4592051cd924b0d73,
+          type: 3}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _MaskMap
+        texture: {fileID: -5142672428998722571, guid: 67753f54d3d3e0a4592051cd924b0d73,
+          type: 3}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _NormalMap
+        texture: {fileID: 6004991725022314182, guid: 67753f54d3d3e0a4592051cd924b0d73,
+          type: 3}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _NormalMapOS
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _SpecularColorMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _SubsurfaceMaskMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _TangentMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _TangentMapOS
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _ThicknessMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _TransmittanceColorMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      floats:
+      - name: _AORemapMax
+        float: 1
+      - name: _AORemapMin
+        float: 0.46851385
+      - name: _ATDistance
+        float: 1
+      - name: _AddPrecomputedVelocity
+        float: 0
+      - name: _AlbedoAffectEmissive
+        float: 0
+      - name: _AlphaCutoff
+        float: 0.5
+      - name: _AlphaCutoffEnable
+        float: 0
+      - name: _AlphaCutoffPostpass
+        float: 0.5
+      - name: _AlphaCutoffPrepass
+        float: 0.5
+      - name: _AlphaCutoffShadow
+        float: 0.5
+      - name: _AlphaDstBlend
+        float: 0
+      - name: _AlphaSrcBlend
+        float: 1
+      - name: _Anisotropy
+        float: 0
+      - name: _BlendMode
+        float: 0
+      - name: _CoatMask
+        float: 0
+      - name: _CullMode
+        float: 2
+      - name: _CullModeForward
+        float: 2
+      - name: _Cutoff
+        float: 0.5
+      - name: _DepthOffsetEnable
+        float: 0
+      - name: _DetailAlbedoScale
+        float: 1
+      - name: _DetailNormalScale
+        float: 1
+      - name: _DetailSmoothnessScale
+        float: 1
+      - name: _DiffusionProfile
+        float: 0
+      - name: _DiffusionProfileHash
+        float: 0
+      - name: _DisplacementLockObjectScale
+        float: 1
+      - name: _DisplacementLockTilingScale
+        float: 1
+      - name: _DisplacementMode
+        float: 3
+      - name: _DistortionBlendMode
+        float: 0
+      - name: _DistortionBlurBlendMode
+        float: 0
+      - name: _DistortionBlurDstBlend
+        float: 1
+      - name: _DistortionBlurRemapMax
+        float: 1
+      - name: _DistortionBlurRemapMin
+        float: 0
+      - name: _DistortionBlurScale
+        float: 1
+      - name: _DistortionBlurSrcBlend
+        float: 1
+      - name: _DistortionDepthTest
+        float: 1
+      - name: _DistortionDstBlend
+        float: 1
+      - name: _DistortionEnable
+        float: 0
+      - name: _DistortionScale
+        float: 1
+      - name: _DistortionSrcBlend
+        float: 1
+      - name: _DistortionVectorBias
+        float: -1
+      - name: _DistortionVectorScale
+        float: 2
+      - name: _DoubleSidedEnable
+        float: 0
+      - name: _DoubleSidedNormalMode
+        float: 1
+      - name: _DstBlend
+        float: 0
+      - name: _EmissiveColorMode
+        float: 1
+      - name: _EmissiveExposureWeight
+        float: 1
+      - name: _EmissiveIntensity
+        float: 1
+      - name: _EmissiveIntensityUnit
+        float: 0
+      - name: _EnableBlendModePreserveSpecularLighting
+        float: 1
+      - name: _EnableFogOnTransparent
+        float: 1
+      - name: _EnableGeometricSpecularAA
+        float: 0
+      - name: _EnergyConservingSpecularColor
+        float: 1
+      - name: _HdrpVersion
+        float: 2
+      - name: _HeightAmplitude
+        float: 0.02
+      - name: _HeightCenter
+        float: 0.5
+      - name: _HeightMapParametrization
+        float: 0
+      - name: _HeightMax
+        float: 1
+      - name: _HeightMin
+        float: -1
+      - name: _HeightOffset
+        float: 0
+      - name: _HeightPoMAmplitude
+        float: 2
+      - name: _HeightTessAmplitude
+        float: 2
+      - name: _HeightTessCenter
+        float: 0.5
+      - name: _InvTilingScale
+        float: 10
+      - name: _Ior
+        float: 1
+      - name: _IridescenceMask
+        float: 1
+      - name: _IridescenceThickness
+        float: 1
+      - name: _LinkDetailsWithBase
+        float: 1
+      - name: _MaterialID
+        float: 1
+      - name: _Metallic
+        float: 1
+      - name: _NormalMapSpace
+        float: 0
+      - name: _NormalScale
+        float: 1
+      - name: _PPDLodThreshold
+        float: 5
+      - name: _PPDMaxSamples
+        float: 15
+      - name: _PPDMinSamples
+        float: 5
+      - name: _PPDPrimitiveLength
+        float: 1
+      - name: _PPDPrimitiveWidth
+        float: 1
+      - name: _ReceivesSSR
+        float: 1
+      - name: _RefractionModel
+        float: 0
+      - name: _SSRefractionProjectionModel
+        float: 0
+      - name: _Smoothness
+        float: 0.5
+      - name: _SmoothnessRemapMax
+        float: 1
+      - name: _SmoothnessRemapMin
+        float: 0
+      - name: _SpecularAAScreenSpaceVariance
+        float: 0.1
+      - name: _SpecularAAThreshold
+        float: 0.2
+      - name: _SpecularOcclusionMode
+        float: 1
+      - name: _SrcBlend
+        float: 1
+      - name: _StencilRef
+        float: 2
+      - name: _StencilRefDepth
+        float: 0
+      - name: _StencilRefDistortionVec
+        float: 64
+      - name: _StencilRefGBuffer
+        float: 2
+      - name: _StencilRefMV
+        float: 128
+      - name: _StencilWriteMask
+        float: 3
+      - name: _StencilWriteMaskDepth
+        float: 48
+      - name: _StencilWriteMaskDistortionVec
+        float: 64
+      - name: _StencilWriteMaskGBuffer
+        float: 51
+      - name: _StencilWriteMaskMV
+        float: 176
+      - name: _SubsurfaceMask
+        float: 1
+      - name: _SupportDecals
+        float: 1
+      - name: _SurfaceType
+        float: 0
+      - name: _TessellationBackFaceCullEpsilon
+        float: -0.25
+      - name: _TessellationFactor
+        float: 4
+      - name: _TessellationFactorMaxDistance
+        float: 50
+      - name: _TessellationFactorMinDistance
+        float: 20
+      - name: _TessellationFactorTriangleSize
+        float: 100
+      - name: _TessellationMode
+        float: 0
+      - name: _TessellationShapeFactor
+        float: 0.75
+      - name: _TexWorldScale
+        float: 1
+      - name: _TexWorldScaleEmissive
+        float: 1
+      - name: _Thickness
+        float: 1
+      - name: _ThicknessMultiplier
+        float: 1
+      - name: _TransmissionEnable
+        float: 1
+      - name: _TransparentBackfaceEnable
+        float: 0
+      - name: _TransparentCullMode
+        float: 2
+      - name: _TransparentDepthPostpassEnable
+        float: 0
+      - name: _TransparentDepthPrepassEnable
+        float: 0
+      - name: _TransparentSortPriority
+        float: 0
+      - name: _TransparentWritingMotionVec
+        float: 0
+      - name: _UVBase
+        float: 5
+      - name: _UVDetail
+        float: 0
+      - name: _UVEmissive
+        float: 0
+      - name: _UseEmissiveIntensity
+        float: 0
+      - name: _UseShadowThreshold
+        float: 0
+      - name: _ZTestDepthEqualForOpaque
+        float: 3
+      - name: _ZTestGBuffer
+        float: 4
+      - name: _ZTestModeDistortion
+        float: 4
+      - name: _ZTestTransparent
+        float: 4
+      - name: _ZWrite
+        float: 1
+      colors:
+      - name: _BaseColor
+        color: {r: 0.5849056, g: 0.5849056, b: 0.5849056, a: 1}
+      - name: _BaseColorMap_MipInfo
+        color: {r: 0, g: 0, b: 0, a: 0}
+      - name: _Color
+        color: {r: 0.5849056, g: 0.5849056, b: 0.5849056, a: 1}
+      - name: _DiffusionProfileAsset
+        color: {r: 0, g: 0, b: 0, a: 0}
+      - name: _DoubleSidedConstants
+        color: {r: 1, g: 1, b: -1, a: 0}
+      - name: _EmissionColor
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - name: _EmissiveColor
+        color: {r: 0, g: 0, b: 0, a: 1}
+      - name: _EmissiveColorLDR
+        color: {r: 0, g: 0, b: 0, a: 1}
+      - name: _InvPrimScale
+        color: {r: 1, g: 1, b: 0, a: 0}
+      - name: _IridescenceThicknessRemap
+        color: {r: 0, g: 1, b: 0, a: 0}
+      - name: _SpecularColor
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - name: _ThicknessRemap
+        color: {r: 0, g: 1, b: 0, a: 0}
+      - name: _TransmittanceColor
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - name: _UVDetailsMappingMask
+        color: {r: 1, g: 0, b: 0, a: 0}
+      - name: _UVMappingMask
+        color: {r: 0, g: 0, b: 0, a: 0}
+      - name: _UVMappingMaskEmissive
+        color: {r: 1, g: 0, b: 0, a: 0}
+    outputDescList:
+    - outputName: baseColor
+      identifier: basecolor
+      usageName: baseColor
+      channelStr: baseColor
+      label: Base Color
+      usage: 1
+      bImage: 1
+      bNumerical: 0
+      bLinear: 0
+    - outputName: normal
+      identifier: normal
+      usageName: normal
+      channelStr: normal
+      label: Normal
+      usage: 7
+      bImage: 1
+      bNumerical: 0
+      bLinear: 1
+    - outputName: roughness
+      identifier: roughness
+      usageName: roughness
+      channelStr: roughness
+      label: Roughness
+      usage: 15
+      bImage: 1
+      bNumerical: 0
+      bLinear: 1
+    - outputName: metallic
+      identifier: metallic
+      usageName: metallic
+      channelStr: metallic
+      label: Metallic
+      usage: 34
+      bImage: 1
+      bNumerical: 0
+      bLinear: 1
+    - outputName: height
+      identifier: height
+      usageName: height
+      channelStr: height
+      label: height
+      usage: 9
+      bImage: 1
+      bNumerical: 0
+      bLinear: 1
+    - outputName: ambientOcclusion
+      identifier: ambientOcclusion
+      usageName: ambientOcclusion
+      channelStr: ambientOcclusion
+      label: ambientOcclusion
+      usage: 5
+      bImage: 1
+      bNumerical: 0
+      bLinear: 1
+    - outputName: mask
+      identifier: mask
+      usageName: mask
+      channelStr: mask
+      label: Mask
+      usage: 6
+      bImage: 1
+      bNumerical: 0
+      bLinear: 1
+    texturePackingList:
+    - targetName: baseColor
+      components:
+      - sourceName: baseColor
+        from: 0
+        to: 3
+    - targetName: normal
+      components:
+      - sourceName: normal
+        from: 0
+        to: 3
+    - targetName: roughness
+      components:
+      - sourceName: roughness
+        from: 0
+        to: 3
+    - targetName: metallic
+      components:
+      - sourceName: smoothness
+        from: 0
+        to: 3
+    - targetName: height
+      components:
+      - sourceName: height
+        from: 0
+        to: 3
+    - targetName: ambientOcclusion
+      components:
+      - sourceName: ambientOcclusion
+        from: 0
+        to: 3
+    - targetName: mask
+      components:
+      - sourceName: metallic
+        from: 0
+        to: 0
+      - sourceName: ambientOcclusion
+        from: 0
+        to: 1
+      - sourceName: mask
+        from: 0
+        to: 2
+      - sourceName: smoothness
+        from: 0
+        to: 3
+    textureParameters:
+    - textureName: Tech_Floor_3 - baseColor
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Tech_Floor_3 - normal
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Tech_Floor_3 - roughness
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Tech_Floor_3 - metallic
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Tech_Floor_3 - height
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Tech_Floor_3 - ambientOcclusion
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Tech_Floor_3 - mask
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    colorSpaceList: []
+    inputTextureMap: []
+    targetSettingList:
+    - label: Default
+      bOverride: 0
+      bLockRatio: 1
+      textureWidth: 512
+      textureHeight: 512
+      textureFormatMode: 0
+      normalCompressed: 0
+      bGenerateOnLoad: 1
+    material: {fileID: -371929018426892879, guid: 67753f54d3d3e0a4592051cd924b0d73,
+      type: 3}
+    generatedTextures:
+    - {fileID: -3517584412498094239, guid: 67753f54d3d3e0a4592051cd924b0d73, type: 3}
+    - {fileID: 6004991725022314182, guid: 67753f54d3d3e0a4592051cd924b0d73, type: 3}
+    - {fileID: -861102234930227162, guid: 67753f54d3d3e0a4592051cd924b0d73, type: 3}
+    - {fileID: -5142672428998722571, guid: 67753f54d3d3e0a4592051cd924b0d73, type: 3}
