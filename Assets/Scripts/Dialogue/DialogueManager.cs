@@ -58,7 +58,10 @@ public class DialogueManager : MonoBehaviour
         GameObject.FindWithTag("Player").GetComponent<vThirdPersonController>().enabled = false;
         GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().horizontalInput = new GenericInput("", "LeftAnalogHorizontal", "Horizontal");
         GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().verticallInput = new GenericInput("", "LeftAnalogVertical", "Vertical");
-    isDialogue = true;
+        GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().jumpInput = new GenericInput("S", "X", "X");
+        GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().rollInput = new GenericInput("", "B", "B");
+        GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().crouchInput = new GenericInput("", "Y", "Y");
+        isDialogue = true;
         txt_Dialogue.text = "";
         dialogues = p_dialogues;
         
@@ -70,6 +73,9 @@ public class DialogueManager : MonoBehaviour
         GameObject.FindWithTag("Player").GetComponent<vThirdPersonController>().enabled = true;
         GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().horizontalInput = new GenericInput("Horizontal", "LeftAnalogHorizontal", "Horizontal");
         GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().verticallInput = new GenericInput("Vertical", "LeftAnalogVertical", "Vertical");
+        GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().jumpInput = new GenericInput("Space", "X", "X");
+        GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().rollInput = new GenericInput("Q", "B", "B");
+        GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().crouchInput = new GenericInput("C", "Y", "Y");
         isDialogue = false;
         contextCount = 0;
         lineCount = 0;
