@@ -58,7 +58,7 @@ public class DialogueManager : MonoBehaviour
         GameObject.FindWithTag("Player").GetComponent<vThirdPersonController>().enabled = false;
         GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().horizontalInput = new GenericInput("", "LeftAnalogHorizontal", "Horizontal");
         GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().verticallInput = new GenericInput("", "LeftAnalogVertical", "Vertical");
-        GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().jumpInput = new GenericInput("S", "X", "X");
+        GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().jumpInput = new GenericInput("", "X", "X");
         GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().rollInput = new GenericInput("", "B", "B");
         GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().crouchInput = new GenericInput("", "Y", "Y");
         isDialogue = true;
