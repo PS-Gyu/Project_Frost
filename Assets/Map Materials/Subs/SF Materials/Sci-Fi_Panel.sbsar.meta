@@ -241,7 +241,7 @@ ScriptedImporter:
       - name: _HeightTessCenter
         float: 0.5
       - name: _InvTilingScale
-        float: 6.6666665
+        float: 10
       - name: _Ior
         float: 1
       - name: _IridescenceMask
@@ -329,7 +329,7 @@ ScriptedImporter:
       - name: _TessellationShapeFactor
         float: 0.75
       - name: _TexWorldScale
-        float: 0.15
+        float: 0.1
       - name: _TexWorldScaleEmissive
         float: 1
       - name: _Thickness

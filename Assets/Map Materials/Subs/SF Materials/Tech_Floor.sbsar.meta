@@ -693,7 +693,7 @@ ScriptedImporter:
       - name: _AORemapMax
         float: 1
       - name: _AORemapMin
-        float: 0.46851385
+        float: 0
       - name: _ATDistance
         float: 1
       - name: _AddPrecomputedVelocity
@@ -851,7 +851,7 @@ ScriptedImporter:
       - name: _Smoothness
         float: 0.5
       - name: _SmoothnessRemapMax
-        float: 1
+        float: 0.8957791
       - name: _SmoothnessRemapMin
         float: 0
       - name: _SpecularAAScreenSpaceVariance

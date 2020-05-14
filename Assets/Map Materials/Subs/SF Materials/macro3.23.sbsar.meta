@@ -21,8 +21,9 @@ ScriptedImporter:
       <presetinput identifier=\"Inner_structure_Mask\" uid=\"1706296914\" type=\"0\"
       value=\"0.478\" />\n  <presetinput identifier=\"Color_Hue\" uid=\"1707916728\"
       type=\"0\" value=\"0.484\" />\n  <presetinput identifier=\"Normal_intensity\"
-      uid=\"1707916415\" type=\"0\" value=\"3.21\" />\n  <presetinput identifier=\"Metalness_contrast\"
-      uid=\"1705916114\" type=\"0\" value=\"-0.07\" />\n </sbspreset>\n"
+      uid=\"1707916415\" type=\"0\" value=\"3.3\" />\n  <presetinput identifier=\"Windows_amount__mask\"
+      uid=\"1705905153\" type=\"0\" value=\"69\" />\n  <presetinput identifier=\"Metalness_contrast\"
+      uid=\"1705916114\" type=\"0\" value=\"0.03\" />\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
@@ -38,7 +39,7 @@ ScriptedImporter:
       - name: _BaseColorMap
         texture: {fileID: -6765018431285918318, guid: 6efb1e82569fbc846a0fd522d05235ee,
           type: 3}
-        scale: {x: 1, y: 1}
+        scale: {x: 0.1, y: 0.1}
         offset: {x: 0, y: 0}
       - name: _BentNormalMap
         texture: {instanceID: 0}
@@ -335,7 +336,7 @@ ScriptedImporter:
       - name: _TessellationShapeFactor
         float: 0.75
       - name: _TexWorldScale
-        float: 0.1
+        float: 1
       - name: _TexWorldScaleEmissive
         float: 1
       - name: _Thickness
@@ -378,11 +379,11 @@ ScriptedImporter:
         float: 1
       colors:
       - name: _BaseColor
-        color: {r: 1, g: 1, b: 1, a: 1}
+        color: {r: 0.3962264, g: 0.3962264, b: 0.3962264, a: 1}
       - name: _BaseColorMap_MipInfo
         color: {r: 0, g: 0, b: 0, a: 0}
       - name: _Color
-        color: {r: 1, g: 1, b: 1, a: 1}
+        color: {r: 0.3962264, g: 0.3962264, b: 0.3962264, a: 1}
       - name: _DiffusionProfileAsset
         color: {r: 0, g: 0, b: 0, a: 0}
       - name: _DoubleSidedConstants

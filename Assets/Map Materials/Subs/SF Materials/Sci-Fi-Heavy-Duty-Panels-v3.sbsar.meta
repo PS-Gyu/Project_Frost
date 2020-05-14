@@ -18,7 +18,10 @@ ScriptedImporter:
     generateMipMaps: 1
     preset: " <sbspreset pkgurl=\"pkg://Sci-Fi-Heavy-Duty-Panels-v3\" label=\"\"
       >\n  <presetinput identifier=\"$outputsize\" uid=\"333091256\" type=\"8\" value=\"9,9\"
-      />\n </sbspreset>\n"
+      />\n  <presetinput identifier=\"paint_panel_basecolor\" uid=\"1624629345\"
+      type=\"2\" value=\"0.141509,0.141509,0.141509\" />\n  <presetinput identifier=\"rust_spreading\"
+      uid=\"1624531895\" type=\"0\" value=\"0.021\" />\n  <presetinput identifier=\"rust_spreading_second_layer\"
+      uid=\"1624603900\" type=\"0\" value=\"0\" />\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
@@ -281,7 +284,7 @@ ScriptedImporter:
       - name: _SmoothnessRemapMax
         float: 1
       - name: _SmoothnessRemapMin
-        float: 0
+        float: 0.50377834
       - name: _SpecularAAScreenSpaceVariance
         float: 0.1
       - name: _SpecularAAThreshold
