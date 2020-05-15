@@ -17,6 +17,16 @@ public class ScanInteract : MonoBehaviour
             r.materials = mats;
 
         }
+        else if(col.tag == "Toy")
+        {
+            Renderer r = col.GetComponent<Renderer>();
+            Material[] mats = r.materials;
+            mats[0] = col.GetComponent<SearchingObj>().highlightMat;
+            mats[1] = col.GetComponent<SearchingObj>().highlightMat;
+            r.materials = mats;
+
+            GirlAI.isFound = true;
+        }
     }
 
     private void OnTriggerExit(Collider col)
@@ -28,7 +38,14 @@ public class ScanInteract : MonoBehaviour
             mats[0] = col.GetComponent<SearchingObj>().originalMat1;
             mats[1] = col.GetComponent<SearchingObj>().originalMat2;
             r.materials = mats;
+        }else if(col.tag == "Toy")
+        {
+            Renderer r = col.GetComponent<Renderer>();
+            Material[] mats = r.materials;
+            mats[0] = col.GetComponent<SearchingObj>().originalMat1;
+            mats[1] = col.GetComponent<SearchingObj>().originalMat2;
+            r.materials = mats;
         }
     }
-
+   
 }

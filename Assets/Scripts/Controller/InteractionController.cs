@@ -32,7 +32,7 @@ public class InteractionController : MonoBehaviour
         layerMask = ~layerMask;
         Vector3 t_MousePos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
 
-        if (Physics.Raycast(mainCam.ScreenPointToRay(t_MousePos), out hitInfo, 5, layerMask))
+        if (Physics.Raycast(mainCam.ScreenPointToRay(t_MousePos), out hitInfo, 10, layerMask))
         {
             Contact();
         }

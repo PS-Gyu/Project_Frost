@@ -32,6 +32,10 @@ TagManager:
   - AIAction
   - SearchingObj
   - Interaction
+  - Girl
+  - NPC
+  - Destination
+  - Toy
   layers:
   - Default
   - TransparentFX

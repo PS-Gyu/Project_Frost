@@ -11,6 +11,7 @@ public class DialogueManager : MonoBehaviour
     //[SerializeField] Text txt_name;
     Dialogue[] dialogues;
 
+    public static bool isRealEnd = false;
     bool isDialogue = false;
     bool isNext = false;  //특정 키 입력 대기
 
@@ -26,7 +27,7 @@ public class DialogueManager : MonoBehaviour
         {
             if (isNext)
             {
-                if (Input.GetKeyDown(KeyCode.E))
+                if (Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0))
                 {
                     isNext = false;
                     txt_Dialogue.text = "";
@@ -44,7 +45,6 @@ public class DialogueManager : MonoBehaviour
                         }
                         else
                         {
-                            GameObject.FindWithTag("Player").SetActive(true);
                             EndDialogue();
                         }
                     }
@@ -81,6 +81,7 @@ public class DialogueManager : MonoBehaviour
         lineCount = 0;
         dialogues = null;
         isNext = false;
+        isRealEnd = true;
         SettingUI(false);
     }
 

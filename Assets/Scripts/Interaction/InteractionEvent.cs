@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InteractionEvent : MonoBehaviour
 {
-    [SerializeField] DialogueEvent dialogue;
+    [SerializeField] public DialogueEvent dialogue;
     [SerializeField] public bool isFirst = true;
     
     public Dialogue[] GetDialogue()
