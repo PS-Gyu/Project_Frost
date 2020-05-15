@@ -93,11 +93,16 @@ public class GirlAI : MonoBehaviour
         {
             isPlaying = true;
             StartCoroutine(indicateToy());
-        }else if(destNum == 10 && !exitTime && !isPlaying)
+        }else if(destNum == 10 && !isPlaying)
+        {
+            isPlaying = true;
+            StartCoroutine(pickingToy());
+        }
+        else if(destNum == 11 && !exitTime && !isPlaying)
         {
             isPlaying = true;
             StartCoroutine(sayThanks());
-        }else if (destNum == 10 && exitTime && !isPlaying)
+        }else if (destNum == 11 && exitTime && !isPlaying)
         {
             isPlaying = true;
             StartCoroutine(exit());
@@ -115,7 +120,7 @@ public class GirlAI : MonoBehaviour
 
     IEnumerator GirlEntrance()
     {
-        Debug.Log("Entrance");
+        Debug.Log("Entrance" + destNum);
         girlAnim.SetBool("isRunning", true);
         theAgent.SetDestination(girlFirstDestination.transform.position);
         yield return new WaitForSeconds(2.0f);
@@ -127,7 +132,7 @@ public class GirlAI : MonoBehaviour
     
     IEnumerator goSecond()
     {
-        Debug.Log("goSecond");
+        Debug.Log("goSecond" + destNum);
         girlFirstDestination.SetActive(false);
         yield return new WaitForSeconds(waitTime);
         girlAnim.SetBool("isRunning", true);
@@ -138,7 +143,7 @@ public class GirlAI : MonoBehaviour
 
     IEnumerator goThird()
     {
-        Debug.Log("goThird");
+        Debug.Log("goThird" + destNum);
         girlSecondDestination.SetActive(false);
         yield return new WaitForSeconds(waitTime);
         girlAnim.SetBool("isRunning", true);
@@ -149,7 +154,7 @@ public class GirlAI : MonoBehaviour
 
     IEnumerator goFourth()
     {
-        Debug.Log("goFourth");
+        Debug.Log("goFourth" + destNum);
         girlThirdDestination.SetActive(false);
         yield return new WaitForSeconds(waitTime);
         girlAnim.SetBool("isRunning", true);
@@ -159,37 +164,40 @@ public class GirlAI : MonoBehaviour
     }
     IEnumerator reFourth()
     {
-        Debug.Log("reFourth");
+        Debug.Log("reFourth" + destNum);
         girlAnim.SetBool("isRunning", true);
         theAgent.SetDestination(girlFourthDestination.transform.position);
-        yield return new WaitForSeconds(4.0f);
         isPlaying = false;
+        yield return new WaitForSeconds(4.0f);
+
     }
 
     IEnumerator goFifth()
     {
-        Debug.Log("goFifth");
+        Debug.Log("goFifth" + destNum);
         girlAnim.SetBool("isRunning", true);
         theAgent.SetDestination(girlFifthDestination.transform.position);
-        yield return new WaitForSeconds(4.0f);
         isPlaying = false;
+        yield return new WaitForSeconds(4.0f);
+
     }
 
     IEnumerator startFind()
     {
-        Debug.Log("startFind");
+        Debug.Log("startFind" + destNum);
         yield return new WaitForSeconds(waitTime);
         girlAnim.SetBool("isSearching", true);
         yield return new WaitForSeconds(4.5f);
-        girlAnim.SetBool("isSearching", false);
+        girlAnim.SetBool("isRunning", true);
         theAgent.SetDestination(girlFifthDestination.transform.position);
+        girlAnim.SetBool("isSearching", false);
         yield return new WaitForSeconds(4.0f);
         isPlaying = false;
     }
 
     IEnumerator soSad()
     {
-        Debug.Log("soSad");
+        Debug.Log("soSad" + destNum);
         girlAnim.SetBool("isCrying", true);
         yield return new WaitForSeconds(2.5f);
         gameObject.GetComponent<InteractionEvent>().dialogue.line.x = 1;
@@ -200,13 +208,13 @@ public class GirlAI : MonoBehaviour
         GameObject.Find("Manager").GetComponent<ScanMode>().enabled = true;
         gameObject.tag = "Girl";
         GameObject.FindWithTag("Player").GetComponent<vThirdPersonController>().Strafe();
-        yield return new WaitForSeconds(4.0f);
+        yield return new WaitUntil(() => isFound);
         isPlaying = false;
     }
 
     IEnumerator indicateToy()
     {
-        Debug.Log("indicate");
+        Debug.Log("indicate" + destNum);
         gameObject.GetComponent<InteractionEvent>().isFirst = true;
         gameObject.GetComponent<InteractionEvent>().dialogue.line.x = 4;
         gameObject.GetComponent<InteractionEvent>().dialogue.line.y = 5;
@@ -214,7 +222,7 @@ public class GirlAI : MonoBehaviour
         yield return new WaitUntil(() => DialogueManager.isRealEnd);
         DialogueManager.isRealEnd = false;
         gameObject.tag = "Girl";
-
+        girlAnim.SetBool("isCrying", false);
         girlAnim.SetBool("isRunning", true);
         theAgent.SetDestination(girlSearchDestination.transform.position);
         yield return new WaitForSeconds(4.0f);
@@ -223,7 +231,7 @@ public class GirlAI : MonoBehaviour
 
     IEnumerator pickingToy()
     {
-        Debug.Log("PickUp");
+        Debug.Log("PickUp" + destNum);
         girlAnim.SetBool("isPickUp", true);
         yield return new WaitForSeconds(1.5f);
         GameObject.FindWithTag("Toy").GetComponent<MeshRenderer>().enabled = false;
@@ -236,7 +244,7 @@ public class GirlAI : MonoBehaviour
 
     IEnumerator sayThanks()
     {
-        Debug.Log("sayThanks");
+        Debug.Log("sayThanks" + destNum);
         gameObject.GetComponent<InteractionEvent>().isFirst = true;
         gameObject.GetComponent<InteractionEvent>().dialogue.line.x = 6;
         gameObject.GetComponent<InteractionEvent>().dialogue.line.y = 7;
@@ -251,7 +259,7 @@ public class GirlAI : MonoBehaviour
 
     IEnumerator exit()
     {
-        Debug.Log("isExit");
+        Debug.Log("isExit" + destNum);
         girlAnim.SetBool("isExit", true);
         yield return new WaitForSeconds(4.2f);
         girlAnim.SetBool("isRunning", true);
