@@ -17,8 +17,9 @@ ScriptedImporter:
     generateAllOutputs: 0
     generateMipMaps: 1
     preset: " <sbspreset pkgurl=\"pkg://New_Graph\" label=\"\" >\n  <presetinput
-      identifier=\"$outputsize\" uid=\"1526401641\" type=\"8\" value=\"9,9\" />\n
-      </sbspreset>\n"
+      identifier=\"$outputsize\" uid=\"1526401641\" type=\"8\" value=\"9,9\" />\n 
+      <presetinput identifier=\"$randomseed\" uid=\"227089467\" type=\"4\" value=\"8441\"
+      />\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
