@@ -15,6 +15,8 @@ public class DialogueManager : MonoBehaviour
     bool isDialogue = false;
     bool isNext = false;  //특정 키 입력 대기
 
+    public static bool isMonologue = false;
+
     [SerializeField] float textDelay;
 
     int lineCount = 0; //대화 카운트
@@ -27,7 +29,7 @@ public class DialogueManager : MonoBehaviour
         {
             if (isNext)
             {
-                if (Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0))
+                if (isMonologue)
                 {
                     isNext = false;
                     txt_Dialogue.text = "";
@@ -38,17 +40,42 @@ public class DialogueManager : MonoBehaviour
                     else
                     {
                         contextCount = 0;
-                        if(++lineCount < dialogues.Length)
+                        if (++lineCount < dialogues.Length)
                         {
                             StartCoroutine(TypeWriter());
-                            
+
                         }
                         else
                         {
                             EndDialogue();
                         }
                     }
+                }
+                else
+                {
+                    if (Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0))
+                    {
+                        isNext = false;
+                        txt_Dialogue.text = "";
+                        if (++contextCount < dialogues[lineCount].contexts.Length)
+                        {
+                            StartCoroutine(TypeWriter());
+                        }
+                        else
+                        {
+                            contextCount = 0;
+                            if (++lineCount < dialogues.Length)
+                            {
+                                StartCoroutine(TypeWriter());
 
+                            }
+                            else
+                            {
+                                EndDialogue();
+                            }
+                        }
+
+                    }
                 }
             }
         }
@@ -56,11 +83,22 @@ public class DialogueManager : MonoBehaviour
     public void ShowDialogue(Dialogue[] p_dialogues)
     {
         GameObject.FindWithTag("Player").GetComponent<vThirdPersonController>().enabled = false;
-        GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().horizontalInput = new GenericInput("", "LeftAnalogHorizontal", "Horizontal");
-        GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().verticallInput = new GenericInput("", "LeftAnalogVertical", "Vertical");
-        GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().jumpInput = new GenericInput("", "X", "X");
-        GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().rollInput = new GenericInput("", "B", "B");
-        GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().crouchInput = new GenericInput("", "Y", "Y");
+        if (isMonologue)
+        {
+            GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().horizontalInput = new GenericInput("Horizontal", "LeftAnalogHorizontal", "Horizontal");
+            GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().verticallInput = new GenericInput("Vertical", "LeftAnalogVertical", "Vertical");
+            GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().jumpInput = new GenericInput("Space", "X", "X");
+            GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().rollInput = new GenericInput("Q", "B", "B");
+            GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().crouchInput = new GenericInput("C", "Y", "Y");
+        }
+        else
+        {
+            GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().horizontalInput = new GenericInput("", "LeftAnalogHorizontal", "Horizontal");
+            GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().verticallInput = new GenericInput("", "LeftAnalogVertical", "Vertical");
+            GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().jumpInput = new GenericInput("", "X", "X");
+            GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().rollInput = new GenericInput("", "B", "B");
+            GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().crouchInput = new GenericInput("", "Y", "Y");
+        }
         isDialogue = true;
         txt_Dialogue.text = "";
         dialogues = p_dialogues;
@@ -82,11 +120,13 @@ public class DialogueManager : MonoBehaviour
         dialogues = null;
         isNext = false;
         isRealEnd = true;
+        isMonologue = false;
         SettingUI(false);
     }
 
     IEnumerator TypeWriter()
     {
+        
         SettingUI(true);
         
         string t_ReplaceText = dialogues[lineCount].contexts[contextCount];
@@ -99,8 +139,17 @@ public class DialogueManager : MonoBehaviour
          */
         txt_Dialogue.text = dialogues[lineCount].name + " : " + t_ReplaceText;
         
-        isNext = true;
-        yield return null;
+        
+        if (isMonologue)
+        {
+            yield return new WaitForSeconds(2.0f);
+            isNext = true;
+        }
+        else {
+            isNext = true;
+            yield return null;
+        }
+        
     }
 
     void SettingUI(bool p_flag)
