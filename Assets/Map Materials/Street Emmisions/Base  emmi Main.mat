@@ -23,7 +23,7 @@ Material:
   m_Name: Base  emmi Main
   m_Shader: {fileID: -6465566751694194690, guid: bd6ef666958578042a32ea1353da2789,
     type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: _MASKMAP _NORMALMAP _NORMALMAP_TANGENT_SPACE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
