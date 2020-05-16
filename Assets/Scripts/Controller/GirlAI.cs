@@ -30,7 +30,7 @@ public class GirlAI : MonoBehaviour
     void Start()
     {
         theDM = FindObjectOfType<DialogueManager>();
-        GameObject.Find("Manager").GetComponent<ScanMode>().enabled = false;
+        //GameObject.Find("Manager").GetComponent<ScanMode>().enabled = false;
         theAgent = GetComponent<NavMeshAgent>();
         girlAnim = GetComponent<Animator>();
         GameObject.FindWithTag("Player").GetComponent<vThirdPersonController>().Strafe();
