@@ -36,6 +36,7 @@ TagManager:
   - NPC
   - Destination
   - Toy
+  - Soldiers
   layers:
   - Default
   - TransparentFX
