@@ -851,7 +851,7 @@ ScriptedImporter:
       - name: _Smoothness
         float: 0.5
       - name: _SmoothnessRemapMax
-        float: 0.8957791
+        float: 0.895779
       - name: _SmoothnessRemapMin
         float: 0
       - name: _SpecularAAScreenSpaceVariance
