@@ -23,19 +23,19 @@ public class ScanMode : MonoBehaviour
     [SerializeField] bool isEnd = false;
 
     bool isUsingLad = false;
-    public static bool isStrafe = false;
+    bool isStrafe = false;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         isUsingLad = GameObject.FindWithTag("Player").GetComponent<vLadderAction>().isUsingLadder;
-
+        
         if (!isScan)
         {
             if (!isEnd)
@@ -46,13 +46,11 @@ public class ScanMode : MonoBehaviour
                     StartCoroutine(ScanStart());
                 }
             }
-        }
-        else if (isUsingLad && isStrafe)
+        }else if(isUsingLad && isStrafe)
         {
             GameObject.FindWithTag("Player").GetComponent<vThirdPersonController>().Strafe();
             isStrafe = !isStrafe;
-        }
-        else if (!isUsingLad && isScan && !isStrafe)
+        }else if(!isUsingLad && isScan && !isStrafe)
         {
             GameObject.FindWithTag("Player").GetComponent<vThirdPersonController>().Strafe();
             isStrafe = !isStrafe;
@@ -72,7 +70,7 @@ public class ScanMode : MonoBehaviour
 
     IEnumerator ScanStart()
     {
-        if (!isStrafe)
+        if (isStrafe == false)
         {
             GameObject.FindWithTag("Player").GetComponent<vThirdPersonController>().Strafe();
             isStrafe = !isStrafe;
@@ -85,7 +83,7 @@ public class ScanMode : MonoBehaviour
     }
     IEnumerator ScanEnd()
     {
-        if (isStrafe)
+        if (isStrafe == true)
         {
             GameObject.FindWithTag("Player").GetComponent<vThirdPersonController>().Strafe();
             isStrafe = !isStrafe;
