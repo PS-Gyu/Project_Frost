@@ -12,7 +12,7 @@ public class DialogueManager : MonoBehaviour
     Dialogue[] dialogues;
 
     public static bool isRealEnd = false;
-    bool isDialogue = false;
+    public static bool isDialogue = false;
     bool isNext = false;  //특정 키 입력 대기
 
     public static bool isMonologue = false;
@@ -102,11 +102,11 @@ public class DialogueManager : MonoBehaviour
         isDialogue = true;
         txt_Dialogue.text = "";
         dialogues = p_dialogues;
-        
+
         StartCoroutine(TypeWriter());
     }
 
-    void EndDialogue()
+    public void EndDialogue()
     {
         GameObject.FindWithTag("Player").GetComponent<vThirdPersonController>().enabled = true;
         GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().horizontalInput = new GenericInput("Horizontal", "LeftAnalogHorizontal", "Horizontal");
@@ -126,9 +126,9 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator TypeWriter()
     {
-        
+
         SettingUI(true);
-        
+
         string t_ReplaceText = dialogues[lineCount].contexts[contextCount];
         t_ReplaceText = t_ReplaceText.Replace("'", ",");
         //txt_Name.text = dialogues[lineCount].name;
@@ -138,18 +138,19 @@ public class DialogueManager : MonoBehaviour
          * yield return new WaitForSeconds(textDelay);
          */
         txt_Dialogue.text = dialogues[lineCount].name + " : " + t_ReplaceText;
-        
-        
+
+
         if (isMonologue)
         {
             yield return new WaitForSeconds(2.0f);
             isNext = true;
         }
-        else {
+        else
+        {
             isNext = true;
             yield return null;
         }
-        
+
     }
 
     void SettingUI(bool p_flag)

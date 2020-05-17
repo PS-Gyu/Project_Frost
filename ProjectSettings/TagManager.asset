@@ -38,6 +38,7 @@ TagManager:
   - Toy
   - Soldiers
   - ToyBoss
+  - USB
   layers:
   - Default
   - TransparentFX

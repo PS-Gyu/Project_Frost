@@ -13,7 +13,6 @@ public class InteractionController : MonoBehaviour
     bool isContact = false;
     bool isInteract = false;
     bool isUSB = false;
-    public static bool isUsed = false;
 
     DialogueManager theDM;
 
@@ -53,7 +52,8 @@ public class InteractionController : MonoBehaviour
             {
                 isContact = true;
             }
-        } else if (hitInfo.transform.CompareTag("USB"))
+        }
+        else if (hitInfo.transform.CompareTag("USB"))
         {
             if (!isUSB)
             {
@@ -72,8 +72,8 @@ public class InteractionController : MonoBehaviour
             isUSB = false;
         }
     }
-    
-    
+
+
 
     void ClickLeftBtn()
     {
@@ -82,11 +82,12 @@ public class InteractionController : MonoBehaviour
             if (isContact)
             {
                 Interact();
-            }else if (isUSB)
+            }
+            else if (isUSB)
             {
                 USB();
             }
-            
+
         }
     }
 
@@ -102,10 +103,9 @@ public class InteractionController : MonoBehaviour
     }
     void USB()
     {
-        if (hitInfo.transform.GetComponent<USBnteract>().usbInteracted)
+        if (!hitInfo.transform.GetComponent<USBnteract>().usbInteracted)
         {
-            isUsed = true;
-            hitInfo.transform.GetComponent<USBnteract>().usbInteracted = false;
+            hitInfo.transform.GetComponent<USBnteract>().usbInteracted = true;
         }
     }
 
