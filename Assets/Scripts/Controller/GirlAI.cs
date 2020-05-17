@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 
 public class GirlAI : MonoBehaviour
 {
@@ -14,11 +16,12 @@ public class GirlAI : MonoBehaviour
     public GameObject girlFifthDestination;
     public GameObject girlSearchDestination;
     public GameObject girlFinalDestination;
-    
+    public VolumeProfile dp;
 
     DialogueManager theDM;
     NavMeshAgent theAgent;
     Animator girlAnim;
+
 
     
     public static bool isFound = false;
@@ -350,8 +353,9 @@ public class GirlAI : MonoBehaviour
         yield return new WaitUntil(() => DialogueManager.isRealEnd);
         DialogueManager.isRealEnd = false;
         yield return new WaitForSeconds(5.0f);
-
-        isAntonio = true;
-        gameObject.SetActive(false);
+        GameObject.Find("Museum Volume").GetComponent<Volume>().profile = dp;
+        SceneManager.LoadScene(1);
+        
+        
     }
 }
