@@ -16,8 +16,8 @@ public class ScanMode : MonoBehaviour
     [SerializeField] AnimationClip start;
     [SerializeField] AnimationClip end;
     [SerializeField] GameObject pp;
-    [SerializeField] VolumeProfile p1;
-    [SerializeField] VolumeProfile p2;
+    [SerializeField] public VolumeProfile p1;
+    [SerializeField] public VolumeProfile p2;
 
     [SerializeField] bool isScan = false;
     [SerializeField] bool isEnd = false;

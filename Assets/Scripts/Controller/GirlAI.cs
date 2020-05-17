@@ -352,7 +352,6 @@ public class GirlAI : MonoBehaviour
         theDM.ShowDialogue(gameObject.GetComponent<InteractionEvent>().GetDialogue());
         yield return new WaitUntil(() => DialogueManager.isRealEnd);
         DialogueManager.isRealEnd = false;
-        yield return new WaitForSeconds(5.0f);
         GameObject.Find("Museum Volume").GetComponent<Volume>().profile = dp;
         SceneManager.LoadScene(1);
         

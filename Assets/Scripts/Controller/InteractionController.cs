@@ -1,6 +1,7 @@
 ﻿using Invector.vCharacterController;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Hardware;
 using UnityEngine;
 
 public class InteractionController : MonoBehaviour
@@ -11,6 +12,8 @@ public class InteractionController : MonoBehaviour
 
     bool isContact = false;
     bool isInteract = false;
+    bool isUSB = false;
+    public static bool isUsed = false;
 
     DialogueManager theDM;
 
@@ -50,6 +53,12 @@ public class InteractionController : MonoBehaviour
             {
                 isContact = true;
             }
+        } else if (hitInfo.transform.CompareTag("USB"))
+        {
+            if (!isUSB)
+            {
+                isUSB = true;
+            }
         }
     }
     void NotContact()
@@ -57,6 +66,10 @@ public class InteractionController : MonoBehaviour
         if (isContact)
         {
             isContact = false;
+        }
+        if (isUSB)
+        {
+            isUSB = false;
         }
     }
     
@@ -69,6 +82,9 @@ public class InteractionController : MonoBehaviour
             if (isContact)
             {
                 Interact();
+            }else if (isUSB)
+            {
+                USB();
             }
             
         }
@@ -82,6 +98,14 @@ public class InteractionController : MonoBehaviour
             theDM.ShowDialogue(hitInfo.transform.GetComponent<InteractionEvent>().GetDialogue());
             hitInfo.transform.GetComponent<InteractionEvent>().isFirst = false;
 
+        }
+    }
+    void USB()
+    {
+        if (hitInfo.transform.GetComponent<USBnteract>().usbInteracted)
+        {
+            isUsed = true;
+            hitInfo.transform.GetComponent<USBnteract>().usbInteracted = false;
         }
     }
 
