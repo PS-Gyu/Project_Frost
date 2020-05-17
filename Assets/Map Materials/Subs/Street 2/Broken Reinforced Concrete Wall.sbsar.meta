@@ -18,10 +18,11 @@ ScriptedImporter:
     generateMipMaps: 1
     preset: " <sbspreset pkgurl=\"pkg://Broken_Reinforced_Concrete\" label=\"\" >\n 
       <presetinput identifier=\"$outputsize\" uid=\"886378142\" type=\"8\" value=\"9,9\"
-      />\n  <presetinput identifier=\"Damage_Switch\" uid=\"1205367787\" type=\"0\"
-      value=\"0.733\" />\n  <presetinput identifier=\"Middle_Section_Size\" uid=\"1205451757\"
-      type=\"0\" value=\"0.528\" />\n  <presetinput identifier=\"Middle_Section_Distortion\"
-      uid=\"1205415086\" type=\"0\" value=\"0.199\" />\n </sbspreset>\n"
+      />\n  <presetinput identifier=\"Top_Damage_Switch\" uid=\"1205345377\" type=\"0\"
+      value=\"0.964\" />\n  <presetinput identifier=\"Damage_Switch\" uid=\"1205367787\"
+      type=\"0\" value=\"0.848\" />\n  <presetinput identifier=\"Middle_Section_Size\"
+      uid=\"1205451757\" type=\"0\" value=\"0.69\" />\n  <presetinput identifier=\"Middle_Section_Distortion\"
+      uid=\"1205415086\" type=\"0\" value=\"0.28\" />\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
@@ -374,11 +375,11 @@ ScriptedImporter:
         float: 1
       colors:
       - name: _BaseColor
-        color: {r: 1, g: 1, b: 1, a: 1}
+        color: {r: 0.6509434, g: 0.6509434, b: 0.6509434, a: 1}
       - name: _BaseColorMap_MipInfo
         color: {r: 0, g: 0, b: 0, a: 0}
       - name: _Color
-        color: {r: 1, g: 1, b: 1, a: 1}
+        color: {r: 0.6509434, g: 0.6509434, b: 0.6509434, a: 1}
       - name: _DiffusionProfileAsset
         color: {r: 0, g: 0, b: 0, a: 0}
       - name: _DoubleSidedConstants
