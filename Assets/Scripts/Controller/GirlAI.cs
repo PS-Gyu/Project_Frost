@@ -25,7 +25,12 @@ public class GirlAI : MonoBehaviour
     public static bool exitTime = false;
     public static bool isPlaying = false;
     public static bool isPicking = false;
+    public static bool isThanks = false;
+    public static bool isSad = false;
+    public static bool isIndicate = false;
     public static float waitTime = 0.8f;
+
+    public static bool isAntonio = false;
 
     // Start is called before the first frame update
     void Start()
@@ -80,27 +85,26 @@ public class GirlAI : MonoBehaviour
             girlFourthDestination.SetActive(false);
             StartCoroutine(goFifth());
         }
-        else if (destNum == 9 && !isFound && !isPlaying)
+        else if (destNum == 9 && !isSad)
         {
-            isPlaying = true;
+            isSad = true;
             StartCoroutine(soSad());
-        }else if (destNum == 9 && isFound && !isPlaying)
+        }else if (destNum == 9 && isIndicate)
         {
-            isPlaying = true;
+            isIndicate = false;
             StartCoroutine(indicateToy());
         }else if(destNum == 10 && !isPicking)
         {
             isPicking = true;
             StartCoroutine(pickingToy());
         }
-        else if(destNum == 11 && !exitTime && !isPlaying)
+        else if(destNum == 11 && isPicking)
         {
-            isPlaying = true;
+            isPicking = false;
             StartCoroutine(sayThanks());
-        }else if (destNum == 11 && exitTime && !isPlaying)
+        }else if (destNum == 11 && exitTime)
         {
-            isPlaying = true;
-            StartCoroutine(exit());
+            //StartCoroutine(exit());
             
         }
     }
@@ -118,8 +122,8 @@ public class GirlAI : MonoBehaviour
     {
         girlAnim.SetBool("isRunning", true);
         theAgent.SetDestination(girlFirstDestination.transform.position);
-        yield return new WaitForSeconds(2.0f);
-        GameObject.FindWithTag("Toy").GetComponent<MeshRenderer>().enabled = true;
+        yield return new WaitForSeconds(4.0f);
+        GameObject.FindWithTag("Toy").GetComponentInChildren<MeshRenderer>().enabled = true;
         yield return new WaitForSeconds(3.0f);
         isPlaying = false;
     }
@@ -207,48 +211,52 @@ public class GirlAI : MonoBehaviour
         DialogueManager.isRealEnd = false;
         Debug.Log("soSad" + destNum);
         girlAnim.SetBool("isCrying", true);
-        yield return new WaitForSeconds(3.0f);
+        yield return new WaitForSeconds(0.5f);
         DialogueManager.isMonologue = true;
         gameObject.GetComponent<InteractionEvent>().dialogue.line.x = 3;
         gameObject.GetComponent<InteractionEvent>().dialogue.line.y = 3;
         theDM.ShowDialogue(gameObject.GetComponent<InteractionEvent>().GetDialogue());
         DialogueManager.isRealEnd = false;
-        yield return new WaitForSeconds(7.0f);
         gameObject.tag = "Interaction";
         gameObject.GetComponent<InteractionEvent>().dialogue.line.x = 4;
         gameObject.GetComponent<InteractionEvent>().dialogue.line.y = 8;
         yield return new WaitUntil(() => DialogueManager.isRealEnd);
         DialogueManager.isRealEnd = false;
-        GameObject.Find("Manager").GetComponent<UnstableScanMode>().enabled = true;
         gameObject.tag = "Girl";
+        GameObject.Find("Manager").GetComponent<UnstableScanMode>().enabled = true;
         GameObject.FindWithTag("Player").GetComponent<vThirdPersonController>().Strafe();
-        yield return new WaitUntil(() => isFound && DialogueManager.isRealEnd);
+        yield return new WaitUntil(() => isFound && GameObject.Find("Manager").GetComponent<UnstableScanMode>().enabled);
         DialogueManager.isRealEnd = false;
         DialogueManager.isMonologue = true;
         gameObject.GetComponent<InteractionEvent>().dialogue.line.x = 9;
         gameObject.GetComponent<InteractionEvent>().dialogue.line.y = 9;
         theDM.ShowDialogue(gameObject.GetComponent<InteractionEvent>().GetDialogue());
         DialogueManager.isRealEnd = false;
-        yield return new WaitForSeconds(7.0f);
-        isPlaying = false;
+        yield return new WaitForSeconds(6.0f);
+        isIndicate = true;
+        
     }
 
     IEnumerator indicateToy()
     {
         Debug.Log("indicate" + destNum);
-        yield return new WaitForSeconds(0.5f);
+        DialogueManager.isRealEnd = false;
         gameObject.GetComponent<InteractionEvent>().isFirst = true;
         gameObject.GetComponent<InteractionEvent>().dialogue.line.x = 10;
-        gameObject.GetComponent<InteractionEvent>().dialogue.line.y = 11;
+        gameObject.GetComponent<InteractionEvent>().dialogue.line.y = 10;
         gameObject.tag = "Interaction";
         yield return new WaitUntil(() => DialogueManager.isRealEnd);
         DialogueManager.isRealEnd = false;
-        yield return new WaitForSeconds(2.0f);
         gameObject.tag = "Girl";
+        yield return new WaitForSeconds(0.8f);
+        DialogueManager.isMonologue = true;
+        gameObject.GetComponent<InteractionEvent>().dialogue.line.x = 11;
+        gameObject.GetComponent<InteractionEvent>().dialogue.line.y = 11;
+        theDM.ShowDialogue(gameObject.GetComponent<InteractionEvent>().GetDialogue());
+        DialogueManager.isRealEnd = false;
         girlAnim.SetBool("isCrying", false);
         girlAnim.SetBool("isRunning", true);
         theAgent.SetDestination(girlSearchDestination.transform.position);
-        isPlaying = false;
     }
 
     IEnumerator pickingToy()
@@ -257,7 +265,7 @@ public class GirlAI : MonoBehaviour
         yield return new WaitForSeconds(2.1f);
         girlAnim.SetBool("isPickUp", true);
         yield return new WaitForSeconds(2.1f);
-        GameObject.FindWithTag("Toy").GetComponent<MeshRenderer>().enabled = false;
+        GameObject.FindWithTag("Toy").GetComponentInChildren<MeshRenderer>().enabled = false;
         girlAnim.SetBool("isPickUp", false);
         yield return new WaitForSeconds(1.5f);
         girlAnim.SetBool("isRunning", true);
@@ -267,6 +275,7 @@ public class GirlAI : MonoBehaviour
 
     IEnumerator sayThanks()
     {
+        DialogueManager.isRealEnd = false;
         Debug.Log("sayThanks" + destNum);
         gameObject.GetComponent<InteractionEvent>().isFirst = true;
         gameObject.GetComponent<InteractionEvent>().dialogue.line.x = 12;
@@ -275,8 +284,7 @@ public class GirlAI : MonoBehaviour
         yield return new WaitUntil(() => DialogueManager.isRealEnd);
         DialogueManager.isRealEnd = false;
         gameObject.tag = "Girl";
-        exitTime = true;
-        isPlaying = false;
+        yield return StartCoroutine(exit());
     }
 
     IEnumerator exit()
@@ -295,7 +303,7 @@ public class GirlAI : MonoBehaviour
         DialogueManager.isRealEnd = false;
         yield return new WaitForSeconds(5.0f);
 
-
+        isAntonio = true;
         gameObject.SetActive(false);
     }
 }
