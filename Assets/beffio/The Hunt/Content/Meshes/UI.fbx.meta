@@ -1,0 +1,250 @@
+fileFormatVersion: 2
+guid: ea50830d9f29f71449d87bbf001bf613
+timeCreated: 1522845881
+licenseType: Store
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Background.001
+    100002: Blue_quarter_circle.001
+    100004: Cross.001
+    100006: Cross_Red_1.001
+    100008: Cross_Red_2.001
+    100010: Crosses_Orange.001
+    100012: Green_Dots.001
+    100014: Hex_Rim.001
+    100016: Line_1.001
+    100018: Line_2.001
+    100020: Line_3.001
+    100022: Line_4.001
+    100024: Line_5.001
+    100026: Orange_Line.001
+    100028: Orange_text_1.001
+    100030: Orange_Text_2.001
+    100032: Orange_Text_3.001
+    100034: Orange_Triangle.001
+    100036: Red_Circle.001
+    100038: //RootNode
+    100040: White_Typo_bar.001
+    100042: Blue_Square_Big.001
+    100044: Blue_Square_Small.001
+    100046: Hex_Lines.001
+    100048: Green_Dots_1.001
+    100050: Green_Dots_2.001
+    100052: Green_Dots_3.001
+    100054: Green_Dots_4.001
+    100056: Green_Dots_5.001
+    100058: Green_Dots_6.001
+    100060: Green_Dots_7.001
+    100062: Green_Dots_8.001
+    400000: Background.001
+    400002: Blue_quarter_circle.001
+    400004: Cross.001
+    400006: Cross_Red_1.001
+    400008: Cross_Red_2.001
+    400010: Crosses_Orange.001
+    400012: Green_Dots.001
+    400014: Hex_Rim.001
+    400016: Line_1.001
+    400018: Line_2.001
+    400020: Line_3.001
+    400022: Line_4.001
+    400024: Line_5.001
+    400026: Orange_Line.001
+    400028: Orange_text_1.001
+    400030: Orange_Text_2.001
+    400032: Orange_Text_3.001
+    400034: Orange_Triangle.001
+    400036: Red_Circle.001
+    400038: //RootNode
+    400040: White_Typo_bar.001
+    400042: Blue_Square_Big.001
+    400044: Blue_Square_Small.001
+    400046: Hex_Lines.001
+    400048: Green_Dots_1.001
+    400050: Green_Dots_2.001
+    400052: Green_Dots_3.001
+    400054: Green_Dots_4.001
+    400056: Green_Dots_5.001
+    400058: Green_Dots_6.001
+    400060: Green_Dots_7.001
+    400062: Green_Dots_8.001
+    2100000: No Name
+    2300000: Background.001
+    2300002: Blue_quarter_circle.001
+    2300004: Cross.001
+    2300006: Cross_Red_1.001
+    2300008: Cross_Red_2.001
+    2300010: Crosses_Orange.001
+    2300012: Green_Dots.001
+    2300014: Hex_Rim.001
+    2300016: Line_1.001
+    2300018: Line_2.001
+    2300020: Line_3.001
+    2300022: Line_4.001
+    2300024: Line_5.001
+    2300026: Orange_Line.001
+    2300028: Orange_text_1.001
+    2300030: Orange_Text_2.001
+    2300032: Orange_Text_3.001
+    2300034: Orange_Triangle.001
+    2300036: Red_Circle.001
+    2300038: White_Typo_bar.001
+    2300040: Blue_Square_Big.001
+    2300042: Blue_Square_Small.001
+    2300044: Hex_Lines.001
+    2300046: Green_Dots_1.001
+    2300048: Green_Dots_2.001
+    2300050: Green_Dots_3.001
+    2300052: Green_Dots_4.001
+    2300054: Green_Dots_5.001
+    2300056: Green_Dots_6.001
+    2300058: Green_Dots_7.001
+    2300060: Green_Dots_8.001
+    3300000: Background.001
+    3300002: Blue_quarter_circle.001
+    3300004: Cross.001
+    3300006: Cross_Red_1.001
+    3300008: Cross_Red_2.001
+    3300010: Crosses_Orange.001
+    3300012: Green_Dots.001
+    3300014: Hex_Rim.001
+    3300016: Line_1.001
+    3300018: Line_2.001
+    3300020: Line_3.001
+    3300022: Line_4.001
+    3300024: Line_5.001
+    3300026: Orange_Line.001
+    3300028: Orange_text_1.001
+    3300030: Orange_Text_2.001
+    3300032: Orange_Text_3.001
+    3300034: Orange_Triangle.001
+    3300036: Red_Circle.001
+    3300038: White_Typo_bar.001
+    3300040: Blue_Square_Big.001
+    3300042: Blue_Square_Small.001
+    3300044: Hex_Lines.001
+    3300046: Green_Dots_1.001
+    3300048: Green_Dots_2.001
+    3300050: Green_Dots_3.001
+    3300052: Green_Dots_4.001
+    3300054: Green_Dots_5.001
+    3300056: Green_Dots_6.001
+    3300058: Green_Dots_7.001
+    3300060: Green_Dots_8.001
+    4300000: Background.001
+    4300002: Blue_quarter_circle.001
+    4300004: Hex_Rim.001
+    4300006: Line_5.001
+    4300008: Cross_Red_1.001
+    4300010: Red_Circle.001
+    4300012: Orange_Triangle.001
+    4300014: Cross.001
+    4300016: Green_Dots.001
+    4300018: Orange_Text_3.001
+    4300020: Orange_Line.001
+    4300022: Orange_Text_2.001
+    4300024: Crosses_Orange.001
+    4300026: Orange_text_1.001
+    4300028: White_Typo_bar.001
+    4300030: Line_1.001
+    4300032: Line_2.001
+    4300034: Line_3.001
+    4300036: Line_4.001
+    4300038: Cross_Red_2.001
+    4300040: Hex_Lines.001
+    4300042: Blue_Square_Big.001
+    4300044: Blue_Square_Small.001
+    4300046: Green_Dots_8.001
+    4300048: Green_Dots_1.001
+    4300050: Green_Dots_2.001
+    4300052: Green_Dots_3.001
+    4300054: Green_Dots_4.001
+    4300056: Green_Dots_5.001
+    4300058: Green_Dots_6.001
+    4300060: Green_Dots_7.001
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: d8f219c193f59bb4896fd76c01827cf3, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
