@@ -72,7 +72,7 @@ public class ScanMode : MonoBehaviour
 
     IEnumerator ScanStart()
     {
-        if (isStrafe == false)
+        if (!isStrafe)
         {
             GameObject.FindWithTag("Player").GetComponent<vThirdPersonController>().Strafe();
             isStrafe = !isStrafe;
@@ -85,7 +85,7 @@ public class ScanMode : MonoBehaviour
     }
     IEnumerator ScanEnd()
     {
-        if (isStrafe == true)
+        if (isStrafe)
         {
             GameObject.FindWithTag("Player").GetComponent<vThirdPersonController>().Strafe();
             isStrafe = !isStrafe;
