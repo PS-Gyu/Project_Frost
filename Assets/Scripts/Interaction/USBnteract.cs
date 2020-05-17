@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class USBnteract : MonoBehaviour
 {
-    public bool usbInteracted = true;
-    public static bool isInteracted = true;
+    public bool usbInteracted = false;
+    public static bool isInteracted = false;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
-    
+
 
     // Update is called once per frame
     void Update()
