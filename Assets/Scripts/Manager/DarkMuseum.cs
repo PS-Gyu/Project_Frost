@@ -15,6 +15,7 @@ public class DarkMuseum : MonoBehaviour
     [SerializeField] GameObject update;
     [SerializeField] GameObject ladder;
     [SerializeField] GameObject ladderCollider;
+    [SerializeField] GameObject redLights;
     VolumeProfile pp;
 
     public bool isInteracted = false;
@@ -147,6 +148,7 @@ public class DarkMuseum : MonoBehaviour
         ladderCollider.SetActive(true);
 
 
+
         yield return new WaitUntil(() => DarkMusFirst.firstDial);
         DialogueManager.isMonologue = true;
         gameObject.GetComponent<InteractionEvent>().dialogue.line.x = 66;
@@ -154,6 +156,8 @@ public class DarkMuseum : MonoBehaviour
         theDM.ShowDialogue(gameObject.GetComponent<InteractionEvent>().GetDialogue());
         yield return new WaitUntil(() => DialogueManager.isRealEnd);
         DialogueManager.isRealEnd = false;
+
+        redLights.SetActive(true);
 
         yield return new WaitUntil(() => DarkMusSec.secDial);
         DialogueManager.isMonologue = true;

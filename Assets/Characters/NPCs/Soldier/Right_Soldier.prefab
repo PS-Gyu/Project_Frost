@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 4858077333422208650}
   m_Layer: 0
   m_Name: Right_Soldier
-  m_TagString: Soldiers
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -448,9 +448,11 @@ GameObject:
   m_Component:
   - component: {fileID: 7129243505200073704}
   - component: {fileID: 9108788606821791690}
+  - component: {fileID: 8950726215711928582}
+  - component: {fileID: 643160538576634149}
   m_Layer: 0
   m_Name: vanguard_Mesh
-  m_TagString: Untagged
+  m_TagString: Soldiers
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -585,6 +587,35 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.026475683, y: -0.06959891, z: 0.2203598}
     m_Extent: {x: 0.47393662, y: 0.8739296, z: 0.49937612}
   m_DirtyAABB: 0
+--- !u!114 &8950726215711928582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2049366098272481692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b58298ef83e694a4e8c1bbf8eb9965ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalMat1: {fileID: 2100000, guid: 4101796af1bb9b0408ae20bf13fe7bdf, type: 2}
+  originalMat2: {fileID: 0}
+  highlightMat: {fileID: 2100000, guid: 9cc14f04425926c4d85e5ce66db2f0f4, type: 2}
+--- !u!136 &643160538576634149
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2049366098272481692}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.73743105
+  m_Height: 1.9328387
+  m_Direction: 1
+  m_Center: {x: 0.028911982, y: 0.7464179, z: 0.21028009}
 --- !u!1 &2140240942725954794
 GameObject:
   m_ObjectHideFlags: 0
@@ -1737,9 +1768,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1495005980602394723}
   - component: {fileID: 7250250040975407828}
+  - component: {fileID: 516965048918921124}
+  - component: {fileID: 7443180198883582013}
   m_Layer: 0
   m_Name: vanguard_visor
-  m_TagString: Untagged
+  m_TagString: Soldiers
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1815,6 +1848,35 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.019097932, y: 0.28080857, z: 0.11839464}
     m_Extent: {x: 0.076844074, y: 0.073714204, z: 0.05093558}
   m_DirtyAABB: 0
+--- !u!114 &516965048918921124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6389231795752426249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b58298ef83e694a4e8c1bbf8eb9965ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalMat1: {fileID: 2100000, guid: 4101796af1bb9b0408ae20bf13fe7bdf, type: 2}
+  originalMat2: {fileID: 0}
+  highlightMat: {fileID: 2100000, guid: 9cc14f04425926c4d85e5ce66db2f0f4, type: 2}
+--- !u!136 &7443180198883582013
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6389231795752426249}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.09880841
+  m_Height: 0.18198583
+  m_Direction: 1
+  m_Center: {x: 0.05677428, y: 1.3871027, z: 0.27563822}
 --- !u!1 &6577872187094723371
 GameObject:
   m_ObjectHideFlags: 0
