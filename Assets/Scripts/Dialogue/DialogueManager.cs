@@ -53,7 +53,7 @@ public class DialogueManager : MonoBehaviour
                 }
                 else
                 {
-                    if (Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0))
+                    if (Input.GetMouseButtonDown(0))
                     {
                         isNext = false;
                         txt_Dialogue.text = "";
@@ -82,7 +82,7 @@ public class DialogueManager : MonoBehaviour
     }
     public void ShowDialogue(Dialogue[] p_dialogues)
     {
-        GameObject.FindWithTag("Player").GetComponent<vThirdPersonController>().enabled = false;
+        
         if (isMonologue)
         {
             GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().horizontalInput = new GenericInput("Horizontal", "LeftAnalogHorizontal", "Horizontal");
@@ -93,6 +93,7 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
+            GameObject.FindWithTag("Player").GetComponent<vThirdPersonController>().enabled = false;
             GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().horizontalInput = new GenericInput("", "LeftAnalogHorizontal", "Horizontal");
             GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().verticallInput = new GenericInput("", "LeftAnalogVertical", "Vertical");
             GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().jumpInput = new GenericInput("", "X", "X");

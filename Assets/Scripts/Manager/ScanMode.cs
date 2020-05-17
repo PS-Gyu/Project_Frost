@@ -72,10 +72,10 @@ public class ScanMode : MonoBehaviour
 
     IEnumerator ScanStart()
     {
-        if (!isStrafe)
+        if (isStrafe == false)
         {
             GameObject.FindWithTag("Player").GetComponent<vThirdPersonController>().Strafe();
-            isStrafe = !isStrafe;
+            isStrafe = true;
         }
         doom.GetComponent<Animation>().clip = start;
         pp.GetComponent<Volume>().profile = p1;
@@ -85,10 +85,10 @@ public class ScanMode : MonoBehaviour
     }
     IEnumerator ScanEnd()
     {
-        if (isStrafe)
+        if (isStrafe == true)
         {
             GameObject.FindWithTag("Player").GetComponent<vThirdPersonController>().Strafe();
-            isStrafe = !isStrafe;
+            isStrafe = false;
         }
         doom.GetComponent<Animation>().clip = end;
         doom.GetComponent<Animation>().Play();

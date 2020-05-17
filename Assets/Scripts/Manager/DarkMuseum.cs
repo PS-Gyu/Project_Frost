@@ -14,6 +14,7 @@ public class DarkMuseum : MonoBehaviour
     [SerializeField] VolumeProfile np;
     [SerializeField] GameObject update;
     [SerializeField] GameObject ladder;
+    [SerializeField] GameObject ladderCollider;
     VolumeProfile pp;
 
     public bool isInteracted = false;
@@ -26,6 +27,9 @@ public class DarkMuseum : MonoBehaviour
         sm = FindObjectOfType<ScanMode>();
         StartCoroutine(darkMuseum());
         pp = dp;
+        DarkMusFirst.firstDial = false;
+        DarkMusSec.secDial = false;
+        DarkMusThird.thirdDial = false;
     }
 
     // Update is called once per frame
@@ -40,6 +44,8 @@ public class DarkMuseum : MonoBehaviour
         isInteracted = USBnteract.isInteracted;
     }
 
+    
+
     IEnumerator darkMuseum()
     {
         yield return new WaitForSeconds(2.0f);
@@ -50,6 +56,8 @@ public class DarkMuseum : MonoBehaviour
         yield return new WaitUntil(() => DialogueManager.isRealEnd);
         DialogueManager.isRealEnd = false;
         pp = np;
+
+        GameObject.FindWithTag("MainCamera").GetComponent<CameraShake>().m_force = 0.1f;
         //화면 흔들림
         yield return new WaitForSeconds(2.0f);
         DialogueManager.isMonologue = true;
@@ -57,18 +65,20 @@ public class DarkMuseum : MonoBehaviour
         gameObject.GetComponent<InteractionEvent>().dialogue.line.y = 35;
         theDM.ShowDialogue(gameObject.GetComponent<InteractionEvent>().GetDialogue());
         yield return new WaitUntil(() => DialogueManager.isRealEnd);
+        GameObject.FindWithTag("MainCamera").GetComponent<CameraShake>().m_force = 0.0f;
         DialogueManager.isRealEnd = false;
-
+        
 
         pp = dp;
         yield return new WaitForSeconds(Random.Range(0.1f, 1.6f));
+        
         pp = np;
         yield return new WaitForSeconds(Random.Range(0.1f, 2.6f));
         pp = dp;
         yield return new WaitForSeconds(Random.Range(0.1f, 1.6f));
         DialogueManager.isMonologue = true;
         gameObject.GetComponent<InteractionEvent>().dialogue.line.x = 36;
-        gameObject.GetComponent<InteractionEvent>().dialogue.line.y = 58;
+        gameObject.GetComponent<InteractionEvent>().dialogue.line.y = 55;
         theDM.ShowDialogue(gameObject.GetComponent<InteractionEvent>().GetDialogue());
 
         pp = np;
@@ -78,10 +88,12 @@ public class DarkMuseum : MonoBehaviour
         pp = np;
         yield return new WaitForSeconds(Random.Range(0.1f, 1.6f));
         pp = dp;
+        GameObject.FindWithTag("MainCamera").GetComponent<CameraShake>().m_force = 0.1f;
         yield return new WaitForSeconds(Random.Range(0.1f, 1.6f));
         pp = np;
         yield return new WaitForSeconds(Random.Range(0.1f, 1.6f));
         pp = dp;
+        GameObject.FindWithTag("MainCamera").GetComponent<CameraShake>().m_force = 0.0f;
         yield return new WaitForSeconds(Random.Range(0.1f, 1.6f));
         pp = np;
         yield return new WaitUntil(() => DialogueManager.isRealEnd);
@@ -92,10 +104,12 @@ public class DarkMuseum : MonoBehaviour
 
         yield return new WaitUntil(() => USBnteract.isInteracted);
 
+
+
         //UI애니메이션 실행 + 캐릭터 행동 제한
         DialogueManager.isMonologue = true;
-        gameObject.GetComponent<InteractionEvent>().dialogue.line.x = 59;
-        gameObject.GetComponent<InteractionEvent>().dialogue.line.y = 63;
+        gameObject.GetComponent<InteractionEvent>().dialogue.line.x = 56;
+        gameObject.GetComponent<InteractionEvent>().dialogue.line.y = 60;
         theDM.ShowDialogue(gameObject.GetComponent<InteractionEvent>().GetDialogue());
         update.SetActive(true);
         GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().horizontalInput = new GenericInput("", "LeftAnalogHorizontal", "Horizontal");
@@ -105,9 +119,9 @@ public class DarkMuseum : MonoBehaviour
         GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().crouchInput = new GenericInput("", "Y", "Y");
         yield return new WaitUntil(() => DialogueManager.isRealEnd);
         DialogueManager.isRealEnd = false;
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(0.3f);
         pp = dp;
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(0.3f);
         pp = np;
         update.SetActive(false);
         GameObject.FindWithTag("USB").GetComponent<MeshRenderer>().enabled = false;
@@ -120,25 +134,42 @@ public class DarkMuseum : MonoBehaviour
         GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().rollInput = new GenericInput("Q", "B", "B");
         GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().crouchInput = new GenericInput("C", "Y", "Y");
 
-        yield return new WaitForSeconds(Random.Range(0.1f, 1.6f));
-        pp = np;
-        yield return new WaitForSeconds(Random.Range(0.1f, 1.6f));
-        pp = dp;
-        yield return new WaitForSeconds(Random.Range(0.1f, 1.6f));
-        pp = np;
-        yield return new WaitForSeconds(Random.Range(0.1f, 1.6f));
         pp = dp;
         //사다리 애니메이션 및 이후 대화
         ladder.SetActive(true);
         yield return new WaitForSeconds(1.0f);
         DialogueManager.isMonologue = true;
-        gameObject.GetComponent<InteractionEvent>().dialogue.line.x = 64;
-        gameObject.GetComponent<InteractionEvent>().dialogue.line.y = 68;
+        gameObject.GetComponent<InteractionEvent>().dialogue.line.x = 61;
+        gameObject.GetComponent<InteractionEvent>().dialogue.line.y = 65;
+        theDM.ShowDialogue(gameObject.GetComponent<InteractionEvent>().GetDialogue());
+        yield return new WaitUntil(() => DialogueManager.isRealEnd);
+        DialogueManager.isRealEnd = false;
+        ladderCollider.SetActive(true);
+
+
+        yield return new WaitUntil(() => DarkMusFirst.firstDial);
+        DialogueManager.isMonologue = true;
+        gameObject.GetComponent<InteractionEvent>().dialogue.line.x = 66;
+        gameObject.GetComponent<InteractionEvent>().dialogue.line.y = 74;
         theDM.ShowDialogue(gameObject.GetComponent<InteractionEvent>().GetDialogue());
         yield return new WaitUntil(() => DialogueManager.isRealEnd);
         DialogueManager.isRealEnd = false;
 
+        yield return new WaitUntil(() => DarkMusSec.secDial);
+        DialogueManager.isMonologue = true;
+        gameObject.GetComponent<InteractionEvent>().dialogue.line.x = 75;
+        gameObject.GetComponent<InteractionEvent>().dialogue.line.y = 79;
+        theDM.ShowDialogue(gameObject.GetComponent<InteractionEvent>().GetDialogue());
+        yield return new WaitUntil(() => DialogueManager.isRealEnd);
+        DialogueManager.isRealEnd = false;
 
+        yield return new WaitUntil(() => DarkMusThird.thirdDial);
+        DialogueManager.isMonologue = true;
+        gameObject.GetComponent<InteractionEvent>().dialogue.line.x = 80;
+        gameObject.GetComponent<InteractionEvent>().dialogue.line.y = 89;
+        theDM.ShowDialogue(gameObject.GetComponent<InteractionEvent>().GetDialogue());
+        yield return new WaitUntil(() => DialogueManager.isRealEnd);
+        DialogueManager.isRealEnd = false;
 
         yield return null;
     }

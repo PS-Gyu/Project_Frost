@@ -46,6 +46,20 @@ public class GirlAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        isFound = false;
+        isPlaying = false;
+        isPicking = false;
+        isThanks = false;
+        isSad = false;
+        isIndicate = false;
+        isFirst = false;
+        isSecond = false;
+        isThird = false;
+        isFourth = false;
+        isFifth = false;
+        isSixth = false;
+        isSeventh = false;
+        isExit = false;
         theDM = FindObjectOfType<DialogueManager>();
         //GameObject.Find("Manager").GetComponent<ScanMode>().enabled = false;
         theAgent = GetComponent<NavMeshAgent>();
@@ -353,6 +367,9 @@ public class GirlAI : MonoBehaviour
         yield return new WaitUntil(() => DialogueManager.isRealEnd);
         DialogueManager.isRealEnd = false;
         GameObject.Find("Museum Volume").GetComponent<Volume>().profile = dp;
+
+        yield return new WaitForSeconds(2.0f);
+
         SceneManager.LoadScene(1);
         
         
