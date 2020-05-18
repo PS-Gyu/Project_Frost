@@ -5,6 +5,8 @@ using UnityEngine;
 public class DarkMusSec : MonoBehaviour
 {
     public static bool secDial = false;
+
+    [SerializeField] GameObject soldiers;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +26,7 @@ public class DarkMusSec : MonoBehaviour
             if (!secDial)
             {
                 secDial = true;
+                soldiers.SetActive(true);
             }
 
         }

@@ -28,7 +28,7 @@ public class ScanMode : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        isStrafe = false;
     }
 
     // Update is called once per frame

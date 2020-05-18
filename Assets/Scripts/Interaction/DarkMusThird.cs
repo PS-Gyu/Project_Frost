@@ -5,7 +5,7 @@ using UnityEngine;
 public class DarkMusThird : MonoBehaviour
 {
     public static bool thirdDial = false;
-    [SerializeField] GameObject soldiers;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +25,7 @@ public class DarkMusThird : MonoBehaviour
             if (!thirdDial)
             {
                 thirdDial = true;
-                soldiers.SetActive(true);
+                
             }
 
         }
