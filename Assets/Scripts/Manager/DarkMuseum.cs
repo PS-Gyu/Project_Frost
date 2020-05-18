@@ -60,7 +60,9 @@ public class DarkMuseum : MonoBehaviour
 
         GameObject.FindWithTag("MainCamera").GetComponent<CameraShake>().m_force = 0.1f;
         //화면 흔들림
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(1.0f);
+        pp = dp;
+        yield return new WaitForSeconds(Random.Range(0.1f, 1.6f));
         DialogueManager.isMonologue = true;
         gameObject.GetComponent<InteractionEvent>().dialogue.line.x = 35;
         gameObject.GetComponent<InteractionEvent>().dialogue.line.y = 35;
@@ -70,8 +72,7 @@ public class DarkMuseum : MonoBehaviour
         DialogueManager.isRealEnd = false;
         
 
-        pp = dp;
-        yield return new WaitForSeconds(Random.Range(0.1f, 1.6f));
+        
         
         pp = np;
         yield return new WaitForSeconds(Random.Range(0.1f, 2.6f));
@@ -85,18 +86,20 @@ public class DarkMuseum : MonoBehaviour
         pp = np;
         yield return new WaitForSeconds(Random.Range(0.1f, 1.6f));
         pp = dp;
-        yield return new WaitForSeconds(Random.Range(0.1f, 1.6f));
+        yield return new WaitForSeconds(Random.Range(0.1f, 2.6f));
         pp = np;
         yield return new WaitForSeconds(Random.Range(0.1f, 1.6f));
         pp = dp;
         GameObject.FindWithTag("MainCamera").GetComponent<CameraShake>().m_force = 0.1f;
         yield return new WaitForSeconds(Random.Range(0.1f, 1.6f));
         pp = np;
-        yield return new WaitForSeconds(Random.Range(0.1f, 1.6f));
+        yield return new WaitForSeconds(Random.Range(0.1f, 2.6f));
         pp = dp;
         GameObject.FindWithTag("MainCamera").GetComponent<CameraShake>().m_force = 0.0f;
         yield return new WaitForSeconds(Random.Range(0.1f, 1.6f));
         pp = np;
+        yield return new WaitForSeconds(Random.Range(0.1f, 3.6f));
+        pp = dp;
         yield return new WaitUntil(() => DialogueManager.isRealEnd);
         DialogueManager.isRealEnd = false;
 
