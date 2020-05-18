@@ -7,7 +7,7 @@ public class DialogueManager : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] GameObject go_DialogueBar;
-    [SerializeField] Text txt_Dialogue;
+    [SerializeField] public Text txt_Dialogue;
     //[SerializeField] Text txt_name;
     Dialogue[] dialogues;
 

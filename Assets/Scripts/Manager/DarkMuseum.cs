@@ -24,13 +24,14 @@ public class DarkMuseum : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        DarkMusFirst.firstDial = false;
+        DarkMusSec.secDial = false;
+        DarkMusThird.thirdDial = false;
         theDM = FindObjectOfType<DialogueManager>();
         sm = FindObjectOfType<ScanMode>();
         StartCoroutine(darkMuseum());
         pp = dp;
-        DarkMusFirst.firstDial = false;
-        DarkMusSec.secDial = false;
-        DarkMusThird.thirdDial = false;
+        
     }
 
     // Update is called once per frame
