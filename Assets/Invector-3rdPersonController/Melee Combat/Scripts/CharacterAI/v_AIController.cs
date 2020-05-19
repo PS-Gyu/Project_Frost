@@ -233,8 +233,14 @@ namespace Invector.vCharacterController.AI
                             yield return StartCoroutine(Idle());
                             break;
                         case AIStates.Chase:
-                            if (currentState != oldState) { onChase.Invoke(); oldState = currentState; }
-                            yield return StartCoroutine(Chase());
+                            if (currentState != oldState) { 
+                                onChase.Invoke(); 
+                                oldState = currentState;
+                                yield return StartCoroutine(Chase());
+                            }else
+                            {
+                                yield return null;
+                            }
                             break;
                         case AIStates.PatrolSubPoints:
                             if (currentState != oldState) { onPatrol.Invoke(); oldState = currentState; }
@@ -314,15 +320,33 @@ namespace Invector.vCharacterController.AI
             else
             {
                 if (!OnStrafeArea && currentTarget.transform != null)
-                    destination = currentTarget.transform.position;
+                {
+                    //destination = currentTarget.transform.position;
+                    /*yield return new WaitForSeconds(1.0f);
+                    if (gameObject.GetComponent<Animator>().GetBool("isDetected")) { }
+                    else
+                    {
+                        gameObject.GetComponent<Animator>().SetBool("isDetected", true);
+                    }*/
+                }
                 else
                 {
-                    fwdMovement = (TargetDistance < distanceToAttack) ? (strafeBackward ? -1 : 0) : TargetDistance > distanceToAttack ? 1 : 0;
+                    /*if (gameObject.GetComponent<Animator>().GetBool("isDetected")) { }
+                    else
+                    {
+                        gameObject.GetComponent<Animator>().SetBool("isDetected", true);
+                    }*/
+                    gameObject.GetComponent<Animator>().SetBool("isDetected", true);
+                    yield return new WaitForSeconds(0.45f);
+                    gameObject.GetComponent<Animator>().SetBool("isDetected", false);
+
+                    /*fwdMovement = (TargetDistance < distanceToAttack) ? (strafeBackward ? -1 : 0) : TargetDistance > distanceToAttack ? 1 : 0;
                     Ray ray = new Ray(transform.position, transform.forward * fwdMovement);
                     if (TargetDistance < strafeDistance - 0.5f)
                         destination = (fwdMovement != 0) ? ray.GetPoint(agent.stoppingDistance + ((fwdMovement > 0) ? TargetDistance : 1f)) : transform.position;
                     else if (currentTarget.transform != null)
                         destination = currentTarget.transform.position;
+                        */
                 }
             }
         }
@@ -373,7 +397,7 @@ namespace Invector.vCharacterController.AI
                     }
                 }
             }
-            if (canSeeTarget)
+            if (canSeeTarget && currentTarget.transform != null)
                 currentState = AIStates.Chase;
         }
 
@@ -381,64 +405,71 @@ namespace Invector.vCharacterController.AI
         {
             while (!agent.enabled) yield return null;
 
-            if (pathArea != null && pathArea.waypoints.Count > 0)
+
+            if (currentTarget.transform == null || !canSeeTarget)
             {
-                if (targetWaypoint == null || !targetWaypoint.isValid)
+                if (pathArea != null && pathArea.waypoints.Count > 0)
                 {
-                    targetWaypoint = GetWaypoint();
-                }
-                else
-                {
-                    agent.speed = Mathf.Lerp(agent.speed, (agent.hasPath && targetWaypoint.isValid) ? patrolSpeed : 0, smoothSpeed * Time.deltaTime);
-
-                    agent.stoppingDistance = patrollingStopDistance;
-
-                    destination = targetWaypoint.position;
-                    if (Vector3.Distance(transform.position, destination) < targetWaypoint.areaRadius && targetWaypoint.CanEnter(transform) && !targetWaypoint.IsOnWay(transform))
+                    if (targetWaypoint == null || !targetWaypoint.isValid)
                     {
-                        targetWaypoint.Enter(transform);
-                        wait = Time.time + targetWaypoint.timeToStay;
-                    }
-                    else if (Vector3.Distance(transform.position, destination) < targetWaypoint.areaRadius && (!targetWaypoint.CanEnter(transform) || !targetWaypoint.isValid))
                         targetWaypoint = GetWaypoint();
-
-                    if (targetWaypoint != null && targetWaypoint.IsOnWay(transform) && Vector3.Distance(transform.position, destination) < distanceToChangeWaypoint)
+                    }
+                    else
                     {
-                        if (wait < Time.time || !targetWaypoint.isValid)
+                        agent.speed = Mathf.Lerp(agent.speed, (agent.hasPath && targetWaypoint.isValid) ? patrolSpeed : 0, smoothSpeed * Time.deltaTime);
+
+                        agent.stoppingDistance = patrollingStopDistance;
+
+                        destination = targetWaypoint.position;
+                        if (Vector3.Distance(transform.position, destination) < targetWaypoint.areaRadius && targetWaypoint.CanEnter(transform) && !targetWaypoint.IsOnWay(transform))
                         {
-                            wait = 0;
-                            if (targetWaypoint.subPoints.Count > 0)
-                                currentState = AIStates.PatrolSubPoints;
-                            else
+                            targetWaypoint.Enter(transform);
+                            wait = Time.time + targetWaypoint.timeToStay;
+                        }
+                        else if (Vector3.Distance(transform.position, destination) < targetWaypoint.areaRadius && (!targetWaypoint.CanEnter(transform) || !targetWaypoint.isValid))
+                            targetWaypoint = GetWaypoint();
+
+                        if (targetWaypoint != null && targetWaypoint.IsOnWay(transform) && Vector3.Distance(transform.position, destination) < distanceToChangeWaypoint)
+                        {
+                            if (wait < Time.time || !targetWaypoint.isValid)
                             {
-                                targetWaypoint.Exit(transform);
-                                visitedPatrolPoint.Clear();
-                                targetWaypoint = GetWaypoint();
+                                wait = 0;
+                                if (targetWaypoint.subPoints.Count > 0)
+                                    currentState = AIStates.PatrolSubPoints;
+                                else
+                                {
+                                    targetWaypoint.Exit(transform);
+                                    visitedPatrolPoint.Clear();
+                                    targetWaypoint = GetWaypoint();
+                                }
                             }
                         }
                     }
                 }
-            }
-            else if (ignorePatrolTimer < Time.time)
-            {
-                switch (patrolWithoutAreaStyle)
+                else if (ignorePatrolTimer < Time.time)
                 {
-                    case AIPatrolWithOutAreaStyle.GoToStartPoint:
-                        yield return StartCoroutine(GoToStartingPoint());
-                        break;
-                    case AIPatrolWithOutAreaStyle.Idle:
-                        currentState = AIStates.Idle;
-                        break;
-                    case AIPatrolWithOutAreaStyle.Wander:
-                        currentState = AIStates.Wander;
-                        break;
-                }
+                    switch (patrolWithoutAreaStyle)
+                    {
+                        case AIPatrolWithOutAreaStyle.GoToStartPoint:
+                            yield return StartCoroutine(GoToStartingPoint());
+                            break;
+                        case AIPatrolWithOutAreaStyle.Idle:
+                            currentState = AIStates.Idle;
+                            break;
+                        case AIPatrolWithOutAreaStyle.Wander:
+                            currentState = AIStates.Wander;
+                            break;
+                    }
 
+                }
+                else if (ignorePatrolTimer > Time.time)
+                {
+                    yield return StartCoroutine(GoToDestionation());
+                }
             }
-            else if (ignorePatrolTimer > Time.time)
-            {
-                yield return StartCoroutine(GoToDestionation());
-            }
+            if (canSeeTarget)
+                currentState = AIStates.Chase;
+
 
         }
 
