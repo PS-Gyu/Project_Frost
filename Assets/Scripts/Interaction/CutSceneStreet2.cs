@@ -12,6 +12,8 @@ public class CutSceneStreet2 : MonoBehaviour
 
     public GameObject textPanel;
 
+    bool isFirst = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,10 +24,21 @@ public class CutSceneStreet2 : MonoBehaviour
     {
         if(other.tag == "Cut Scene")
         {
-            playableDirector.Play();
-            //textPanel.SetActive(false);
-            Destroy(textPanel);
-            gameObject.SetActive(false);
+            if (isFirst)
+            {
+                playableDirector.Play();
+                //textPanel.SetActive(false);
+                Destroy(textPanel);
+                gameObject.SetActive(false);
+            }
+            
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.tag == "Cut Scene")
+        {
+            isFirst = false;
         }
     }
 
