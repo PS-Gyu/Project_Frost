@@ -33,5 +33,6 @@ public class EnemyAI : MonoBehaviour
     {
         yield return new WaitForSeconds(1.0f);
         goUI.SetActive(true);
+        yield return null;
     }
 }
