@@ -4,10 +4,13 @@ using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.Timeline;
 
+
 public class CutSceneStreet : MonoBehaviour
 {
     public PlayableDirector playableDirector;
     public TimelineAsset timeline;
+
+    public GameObject textPanel;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +23,8 @@ public class CutSceneStreet : MonoBehaviour
         if(other.tag == "Cut Scene")
         {
             playableDirector.Play();
+            //textPanel.SetActive(false);
+            Destroy(textPanel);
             Destroy(gameObject);
         }
     }
