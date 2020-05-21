@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ChangeView : MonoBehaviour
 {
-       
+
     [SerializeField] GameObject vCam0;
     [SerializeField] GameObject vCam1;
     [SerializeField] GameObject vCam2;
@@ -21,8 +21,9 @@ public class ChangeView : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(WhatsNext > 0 && WhatsNext < 5)
+        if (WhatsNext > 0 && WhatsNext < 5)
         {
+
             if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.RightArrow))
             {
                 WhatsNext += 1;
@@ -36,6 +37,13 @@ public class ChangeView : MonoBehaviour
 
             }
 
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                SwitchUpdatee();
+            }
+
+
+
         }
 
 
@@ -46,7 +54,7 @@ public class ChangeView : MonoBehaviour
         vCam1.SetActive(true);
         vCam0.SetActive(false);
     }
-    
+
     void SwitchUpdate()
     {
         switch (WhatsNext)
@@ -102,5 +110,27 @@ public class ChangeView : MonoBehaviour
     }
 
 
+    void SwitchUpdatee()
+    {
+        switch (WhatsNext)
+        {
+            case 1:
+                Debug.Log("1");
+                break;
+            case 2:
+                Debug.Log("2");
+                break;
+            case 3:
+                Debug.Log("3");
+                Application.Quit();
+                break;
+            case 4:
+                Debug.Log("4");
+                break;
+            default:
+                Debug.LogError($"{gameObject.name} : {WhatsNext}");
+                break;
+        }
+    }
 
 }
