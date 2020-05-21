@@ -32,4 +32,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/0000_Intro.unity
     guid: c59a395cf788e454ba0d9638d9e31b37
+  - enabled: 1
+    path: Assets/Scenes/007_Street.unity
+    guid: 8e89dace63cba39479c7e94c022d457b
+  - enabled: 1
+    path: Assets/Scenes/008_Dark_Museum.unity
+    guid: 195beac758dc3194789503dd99e52cc7
   m_configObjects: {}

@@ -5,10 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class Scene6to7 : MonoBehaviour
 {
+public GameObject pin;
 
     private void OnEnable()
     {
-        SceneManager.LoadScene(7);
+        SceneManager.LoadScene(9);
+        Destroy(pin);
     }
     // Start is called before the first frame update
     void Start()
