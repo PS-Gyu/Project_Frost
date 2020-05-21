@@ -31,7 +31,7 @@ public class MuseumBase : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
         DialogueManager.isMonologue = true;
         gameObject.GetComponent<InteractionEvent>().dialogue.line.x = 1;
-        gameObject.GetComponent<InteractionEvent>().dialogue.line.y = 3;
+        gameObject.GetComponent<InteractionEvent>().dialogue.line.y = 2;
         theDM.ShowDialogue(gameObject.GetComponent<InteractionEvent>().GetDialogue());
 
         yield return new WaitForSeconds(8.5f);
@@ -40,6 +40,9 @@ public class MuseumBase : MonoBehaviour
         GameObject.FindWithTag("Player").GetComponent<vThirdPersonController>().enabled = true;
         GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>().enabled = true;
         GameObject.FindWithTag("Player").GetComponent<vGenericAction>().enabled = true;
+
+
+
         yield return new WaitUntil(() => DialogueManager.isRealEnd);
         DialogueManager.isRealEnd = false;
 
