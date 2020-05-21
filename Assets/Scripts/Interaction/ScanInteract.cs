@@ -56,6 +56,22 @@ public class ScanInteract : MonoBehaviour
                 r.materials = mats;
             }
         }
+        else if (col.tag == "Soldiers")
+        {
+            Renderer r = col.GetComponent<Renderer>();
+            Material[] mats = r.materials;
+            if (r.materials.Length == 1)
+            {
+                mats[0] = col.GetComponent<SearchingObj>().highlightMat;
+                r.materials = mats;
+            }
+            else
+            {
+                mats[0] = col.GetComponent<SearchingObj>().highlightMat;
+                mats[1] = col.GetComponent<SearchingObj>().highlightMat;
+                r.materials = mats;
+            }
+        }
     }
 
     private void OnTriggerExit(Collider col)
