@@ -16,6 +16,7 @@ public class MuseumBase : MonoBehaviour
     [SerializeField] GameObject alert;
     [SerializeField] GameObject EV;
     [SerializeField] GameObject EVPlayer;
+    [SerializeField] GameObject pin;
     DialogueManager theDM;
     int num = 0;
     // Start is called before the first frame update
@@ -118,7 +119,8 @@ public class MuseumBase : MonoBehaviour
         yield return new WaitUntil(() => BaseFifthDial.fifthDial);
         gameObject.GetComponent<PlayableDirector>().enabled = true;
         yield return new WaitForSeconds(8.7f);
-        SceneManager.LoadScene(8);
+        Destroy(pin);
+        SceneManager.LoadScene("00_GameStart");
 
 
         yield return null;

@@ -34,7 +34,8 @@ public class ScanMode : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        isUsingLad = GameObject.FindWithTag("Player").GetComponent<vLadderAction>().isUsingLadder;
+        if(GameObject.FindWithTag("Player"))
+            isUsingLad = GameObject.FindWithTag("Player").GetComponent<vLadderAction>().isUsingLadder;
 
         if (!isScan)
         {

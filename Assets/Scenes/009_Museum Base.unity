@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.5190858, g: 0.49527574, b: 0.48140597, a: 1}
+  m_IndirectSpecularColor: {r: 0.5195407, g: 0.4957146, b: 0.48184657, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -11312,6 +11312,7 @@ MonoBehaviour:
   alert: {fileID: 1279310126}
   EV: {fileID: 1439043315}
   EVPlayer: {fileID: 6164272592867165175}
+  pin: {fileID: 4930352897648616652}
 --- !u!320 &1101206293
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -11319,7 +11320,7 @@ PlayableDirector:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1101206285}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: 9c878c61dde4840449a29ed70ec55a4e, type: 2}
   m_InitialState: 1

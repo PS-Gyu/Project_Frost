@@ -9,16 +9,16 @@ using UnityEngine.SceneManagement;
 public class LightOffMuseum : MonoBehaviour
 {
     [SerializeField] GameObject goUI;
+    [SerializeField] GameObject pin;
     DialogueManager theDM;
-    float p_x = 0f;
-    float p_y = 0f;
-    float p_z = 0f;
     bool isRespawned = false;
     bool isSaved = false;
+    bool isNowGaming = false;
     Vector3 pos;
     // Start is called before the first frame update
     void Start()
     {
+        isNowGaming = false;
         isSaved = false;
         DarkMusFirst.firstDial = false;
         DarkMusSec.secDial = false;
@@ -30,43 +30,25 @@ public class LightOffMuseum : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    public void loadSaved()
-    {
-        goUI.SetActive(false);
-        if (isSaved)
+        if (EnemyAI.isDetected)
         {
-            StopAllCoroutines();
-
-            p_x = GameObject.FindWithTag("Respawn").GetComponent<Transform>().position.x;
-            p_y = GameObject.FindWithTag("Respawn").GetComponent<Transform>().position.y;
-            p_z = GameObject.FindWithTag("Respawn").GetComponent<Transform>().position.z;
-            GameObject.FindWithTag("Player").transform.SetPositionAndRotation(pos, GameObject.FindWithTag("Respawn").GetComponent<Transform>().rotation);
-
-            StartCoroutine(lightOffMuseum());
+            if (isSaved)
+            {
+                Destroy(pin);
+                SceneManager.LoadScene("008_Dark_Museum_2");
+            }
+            else
+            {
+                Destroy(pin);
+                SceneManager.LoadScene("008_Dark_Museum");
+            }
         }
-        else
-        {
-            //SceneManager.LoadScene(8);
-            Debug.Log("8");
-        }
-        
     }
 
-    
-
-    public void restartScene()
-    {
-        //SceneManager.LoadScene(8);
-        Debug.Log("8");
-    }
 
     IEnumerator lightOffMuseum()
     {
-        if (!isRespawned)
-        {
+
             yield return new WaitForSeconds(2.0f);
             DialogueManager.isMonologue = true;
             gameObject.GetComponent<InteractionEvent>().dialogue.line.x = 1;
@@ -96,18 +78,8 @@ public class LightOffMuseum : MonoBehaviour
             gameObject.GetComponent<PlayableDirector>().enabled = true;
 
             yield return new WaitForSeconds(21.0f);
-            //SceneManager.LoadScene(9);
-            Debug.Log("9");
-        }
-        else
-        {
-            yield return new WaitUntil(() => DarkMusThird.thirdDial);
-            gameObject.GetComponent<PlayableDirector>().enabled = true;
-            yield return new WaitForSeconds(21.0f);
-            //SceneManager.LoadScene(9);
-            Debug.Log("9");
-
-        }
+            Destroy(pin);
+        SceneManager.LoadScene(12);
 
         yield return null;
     }

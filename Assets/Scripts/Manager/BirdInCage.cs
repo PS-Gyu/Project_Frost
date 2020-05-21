@@ -19,6 +19,7 @@ public class BirdInCage : MonoBehaviour
     [SerializeField] GameObject rob;
     [SerializeField] GameObject rob2;
     [SerializeField] GameObject fadeOut;
+    [SerializeField] GameObject pin;
 
     VolumeProfile pp;
     UnstableScanMode usm;
@@ -172,6 +173,7 @@ public class BirdInCage : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
         fadeOut.SetActive(true);
         yield return new WaitForSeconds(3.0f);
+        Destroy(pin);
         SceneManager.LoadScene("001_Museum");
     }
 

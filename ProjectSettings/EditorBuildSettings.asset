@@ -38,4 +38,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/008_Dark_Museum.unity
     guid: 195beac758dc3194789503dd99e52cc7
+  - enabled: 1
+    path: Assets/Scenes/008_Dark_Museum_2.unity
+    guid: 90e74e022ee7bfd49bfeecb44207b49d
+  - enabled: 1
+    path: Assets/Scenes/009_Museum Base.unity
+    guid: 8ff0befc6865178438cba3382b0e6c0c
   m_configObjects: {}
