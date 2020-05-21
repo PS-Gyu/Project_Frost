@@ -26,4 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/006_Zepeto Lab Again.unity
     guid: 21eb62ec0712ba64482a78c752673407
+  - enabled: 1
+    path: Assets/Scenes/00_GameStart.unity
+    guid: 9d10eb69b83a071479b02dc20e4e8dba
+  - enabled: 1
+    path: Assets/Scenes/0000_Intro.unity
+    guid: c59a395cf788e454ba0d9638d9e31b37
   m_configObjects: {}
