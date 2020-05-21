@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class ChangeView : MonoBehaviour
@@ -126,10 +127,11 @@ public class ChangeView : MonoBehaviour
                 break;
             case 4:
                 Debug.Log("4");
+                SceneManager.LoadScene("0000_Intro");
                 break;
-            default:
-                Debug.LogError($"{gameObject.name} : {WhatsNext}");
-                break;
+           // default:
+           //     Debug.LogError($"{gameObject.name} : {WhatsNext}");
+           //     break;
         }
     }
 
