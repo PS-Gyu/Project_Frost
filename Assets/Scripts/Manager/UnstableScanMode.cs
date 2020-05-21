@@ -11,8 +11,8 @@ public class UnstableScanMode : MonoBehaviour
     [SerializeField] AnimationClip unstableStart;
     [SerializeField] AnimationClip unstableEnd;
     [SerializeField] GameObject pp;
-    [SerializeField] VolumeProfile p1;
-    [SerializeField] VolumeProfile p2;
+    [SerializeField] public VolumeProfile p1;
+    [SerializeField] public VolumeProfile p2;
 
     [SerializeField] bool isScan = false;
     [SerializeField] bool isEnd = false;
