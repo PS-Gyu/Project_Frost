@@ -7137,7 +7137,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh1363780
+  m_Name: pb_Mesh2685352
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11399,6 +11399,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1971237742}
+  - {fileID: 1509841049}
   m_Father: {fileID: 1578244554}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -31281,6 +31282,63 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1507044587}
   m_Mesh: {fileID: -2772236550265801276, guid: 94570b80cf9bb344d8e3fea43fc4f007, type: 3}
+--- !u!1 &1509841048
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1509841049}
+  - component: {fileID: 1509841051}
+  - component: {fileID: 1509841050}
+  m_Layer: 2
+  m_Name: rightFoot_trigger
+  m_TagString: Weapon
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1509841049
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509841048}
+  m_LocalRotation: {x: 0.032245565, y: -0.43868256, z: -0.8945035, w: -0.0798832}
+  m_LocalPosition: {x: 0.024052197, y: 0.084627, z: -0.10953692}
+  m_LocalScale: {x: 1, y: 0.99999976, z: 1}
+  m_Children: []
+  m_Father: {fileID: 687588010}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1509841050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509841048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b04f4ac1b776ff48b5f78a97b57f776, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &1509841051
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509841048}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1511793974
 GameObject:
   m_ObjectHideFlags: 0
@@ -35167,6 +35225,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1051493320}
+  - {fileID: 1749085352}
   m_Father: {fileID: 1879461139}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -36645,6 +36704,63 @@ Transform:
   m_Father: {fileID: 1713330994}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1749085351
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1749085352}
+  - component: {fileID: 1749085354}
+  - component: {fileID: 1749085353}
+  m_Layer: 2
+  m_Name: leftFoot_trigger
+  m_TagString: Weapon
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1749085352
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749085351}
+  m_LocalRotation: {x: -0.08140156, y: -0.4574267, z: -0.8830289, w: 0.06629224}
+  m_LocalPosition: {x: -0.025688294, y: 0.076811835, z: -0.10689608}
+  m_LocalScale: {x: 0.9999996, y: 0.99999964, z: 0.9999999}
+  m_Children: []
+  m_Father: {fileID: 1691422183}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1749085353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749085351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b04f4ac1b776ff48b5f78a97b57f776, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &1749085354
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749085351}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &1755645778
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44949,6 +45065,7 @@ GameObject:
   - component: {fileID: 2134630400}
   - component: {fileID: 2134630401}
   - component: {fileID: 2134630402}
+  - component: {fileID: 2134630403}
   m_Layer: 8
   m_Name: vBasicController_Pino_Prefab
   m_TagString: Player
@@ -45543,6 +45660,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20588a65884148b459d5ce1de87d49bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2134630403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134630392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19ce6a4d1f67f494f8e871355031f21c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultSurface: {fileID: 11400000, guid: 710c74baecce50746bd56b9711c851e7, type: 2}
+  customSurfaces: []
+  animationType: 0
+  debugTextureName: 0
+  _volume: 1
+  leftFootTrigger: {fileID: 1749085353}
+  rightFootTrigger: {fileID: 1509841050}
+  currentStep: {fileID: 0}
+  footStepTriggers: []
 --- !u!1 &2138018359
 GameObject:
   m_ObjectHideFlags: 0

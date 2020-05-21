@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.77848387, g: 0.78496176, b: 0.7864659, a: 1}
+  m_IndirectSpecularColor: {r: 0.90792316, g: 0.915424, b: 0.91713494, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2022,8 +2022,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 255041983}
-  m_LocalRotation: {x: 0.0010364687, y: 0.9977123, z: -0.065740235, w: 0.01573005}
-  m_LocalPosition: {x: -6.5975337, y: -0.5161221, z: -0.14229691}
+  m_LocalRotation: {x: 0.03127661, y: 0.85070574, z: -0.050949033, w: 0.5222316}
+  m_LocalPosition: {x: 9.266422, y: 0.16500008, z: -5.568009}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 662942312}
@@ -3269,7 +3269,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 338046619}
-  m_LocalRotation: {x: 0.0071699102, y: -0.8252816, z: 0.010480728, w: 0.56457865}
+  m_LocalRotation: {x: 0.0062452937, y: -0.9393202, z: -0.017125115, w: -0.34255713}
   m_LocalPosition: {x: 3.5816565, y: -0.44115525, z: 2.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3428,7 +3428,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 355116026}
-  m_LocalRotation: {x: 0.26779348, y: -0.66605943, z: 0.2798063, w: 0.6374637}
+  m_LocalRotation: {x: 0.106888115, y: 0.723544, z: -0.115056485, w: 0.67217636}
   m_LocalPosition: {x: 0.91810036, y: 1.5676641, z: -5.4447784}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3800,8 +3800,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 408820807}
-  m_LocalRotation: {x: 0.047958557, y: 0.015089066, z: -0.0007245665, w: 0.99873513}
-  m_LocalPosition: {x: -6.3499928, y: -0.5337355, z: -3.9444427}
+  m_LocalRotation: {x: 0.023433559, y: 0.95467937, z: -0.078158356, w: 0.28623345}
+  m_LocalPosition: {x: 3.7910001, y: 2.05, z: 4.2409997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 383173279}
@@ -4315,6 +4315,8 @@ PlayableDirector:
     value: {fileID: 5623948839249335529}
   - key: {fileID: 2114743993491694207, guid: 394c5709939afa542bff005bac9dbb08, type: 2}
     value: {fileID: 7422861546082724187}
+  - key: {fileID: -5060108926467406568, guid: 394c5709939afa542bff005bac9dbb08, type: 2}
+    value: {fileID: 1478487671}
   m_ExposedReferences:
     m_References:
     - 96e9a38449e1ccb44b9b9eeb292a266c: {fileID: 2011721716}
@@ -5492,7 +5494,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 619455108}
-  m_LocalRotation: {x: 0.040926617, y: 0.94908994, z: -0.1388323, w: 0.27978382}
+  m_LocalRotation: {x: -0.040926624, y: -0.94908994, z: 0.13883233, w: -0.27978382}
   m_LocalPosition: {x: 5.2201424, y: 1.5217791, z: 3.205982}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -12015,6 +12017,49 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.016, y: 2.5400007, z: 7.620002}
   m_Center: {x: 0, y: -0.0000019073486, z: 0.00000023841858}
+--- !u!1 &1478487671
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1478487672}
+  - component: {fileID: 1478487673}
+  m_Layer: 0
+  m_Name: Scene to 5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1478487672
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478487671}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 16.044884, y: 16.625177, z: 10.159899}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 30
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1478487673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478487671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1354ad12a68926049a2e339366a13703, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1478772668
 GameObject:
   m_ObjectHideFlags: 0
@@ -13371,8 +13416,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1680158626}
-  m_LocalRotation: {x: 0.006214231, y: -0.28049687, z: 0.0018160157, w: 0.95983315}
-  m_LocalPosition: {x: -4.7798243, y: -0.6689414, z: -4.395981}
+  m_LocalRotation: {x: -0.009767587, y: 0.68376106, z: -0.009154116, w: -0.7295832}
+  m_LocalPosition: {x: 12.091434, y: 0.0010000467, z: -6.408073}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 767645669}
@@ -14215,13 +14260,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
-    are already bound by a Humanoid avatar. These transforms can only be changed
-    by Humanoid clips.\n\tTransform 'mixamorig:LeftFoot'\n\tTransform 'mixamorig:LeftHandThumb2'\n\tTransform
-    'mixamorig:LeftHandIndex1'\n\tTransform 'mixamorig:LeftHandPinky2'\n\tTransform
-    'mixamorig:RightHandRing2'\n\tTransform 'mixamorig:Spine1'\n\tTransform 'mixamorig:LeftToeBase'\n\tTransform
-    'mixamorig:LeftHandThumb3'\n\tTransform 'mixamorig:RightArm'\n\tTransform 'mixamorig:LeftLeg'\n\tand
-    more ..."
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -15403,7 +15442,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1909381590}
-  m_LocalRotation: {x: -0.046361715, y: 0.9088472, z: -0.10507474, w: -0.40100703}
+  m_LocalRotation: {x: 0.025213264, y: 0.94864404, z: -0.078302175, w: 0.30546296}
   m_LocalPosition: {x: 3.7910001, y: 2.05, z: 4.2409997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
