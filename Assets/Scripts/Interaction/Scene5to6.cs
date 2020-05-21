@@ -8,7 +8,7 @@ public class Scene5to6 : MonoBehaviour
 
     private void OnEnable()
     {
-        SceneManager.LoadScene(6);
+        SceneManager.LoadScene("006_Zepeto Lab Again");
     }
     // Start is called before the first frame update
     void Start()

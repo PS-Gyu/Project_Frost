@@ -9,7 +9,7 @@ public class Scene7to8 : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Cut Scene"){
-        SceneManager.LoadScene(10);  
+        SceneManager.LoadScene("008_Dark_Museum");  
         Destroy(gameObject);
 		}
       

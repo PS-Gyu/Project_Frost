@@ -9,7 +9,7 @@ public GameObject pin;
 
     private void OnEnable()
     {
-        SceneManager.LoadScene(9);
+        SceneManager.LoadScene("007_Street");
         Destroy(pin);
     }
     // Start is called before the first frame update

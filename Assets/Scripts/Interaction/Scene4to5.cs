@@ -8,7 +8,7 @@ public class Scene4to5 : MonoBehaviour
 
     private void OnEnable()
     {
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene("005_Street");
     }
     // Start is called before the first frame update
     void Start()
