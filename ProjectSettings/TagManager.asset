@@ -41,6 +41,10 @@ TagManager:
   - USB
   - Cut Scene
   - Cut Scene2
+  - cage
+  - picture
+  - robots
+  - clickUI
   layers:
   - Default
   - TransparentFX
