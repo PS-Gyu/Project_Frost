@@ -9,6 +9,7 @@ using UnityEngine.SceneManagement;
 public class GirlAI : MonoBehaviour
 {
     [SerializeField] public int destNum = 0;
+    [SerializeField] GameObject pin;
     public GameObject girlFirstDestination;
     public GameObject girlSecondDestination;
     public GameObject girlThirdDestination;
@@ -369,8 +370,8 @@ public class GirlAI : MonoBehaviour
         GameObject.Find("Museum Volume").GetComponent<Volume>().profile = dp;
 
         yield return new WaitForSeconds(2.0f);
-
-        SceneManager.LoadScene(1);
+        Destroy(pin);
+        SceneManager.LoadScene("002_Dark_Museum");
         
         
     }

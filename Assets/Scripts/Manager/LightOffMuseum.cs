@@ -1,7 +1,6 @@
 ﻿using Invector.vCamera;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
