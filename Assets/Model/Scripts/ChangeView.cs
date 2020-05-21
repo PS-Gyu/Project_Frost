@@ -11,12 +11,18 @@ public class ChangeView : MonoBehaviour
     [SerializeField] GameObject vCam2;
     [SerializeField] GameObject vCam3;
     [SerializeField] GameObject vCam4;
+    [SerializeField] GameObject MFLogo;
+    [SerializeField] GameObject Univ;
     public int WhatsNext;
 
     void Start()
     {
         WhatsNext = 1;
         Invoke("startScenes", 1);
+        Invoke("OpenSpons", 8);
+        Invoke("CloseSpons", 14);
+        Invoke("OpenLogo", 15);
+        Invoke("CloseLogo", 23.3f);
     }
 
     // Update is called once per frame
@@ -54,6 +60,28 @@ public class ChangeView : MonoBehaviour
     {
         vCam1.SetActive(true);
         vCam0.SetActive(false);
+    }
+
+    void OpenLogo()
+    {
+        MFLogo.SetActive(true);
+
+    }
+
+    void CloseLogo()
+    {
+        MFLogo.SetActive(false);
+    }
+
+    void OpenSpons()
+    {
+        Univ.SetActive(true);
+
+    }
+
+    void CloseSpons()
+    {
+        Univ.SetActive(false);
     }
 
     void SwitchUpdate()
