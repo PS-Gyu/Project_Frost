@@ -13,7 +13,6 @@ public class InteractionController : MonoBehaviour
     bool isInteract = false;
     bool isUSB = false;
     bool isPictures = false;
-    bool isRobots = false;
     bool isCage = false;
 
     DialogueManager theDM;
@@ -69,20 +68,6 @@ public class InteractionController : MonoBehaviour
                 isCage = true;
             }
         }
-        else if (hitInfo.transform.CompareTag("picture"))
-        {
-            if (!isPictures)
-            {
-                isPictures = true;
-            }
-        }
-        else if (hitInfo.transform.CompareTag("robots"))
-        {
-            if (!isRobots)
-            {
-                isRobots = true;
-            }
-        }
         else { }
     }
     void NotContact()
@@ -98,15 +83,6 @@ public class InteractionController : MonoBehaviour
         if (isCage)
         {
             isCage = false;
-        }
-        if (isPictures)
-        {
-            isPictures = false;
-
-        }
-        if (isRobots)
-        {
-            isRobots = false;
         }
     }
 
@@ -127,14 +103,6 @@ public class InteractionController : MonoBehaviour
             else if (isCage)
             {
                 Cage();
-            }
-            else if (isPictures)
-            {
-                Pictures();
-            }
-            else if (isRobots)
-            {
-                Robots();
             }
             else { }
 
@@ -165,20 +133,7 @@ public class InteractionController : MonoBehaviour
             hitInfo.transform.GetComponent<CageInteract>().cageInteracted = true;
         }
     }
-    void Pictures()
-    {
-        if (!hitInfo.transform.GetComponent<PicInteract>().picInteracted && BirdInCage.isStart)
-        {
-            hitInfo.transform.GetComponent<PicInteract>().picInteracted = true;
-        }
-    }
-    void Robots()
-    {
-        if (!hitInfo.transform.GetComponent<RobInteract>().robInteracted && BirdInCage.isStart)
-        {
-            hitInfo.transform.GetComponent<RobInteract>().robInteracted = true;
-        }
-    }
+
 
 
 }
